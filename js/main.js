@@ -17,7 +17,7 @@ $(function(){
 
 	$('button#get-involved').on('click', function(){
 		$('#overlay').fadeIn(150)
-		$('#contact-form').animate({ marginTop : '+125px' })
+		$('#contact-form').animate({ marginTop : '0px' })
 		$('body').css('overflow', 'hidden')
 		clickOut()
 		escOut()
