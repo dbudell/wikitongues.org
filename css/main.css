@@ -120,14 +120,28 @@ header {
 
 h1 {
     width:100%;
-    margin:20px 0;
+    margin:-45px 0 20px;
     font-weight:800;
     font-size:18rem;
 }
 
+button {
+    border:none;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+ul li {
+    list-style-type:none;
+    display:inline-block;
+}
+
 .content-wrapper {
     width:1280px;
-    margin:0 auto;
+    margin:30px auto 0;
 }
 
 .content-wrapper p {
@@ -141,10 +155,9 @@ body > .content-wrapper div {
     margin:20px 0 40px;
 }
 
-button {
+button#get-involved {
     display: block;
     background: rgba(17,35,36,1);
-    border: none;
     color: #fff;
     font-weight: 800;
     padding: 20px 0;
@@ -156,20 +169,37 @@ button:focus {
     outline:none;
 }
 
-ul {
+.language-options li {
+    font-size:2rem;
+}
+
+.language-options li button {
+    background:none;
     padding:0;
+    font-family:'Raleway',helvetica;
+}
+
+#active {
+    padding:5px;
+    background:rgba(17,35,36,1);
+    color:rgb(255,255,255);
+}
+
+#hebrew {
+    font-family:'Alef',helvetica;
+}
+
+#social-media {
     margin:20px 0 80px;
 }
 
-ul li {
-    list-style-type:none;
-    display:inline-block;
+#social-media li {
     margin:0 -16px 0 0;
     width:20%;
     height:20%;
 }
 
-ul li, button {
+#social-media li, button {
      -webkit-transition:background .2s ease-in-out;
     -moz-transition:background .2s ease-in-out;
     -ms-transition:background .2s ease-in-out;
@@ -177,31 +207,31 @@ ul li, button {
     transition:background .2s ease-in-out;
 }
 
-ul li:nth-child(1) {
+#social-media li:nth-child(1) {
     background:rgba(177,35,36,1);
 }
 
-ul li:nth-child(2) { 
+#social-media li:nth-child(2) { 
     background:rgba(59,89,183,1);
 }
 
-ul li:nth-child(3) { 
+#social-media li:nth-child(3) { 
     background:rgba(92,144,203,1);
 }
 
-ul li:nth-child(4) { 
+#social-media li:nth-child(4) { 
     background:rgba(30,41,91,1);
 }
 
-ul li:nth-child(5) { 
+#social-media li:nth-child(5) { 
     background:rgba(63,114,155,1);
 }
 
-ul li:hover, button:hover {
+#social-media li:hover, button:hover {
     background:rgba(255,195,40,1);
 }
 
-ul li img {
+#social-media li img {
     width:100%;
     height:auto;
 }
