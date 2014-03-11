@@ -10,6 +10,7 @@
     display: none;
   }
   .content-wrapper h1 {
+    margin-top: 10px;
     font-size: 2.5em;
   }
   .content-wrapper h4 {
@@ -27,23 +28,23 @@
     margin-top: 0;
     display: block;
   }
-  .content-wrapper button {
-    margin: 30px 0;
+  .content-wrapper #get-involved {
+    margin: 20px 0;
     font-size: 2em;
   }
-  .content-wrapper ul {
+  .content-wrapper #social-media {
     display: inline-block;
     margin: 5px 0 5px 0;
   }
-  .content-wrapper ul li {
+  .content-wrapper #social-media li {
     margin: 0 0 10px 0;
     width: 20%;
     float: left;
   }
-  .content-wrapper ul li:last-of-type {
+  .content-wrapper #social-media li:last-of-type {
     margin-right: 0;
   }
-  .content-wrapper ul li a {
+  .content-wrapper #social-media li a {
     display: inline-block;
   }
   footer .content-wrapper p {
