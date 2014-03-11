@@ -329,6 +329,12 @@ footer > .content-wrapper p, footer > .content-wrapper a {
     outline:none;
 }
 
+@media screen and (max-width:1450px) {
+    .content-wrapper {
+        width:90%;
+    }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
