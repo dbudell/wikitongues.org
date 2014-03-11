@@ -126,9 +126,18 @@ h1 {
     text-align: center;
 }
 
+h4{
+    margin:0;
+    font-weight: bold;
+}
+
 .content-wrapper {
     width:1280px;
     margin:0 auto;
+}
+
+.no-wrap{
+    white-space: nowrap;
 }
 
 .content-wrapper p {
@@ -136,6 +145,10 @@ h1 {
     padding-left: 0px;
     margin-bottom: 40px;
     margin-top: 10px;
+}
+
+.content-wrapper p.mobile-text {
+    display: none;
 }
 
 body > .content-wrapper div {
@@ -285,17 +298,6 @@ footer > .content-wrapper p, footer > .content-wrapper a {
     background:rgba(255,255,255,1);
     outline:none;
 }
-
-@media screen and (max-width:1450px) {
-    .content-wrapper {
-        width:90%;
-    }
-
-    /*h1 {
-        font-size:100%;
-    }*/
-}
-
 
 /* ==========================================================================
    Helper classes

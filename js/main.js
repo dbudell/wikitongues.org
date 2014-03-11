@@ -1,5 +1,5 @@
 $(function(){
-	
+
 	var freezeScroll = $('body').css('overflow', 'hidden'),
 		clickOut = $('#overlay').on('click', function(e){
 						if (e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
@@ -14,7 +14,7 @@ $(function(){
 				    	$('#contact-form').animate({ marginTop : '-725px' })
 				        $('#overlay').fadeOut(300)
 				        $('body').css('overflow', 'visible')
-				    }  
+				    }
 				})
 
 	$('button').on('click', function(){
