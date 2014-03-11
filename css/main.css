@@ -227,7 +227,7 @@ button:focus {
     background:rgba(63,114,155,1);
 }
 
-#social-media li:hover, button:hover {
+#social-media li:hover, #get-involved:hover {
     background:rgba(255,195,40,1);
 }
 

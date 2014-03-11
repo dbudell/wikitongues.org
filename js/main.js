@@ -34,26 +34,51 @@ $(function(){
 			$('strong').text('Todos los idiomas del mundo, para todos.')
 			$('#summary').text('Wikitongues es un esfuerzo comunitario para que todas las personas puedan acceder a las 7.000 lenguas que existen y también las historias y los sentimientos detrás de ellas. Coordinados con una red de voluntarios, nos dedicamos a enseñar al mundo el verdadero significado de diversidad.')
 			$('#get-involved').text('Involúcrate.')
-			$('footer p:first-child').hide()
-			$('footer p:last-child').before(
-				'<p>Hecho con amor internacional por @<a href="http://www.twitter.com/dbudell" target="_blank">dbudell</a>, ' +
-                '@<a href=\"http://www.twitter.com/freddieandrade\" target=\"_blank\">freddieandrade</a>, ' +
-                '@<a href=\"http://www.twitter.com/@lindiebee\" target=\"_blank\">lindiebee</a> y ' + 
-                '@<a href=\"http://www.twitter.com/@fateuser\" target=\"_blank\">fateuser</a>.</p>')
-			$('footer p:last-child').text('© 2014 Wikitongues, tots els drets reservats.')
+			$('.first').text('Hecho con amor internacional por ')
+			$('.second').text(' y')
+			$('footer p:last-child').text('© 2014 Wikitongues, todos los derechos reservados.')
 		} else if (activeLanguage === 'Català') {
 			$('strong').text('Tots els idiomes del món, per a tothom.')
 			$('#summary').text('Wikitongues és un esforç comunitari perquè totes les persones puguin accedir a les 7.000 llengües que existeixen i també les històries i els sentiments darrere d\'elles. Coordinats amb una xarxa de voluntaris, ens dediquem a ensenyar al món el veritable significat de diversitat.')
 			$('#get-involved').text('Involucra\'t.')
-			$('footer p:first-child').hide()
-			$('footer p:last-child').before(
-				'<p>Fet amb amor internacional per @<a href="http://www.twitter.com/dbudell" target="_blank">dbudell</a>, ' +
-                '@<a href=\"http://www.twitter.com/freddieandrade\" target=\"_blank\">freddieandrade</a>, ' +
-                '@<a href=\"http://www.twitter.com/@lindiebee\" target=\"_blank\">lindiebee</a> i ' + 
-                '@<a href=\"http://www.twitter.com/@fateuser\" target=\"_blank\">fateuser</a>.</p>')
-			$('footer p:last-child').text('© 2014 Wikitongues, todos los derechos reservados.')
-		} else {
-			console.log('hi')
+			$('.first').text('Fet amb amor internacional per ')
+			$('.second').text(' i')
+			$('footer p:last-child').text('© 2014 Wikitongues, tots els drets reservats.')
+		} else if (activeLanguage === 'Italiano') {
+			$('strong').text('Ogni lingua del mondo, per tutti.')
+			$('#summary').text('Wikitongues è una comunità che prova a dare accesso a tutte le persone del mondo a tutte le 7.000 lingue del mondo — storie e sentimenti nascosti dietro ognuna.Con l\'aiuto di una rete di volontari, ci dedichiamo a mostrare al mondo il vero significato di diversità.')
+			$('#get-involved').text('Resta coinvolto.')
+			$('.first').text('Fatto con amore internazionale da ')
+			$('.second').text(' e')
+			$('footer p:last-child').text('© 2014 Wikitongues, tutti i diritti riservati.')
+		} else if (activeLanguage === 'Deutsch') {
+			$('strong').text('Jede Sprache der Welt, für alle.')
+			$('#summary').text('Wikitongues ist eine Gemeinschaft deren Anstrengung es ist den Menschen in der Welt Zugang zu allen 7000 Sprachen in der Welt zu geben - die Geschichte und die Gefühle dahinter. In Zusammenarbeit mit einem Netzwerk von Freiwilligen bemühen wir uns der Welt die wahre Bedeutung von Diversität zu zeigen.')
+			$('#get-involved').text('Mach mit!')
+			$('.first').text('Mit internationaler Liebe gemacht ')
+			$('.second').text(' und')
+			$('footer p:last-child').text('© 2014 Wikitongues, All Rights Reserved.')
+		} else if (activeLanguage === 'Lietuvių') {
+			$('strong').text('Visos pasaulio kalbos - kiekvienam.')
+			$('#summary').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
+			$('#get-involved').text('Prisijunk ir Tu!')
+			$('.first').text('Tarptautiškumą mylintys ')
+			$('.second').text(' ir')
+			$('footer p:last-child').text('© 2014 Wikitongues, Visos teisės saugomos.')
+		} /*else if (activeLanguage === 'עברית') {
+			$('strong').text('.כל שפה בעולם, לכולם')
+			$('#summary').text('הינו מאמץ קהילתי שמטרתו לאפשר לכל אדם בעולם גישה לכל 7,000 השפות הקיימות בעולם – הסיפורים והרגש שעומד מאחוריהם. בתיאום עם קהילת מתנדבים, אנחנו מחוייבים להראות לעולם את משמעותו האמיתי של הגִּוּוּן.')
+			$('#get-involved').text('Prisijunk ir Tu!')
+			$('.first').text('Tarptautiškumą mylintys ')
+			$('.second').text(' ir')
+			$('footer p:last-child').text('© 2014 Wikitongues, Visos teisės saugomos.')
+		} */ else {
+			$('strong').text('Every language in the world, for everyone.')
+			$('#summary').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
+			$('#get-involved').text('Get involved.')
+			$('.first').text('Made with international love ')
+			$('.second').text(' by')
+			$('footer p:last-child').text('© 2014 Wikitongues, All Rights Reserved.')
 		}
 		
 	})
