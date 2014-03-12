@@ -13,13 +13,23 @@ $(function(){
 				        $('#overlay').fadeOut(300)
 				        $('body').css('overflow', 'visible')
 				    }
-				}),
-		 frameSet = $('html').closest('frameset'),
-    		 metaHead = frameSet.prev('head')
+				})
 
-	 metaHead.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
+	function contactResize () {
+		var screenHeight = $(window).innerHeight(),
+		buttonHeight = $("#contact-form input").outerHeight(),
+		modalHeight = screenHeight - (36+60+60+70+20)
+
+		$('#overlay #contact-form #message').css('height',modalHeight)
+	}
+
+	$(window).resize(function(){
+		contactResize()
+	})
+
 
 	$('button#get-involved').on('click', function(){
+		contactResize()
 		$('#overlay').fadeIn(150)
 		$('#contact-form').animate({ marginTop : '0px' })
 		$('body').css('overflow', 'hidden')
@@ -85,4 +95,5 @@ $(function(){
 		}
 
 	})
+
 })
