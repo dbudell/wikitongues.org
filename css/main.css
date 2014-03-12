@@ -30,13 +30,15 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background: background: rgba(17,35,36,1);
+    text-shadow: 0px 0px 1px #f3f3f3;
+    color: #f1f1f1;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+    background: rgba(17,35,36,1);
+    text-shadow: 0px 0px 1px #f3f3f3;
+    color: #f1f1f1;
 }
 
 /*

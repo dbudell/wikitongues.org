@@ -14,7 +14,7 @@ $(function(){
 				        $('body').css('overflow', 'visible')
 				    }
 				})
-
+		
 	function contactResize () {
 		var screenHeight = $(window).innerHeight(),
 		buttonHeight = $("#contact-form input").outerHeight(),
@@ -26,7 +26,6 @@ $(function(){
 	$(window).resize(function(){
 		contactResize()
 	})
-
 
 	$('button#get-involved').on('click', function(){
 		contactResize()
