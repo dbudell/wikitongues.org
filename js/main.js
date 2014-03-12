@@ -14,13 +14,17 @@ $(function(){
 				        $('body').css('overflow', 'visible')
 				    }
 				})
-		
+
 	function contactResize () {
 		var screenHeight = $(window).innerHeight(),
-		buttonHeight = $("#contact-form input").outerHeight(),
-		modalHeight = screenHeight - (36+60+60+70+20)
+		modalHeight = screenHeight - (246)
+		mobileModalHeight = screenHeight - (246)
 
-		$('#overlay #contact-form #message').css('height',modalHeight)
+		if($(window).width() > 480) {
+				$('#overlay #contact-form #message').css('height',modalHeight)
+			} else {
+				$('#overlay #contact-form #message').css('height',mobileModalHeight)
+			}
 	}
 
 	$(window).resize(function(){

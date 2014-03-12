@@ -77,7 +77,7 @@
     margin: 0;
   }
   #overlay #contact-form textarea {
-    height: 180px;
+    height: 180px !important;
   }
 }
 /* Smartphones (landscape) ----------- */
