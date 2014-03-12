@@ -14,7 +14,7 @@ $(function(){
 				        $('body').css('overflow', 'visible')
 				    }
 				}),
-		 frameSet = $('html').closest('frameset'),
+		 frameSet = $('html.js').closest('frameset'),
     		 metaHead = frameSet.prev('head')
 
 	 metaHead.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
