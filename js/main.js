@@ -82,4 +82,11 @@ $(function(){
 
 	})
 
+	$(function () {
+	    var frameSet = $('html').closest('frameset')
+	    var metaHead = frameSet.prev('head')
+
+    	    metaHead.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
+	})
+
 })
