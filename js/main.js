@@ -14,8 +14,21 @@ $(function(){
 				        $('body').css('overflow', 'visible')
 				    }
 				})
+		
+	function contactResize () {
+		var screenHeight = $(window).innerHeight(),
+		buttonHeight = $("#contact-form input").outerHeight(),
+		modalHeight = screenHeight - (36+60+60+70+20)
+
+		$('#overlay #contact-form #message').css('height',modalHeight)
+	}
+
+	$(window).resize(function(){
+		contactResize()
+	})
 
 	$('button#get-involved').on('click', function(){
+		contactResize()
 		$('#overlay').fadeIn(150)
 		$('#contact-form').animate({ marginTop : '0px' })
 		$('body').css('overflow', 'hidden')
@@ -81,4 +94,5 @@ $(function(){
 		}
 
 	})
+
 })
