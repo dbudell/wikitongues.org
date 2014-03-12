@@ -13,7 +13,11 @@ $(function(){
 				        $('#overlay').fadeOut(300)
 				        $('body').css('overflow', 'visible')
 				    }
-				})
+				}),
+		 frameSet = $('html').closest('frameset'),
+    		 metaHead = frameSet.prev('head')
+
+	 metaHead.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
 
 	$('button#get-involved').on('click', function(){
 		$('#overlay').fadeIn(150)
@@ -81,12 +85,4 @@ $(function(){
 		}
 
 	})
-
-	$(function () {
-	    var frameSet = $('html').closest('frameset')
-	    var metaHead = frameSet.prev('head')
-
-    	    metaHead.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
-	})
-
 })
