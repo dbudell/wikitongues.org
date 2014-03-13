@@ -125,7 +125,6 @@ h1 {
     margin:-0 0 20px 0;
     font-weight:800;
     font-size: 2.8em;
-    text-align: center;
     line-height: 1em;
 }
 
@@ -202,7 +201,7 @@ button:focus {
 }
 
 #active {
-    padding:5px;
+    padding:5px 10px;
     background:rgba(17,35,36,1);
     color:rgb(255,255,255);
 }
