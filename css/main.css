@@ -109,6 +109,11 @@ body {
     color:rgba(17,35,36,1);
     background:rgba(240,240,240,1);
     text-shadow:1px 1px 0 rgb(255,255,255);
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -ms-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
 }
 
 header, footer {
@@ -150,6 +155,11 @@ ul li {
 .rtl {
     direction:rtl;
     text-align:right;
+}
+
+.rtl-center {
+    direction:rtl;
+    text-align:center;
 }
 
 .content-wrapper {
@@ -204,10 +214,6 @@ button:focus {
     padding:5px 10px;
     background:rgba(17,35,36,1);
     color:rgb(255,255,255);
-}
-
-#hebrew {
-    font-family:'Alef',helvetica;
 }
 
 #social-media {
