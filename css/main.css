@@ -255,7 +255,7 @@ button:focus {
     background:rgb(63,114,155);
 }
 
-#social-media li:hover, #get-involved:hover {
+#social-media li:hover a, #get-involved:hover {
     background:rgb(255,195,40);
 }
 
