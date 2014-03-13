@@ -44,6 +44,23 @@ $(function(){
 
 		var activeLanguage = $(this).text()
 
+		if(activeLanguage === 'עברית'){
+			if($('body').hasClass('rtl')) {
+			} else {
+				$('body').addClass('rtl')
+			}			
+		} else if (activeLanguage === 'العربية') {
+			if($('body').hasClass('rtl')) {
+			} else {
+				$('body').addClass('rtl')
+			}
+		} else {
+			if($('body').hasClass('rtl')) {
+				$('body').removeClass('rtl')
+				$('body').css('direction','ltr')
+			} else { }
+		}
+
 		$('#active').removeAttr('id','active')
 		$(this).attr('id','active')
 		if(activeLanguage === 'Español'){
@@ -81,14 +98,35 @@ $(function(){
 			$('.first').text('Tarptautiškumą mylintys ')
 			$('.second').text(' ir')
 			$('footer p:last-child').text('© 2014 Wikitongues, Visos teisės saugomos.')
-		} /*else if (activeLanguage === 'עברית') {
-			$('h4').text('.כל שפה בעולם, לכולם')
-			$('#summary').text('הינו מאמץ קהילתי שמטרתו לאפשר לכל אדם בעולם גישה לכל 7,000 השפות הקיימות בעולם – הסיפורים והרגש שעומד מאחוריהם. בתיאום עם קהילת מתנדבים, אנחנו מחוייבים להראות לעולם את משמעותו האמיתי של הגִּוּוּן.')
-			$('#get-involved').text('Prisijunk ir Tu!')
-			$('.first').text('Tarptautiškumą mylintys ')
-			$('.second').text(' ir')
-			$('footer p:last-child').text('© 2014 Wikitongues, Visos teisės saugomos.')
-		} */ else {
+		} else if (activeLanguage === 'עברית') {
+			$('h4').text('כל שפה בעולם, לכולם.')
+			$('#summary').text('Wikitongues הינו מאמץ קהילתי שמטרתו לאפשר לכל אדם בעולם גישה לכל 7,000 השפות הקיימות בעולם – הסיפורים והרגש שעומד מאחוריהם. בתיאום עם קהילת מתנדבים, אנחנו מחוייבים להראות לעולם את משמעותו האמיתי של הגִּוּוּן.')
+			$('#get-involved').text('הצטרפו אלינו.')
+			$('.first').text('נעשה באהבה ')
+			$('.second').text(' ו -')
+			$('footer p:last-child').text('© 2014 Wikitongues, כל הזכויות שמורות.')
+		} else if (activeLanguage === 'العربية') {
+			$('h4').text('أي لغة في العالم هي لغة للجميع و')
+			$('#summary').text('ويكي تونق هي مجموعة تسعي لمنح كل الناس في العالم امكانية التعرف علي كل لغات العالم و هي سبعة الف لغة \(700\) و ما ورائها من قصص و احاسيس بالتنسيق مع مجموعة من المتطوعين نحن نركز علي تعريف العالم بالمعني الحقيقي للتنوع')
+			$('#get-involved').text('الانضمام إلينا.')
+			$('.first').text('شارك و نظم بواسطة ')
+			$('.second').text(' ')
+			$('footer p:last-child').text('© 2014 جميع الحقوق محفوظة لويكي تونق')
+		} else if (activeLanguage === 'Português') {
+			$('h4').text('Todas as linguas do mundo, para todos.')
+			$('#summary').text('Wikitongues é uma comunidade com o fim de trazer accesso para as quase 7000 linguas do mundo à todas as pessoas - suas histórias e emoções. Em conjunto a uma rede de voluntários, nos dedicamos a mostrar ao mundo o verdadeiro significado de diversidade.')
+			$('#get-involved').text('Participe.')
+			$('.first').text('Feito com amor internacional por ')
+			$('.second').text(' e')
+			$('footer p:last-child').text('© 2014 Wikitongues, Todos os direitos reservados.')
+		} else if (activeLanguage === 'Русский') {
+			$('h4').text('Каждый язык в мире для всех.')
+			$('#summary').text('Wikitongues является результатом коллективного усилия дать всем людям в мире доступ к 7000 языкам мира - к их историям и чувствам, стоящими за ними. Работая с сетью добровольцов, мы стремимся показать миру истинное значение разнообразия.')
+			$('#get-involved').text('Примите участие.')
+			$('.first').text('Организаторы ')
+			$('.second').text(' и')
+			$('footer p:last-child').text('© 2014 Wikitongues, Все права защищены')
+		} else {
 			$('h4').text('Every language in the world, for everyone.')
 			$('#summary').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
 			$('#get-involved').text('Get involved.')

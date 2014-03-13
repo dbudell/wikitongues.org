@@ -148,6 +148,11 @@ ul li {
     display:inline-block;
 }
 
+.rtl {
+    direction:rtl;
+    text-align:right;
+}
+
 .content-wrapper {
     width:1280px;
     margin:30px auto 0;
