@@ -30,12 +30,14 @@ html {
  */
 
 ::-moz-selection {
-    background: background: rgba(19,74,101,.6);
+    background:rgb(19,74,101);
+    background:rgba(19,74,101,.6);
     color:#fff;
     text-shadow:none;
 }
 
 ::selection {
+    background:rgb(19,74,101);
     background: rgba(19,74,101,.6);
     color:#fff;
     text-shadow:none;
@@ -106,14 +108,19 @@ html {
 body {
     font-size:6rem;
     font-family:'Raleway',sans-serif;
-    color:rgba(17,35,36,1);
-    background:rgba(240,240,240,1);
+    color:rgb(17,35,36);
+    background:rgb(240,240,240);
     text-shadow:1px 1px 0 rgb(255,255,255);
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -ms-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
 }
 
 header, footer {
     width:100%;
-    background:rgba(17,35,36,1);
+    background:rgb(17,35,36);
 }
 
 header {
@@ -152,6 +159,11 @@ ul li {
     text-align:right;
 }
 
+.rtl-center {
+    direction:rtl;
+    text-align:center;
+}
+
 .content-wrapper {
     width:1280px;
     margin:30px auto 0;
@@ -179,7 +191,7 @@ body > .content-wrapper div {
 
 button#get-involved {
     display: block;
-    background: rgba(17,35,36,1);
+    background: rgb(17,35,36);
     color: #fff;
     font-weight: 800;
     padding: 20px 0;
@@ -203,12 +215,8 @@ button:focus {
 
 #active {
     padding:5px 10px;
-    background:rgba(17,35,36,1);
+    background:rgb(17,35,36);
     color:rgb(255,255,255);
-}
-
-#hebrew {
-    font-family:'Alef',helvetica;
 }
 
 #social-media {
@@ -230,27 +238,27 @@ button:focus {
 }
 
 #social-media li:nth-child(1) {
-    background:rgba(177,35,36,1);
+    background:rgb(177,35,36);
 }
 
 #social-media li:nth-child(2) {
-    background:rgba(59,89,183,1);
+    background:rgb(59,89,183);
 }
 
 #social-media li:nth-child(3) {
-    background:rgba(92,144,203,1);
+    background:rgb(92,144,203);
 }
 
 #social-media li:nth-child(4) {
-    background:rgba(30,41,91,1);
+    background:rgb(30,41,91);
 }
 
 #social-media li:nth-child(5) {
-    background:rgba(63,114,155,1);
+    background:rgb(63,114,155);
 }
 
 #social-media li:hover, #get-involved:hover {
-    background:rgba(255,195,40,1);
+    background:rgb(255,195,40);
 }
 
 #social-media li img {
@@ -287,6 +295,7 @@ footer .content-wrapper p, footer .content-wrapper a {
     left:0;
     width:100%;
     height:100%;
+    background:rgb(17,35,36);
     background:rgba(17,35,36,.97);
     cursor:pointer;
 }
@@ -305,7 +314,7 @@ footer .content-wrapper p, footer .content-wrapper a {
     width:100%;
     resize:none;
     font-family:'Raleway',helvetica;
-    color:rgba(17,35,36,1);
+    color:rgb(17,35,36);
     -webkit-transition: margin-top .2s ease-in-out;
     -moz-transition: margin-top .2s ease-in-out;
     -ms-transition: margin-top .2s ease-in-out;
@@ -344,7 +353,7 @@ footer .content-wrapper p, footer .content-wrapper a {
 }
 
 #contact-form input:hover, #contact-form textarea:hover, #contact-form *:focus {
-    background:rgba(245,245,245,1);
+    background:rgb(245,245,245);
     outline:none;
 }
 
