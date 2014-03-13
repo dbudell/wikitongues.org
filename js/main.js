@@ -42,7 +42,9 @@ $(function(){
 
 	$('.language-options li button').on('click', function(){
 
-		var activeLanguage = $(this).text()
+		var activeLanguage = $(this).text(),
+			rightToLeft = $('ul.language-options, .content-wrapper > h1, h4, #summary, #name, #email, #message'),
+			rightToLeftCenterAlign = $('#get-involved, #submit, footer')
 
 		if(activeLanguage === 'עברית'){
 			if($('body').hasClass('rtl')) {
