@@ -211,6 +211,7 @@ button:focus {
     background:none;
     padding:0;
     font-family:'Raleway',helvetica;
+    font-weight: 100;
 }
 
 #active {
