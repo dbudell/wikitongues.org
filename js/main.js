@@ -43,18 +43,18 @@ $(function(){
 	$('.language-options li button').on('click', function(){
 
 		var activeLanguage = $(this).text(),
-			rightToLeft = $('ul.language-options, h1, h4, #summary'),
+			rightToLeft = $('ul.language-options, h1.logotype, h4, #summary, #contact-form input, #contact-form textarea'),
 			rightToLeftCenterAlign = $('#get-involved, footer')
 
 		if(activeLanguage === 'עברית'){
 			if($(rightToLeft).hasClass('rtl')) {
 			} else {
 				$(rightToLeft).addClass('rtl')
-			}	
+			}
 			if($(rightToLeftCenterAlign).hasClass('rtl-center')) {
 			} else {
 				$(rightToLeftCenterAlign).addClass('rtl-center')
-			}			
+			}
 		} else if (activeLanguage === 'العربية') {
 			if($(rightToLeft).hasClass('rtl')) {
 			} else {
@@ -63,7 +63,7 @@ $(function(){
 			if($(rightToLeftCenterAlign).hasClass('rtl-center')) {
 			} else {
 				$(rightToLeftCenterAlign).addClass('rtl-center')
-			}	
+			}
 		} else {
 			if($(rightToLeft).hasClass('rtl')) {
 				$(rightToLeft).removeClass('rtl')
