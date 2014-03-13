@@ -101,7 +101,7 @@ $(function(){
 			$('#submit').attr('value','Enviar')
 		} else if (activeLanguage === 'Italiano') {
 			$('h4').text('Ogni lingua del mondo, per tutti.')
-			$('#summary').text('Wikitongues è una comunità che prova a dare accesso a tutte le persone del mondo a tutte le 7.000 lingue del mondo — storie e sentimenti nascosti dietro ognuna.Con l\'aiuto di una rete di volontari, ci dedichiamo a mostrare al mondo il vero significato di diversità.')
+			$('#summary').text('Wikitongues è una comunità che prova a dare accesso a tutte le persone del mondo a tutte le 7.000 lingue del mondo — storie e sentimenti nascosti dietro ognuna. Con l\'aiuto di una rete di volontari, ci dedichiamo a mostrare al mondo il vero significato di diversità.')
 			$('#get-involved').text('Resta coinvolto.')
 			$('.first').text('Fatto con amore internazionale da ')
 			$('.second').text(' e')
