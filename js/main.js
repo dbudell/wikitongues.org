@@ -151,6 +151,5 @@ $(function(){
 			$('#message').attr('placeholder','What\'s up?')
 			$('#submit').attr('value','Send')
 		}
-
 	})
 })
