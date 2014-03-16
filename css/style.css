@@ -1,3 +1,10 @@
+html,
+button,
+input,
+select,
+textarea {
+  color: #11242f;
+}
 ::-moz-selection {
   background: #6a8b9b;
   color: #fff;
@@ -11,13 +18,13 @@
 html {
   font-size: 62.5%;
   line-height: 1.4;
-  background: #11242f;
+  background: #0e1f28;
 }
 body {
   font-size: 6rem;
   font-family: 'Raleway', sans-serif;
   color: #11242f;
-  background: #f0f0f0;
+  background: #fafafa;
   text-shadow: 1px 1px 0 #fff;
   border-top: 20px solid #11242f;
   -webkit-transition: all 0.2s ease-in-out;
@@ -42,6 +49,7 @@ body .content-wrapper .language-options {
   clear: both;
   float: left;
   display: inline-block;
+  margin-bottom: 20px;
 }
 body .content-wrapper .language-options li {
   font-size: 2rem;
@@ -54,15 +62,9 @@ body .content-wrapper .language-options li button {
   font-weight: 100;
   height: 38px;
 }
-body .content-wrapper .language-options li button:hover {
-  background: #ffc328;
-}
-body .content-wrapper .language-options li button#active {
+body .content-wrapper .language-options li button.active {
   background: #11242f;
   color: #fff;
-}
-body .content-wrapper .language-options li button#active:hover {
-  background: #ffc328;
 }
 body .content-wrapper .logotype {
   clear: both;
@@ -178,6 +180,14 @@ footer .content-wrapper a {
   background: rgba(17,35,36,0.97);
   cursor: pointer;
 }
+#overlay .displayed {
+  margin-top: 0 !important;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  -moz-transition: margin-top 0.2s ease-in-out;
+  -ms-transition: margin-top 0.2s ease-in-out;
+  -o-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
+}
 #overlay #contact-form {
   width: 650px;
   margin: auto;
@@ -187,6 +197,11 @@ footer .content-wrapper a {
   background: #fff;
   cursor: initial;
   overflow: auto;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  -moz-transition: margin-top 0.2s ease-in-out;
+  -ms-transition: margin-top 0.2s ease-in-out;
+  -o-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
 }
 #overlay #contact-form * {
   width: 100%;

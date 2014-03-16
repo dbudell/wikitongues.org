@@ -1,11 +1,7 @@
 $(function(){
 
-
 	// Logotype resize
 	$(".logotype").fitText(.712)
-
-
-
 
 	$('.language-options li button').on('click', function(){
 

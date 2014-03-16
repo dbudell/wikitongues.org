@@ -2,6 +2,13 @@ $color = #11242f
 $selectColor = #6A8B9B
 $hoverColor = #FFC328
 
+html,
+button,
+input,
+select,
+textarea {
+    color: $color;
+}
 
 ::-moz-selection {
     background:$selectColor;
@@ -18,15 +25,14 @@ $hoverColor = #FFC328
 html {
     font-size:62.5%;
     line-height: 1.4;
-    background:$color;
+    background:darken($color,15%);
 }
-
 
 body {
     font-size:6rem;
     font-family:'Raleway',sans-serif;
     color:$color;
-    background:rgb(240,240,240);
+    background:#fafafa;
     text-shadow:1px 1px 0 rgb(255,255,255);
     border-top:20px solid $color;
     -webkit-transition:all .2s ease-in-out;
@@ -53,6 +59,7 @@ body {
             clear:both;
             float:left;
             display:inline-block;
+            margin-bottom:20px;
 
             li{
                 font-size:2rem;
@@ -65,17 +72,9 @@ body {
                     font-weight: 100;
                     height:38px;
 
-                    &:hover{
-                        background:$hoverColor;
-                    }
-
-                    &#active {
+                    &.active {
                         background:$color;
                         color:rgb(255,255,255);
-
-                        &:hover{
-                            background:$hoverColor;
-                        }
                     }
                 }
             }
@@ -187,9 +186,6 @@ body {
     }
 }
 
-
-
-
 footer {
     width:100%;
     background:$color;
@@ -223,6 +219,15 @@ footer {
     background:rgba(17,35,36,.97);
     cursor:pointer;
 
+    .displayed{
+        margin-top:0 !important;
+        -webkit-transition: margin-top .2s ease-in-out;
+        -moz-transition: margin-top .2s ease-in-out;
+        -ms-transition: margin-top .2s ease-in-out;
+        -o-transition: margin-top .2s ease-in-out;
+        transition: margin-top .2s ease-in-out;
+    }
+
     #contact-form {
         width:650px;
         margin:auto;
@@ -232,6 +237,11 @@ footer {
         background:#fff;
         cursor:initial;
         overflow:auto;
+        -webkit-transition: margin-top .2s ease-in-out;
+        -moz-transition: margin-top .2s ease-in-out;
+        -ms-transition: margin-top .2s ease-in-out;
+        -o-transition: margin-top .2s ease-in-out;
+        transition: margin-top .2s ease-in-out;
 
         *{
             width:100%;
@@ -289,7 +299,6 @@ footer {
         width:90% !important;
     }
 }
-
 
 button {
     border:none;

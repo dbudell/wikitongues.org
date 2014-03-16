@@ -6,7 +6,7 @@ $(document).ready(function(){
         <input id="name" name="name" type="text" placeholder="What&#39;s your name?">\
         <input id="email" name="email" type="text" placeholder="What&#39;s your email?">\
         <textarea id="message" name="message" placeholder="Whats up?"></textarea>\
-        <input id="submit" type="submit" value="Submit">\
+        <input id="submit" type="submit" value="Send">\
       </form>\
       ')
   })
