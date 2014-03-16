@@ -1,50 +1,13 @@
 $(function(){
-	var clickOut = $('#overlay').on('click', function(e){
-						if (e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
-							$('#contact-form').animate({ marginTop : '-725px' }, 300)
-							$(this).fadeOut(300)
-							$('body').css('overflow', 'visible')
-						}
-					}),
-		escOut = $('body').on('keydown', function(e){
-					if ((e.keyCode || e.which) == 27)
-				    {
-				    	$('#contact-form').animate({ marginTop : '-725px' })
-				        $('#overlay').fadeOut(300)
-				        $('body').css('overflow', 'visible')
-				    }
-				})
 
-	function contactResize () {
-		var screenHeight = $(window).innerHeight(),
-		modalHeight = screenHeight - (246)
-		mobileModalHeight = screenHeight - (246)
-
-		if($(window).width() > 480) {
-				$('#overlay #contact-form #message').css('height',modalHeight)
-			} else {
-				$('#overlay #contact-form #message').css('height',mobileModalHeight)
-			}
-	}
-
-	$(window).resize(function(){
-		contactResize()
-	})
-
-	$('button#get-involved').on('click', function(){
-		contactResize()
-		$('#overlay').fadeIn(150)
-		$('#contact-form').animate({ marginTop : '0px' })
-		$('body').css('overflow', 'hidden')
-		clickOut()
-		escOut()
-	})
+	// Logotype resize
+	$(".logotype").fitText(.712)
 
 	$('.language-options li button').on('click', function(){
 
 		var activeLanguage = $(this).text(),
 			rightToLeft = $('ul.language-options, h1.logotype, h4, #summary, #contact-form input, #contact-form textarea'),
-			rightToLeftCenterAlign = $('#get-involved, footer')
+			rightToLeftCenterAlign = $('#get-involved, footer, #overlay #contact-form .rtl')
 
 		if(activeLanguage === 'עברית'){
 			if($(rightToLeft).hasClass('rtl')) {
@@ -75,8 +38,8 @@ $(function(){
 			} else { }
 		}
 
-		$('#active').removeAttr('id','active')
-		$(this).attr('id','active')
+		$('.active').removeClass('active')
+		$(this).attr('class','active')
 		if(activeLanguage === 'Español'){
 			$('h4').text('Todos los idiomas del mundo, para todos.')
 			$('#summary').text('Wikitongues es un esfuerzo comunitario para que todas las personas puedan acceder a las 7.000 lenguas que existen y también las historias y los sentimientos detrás de ellas. Coordinados con una red de voluntarios, nos dedicamos a enseñar al mundo el verdadero significado de diversidad.')
@@ -177,7 +140,7 @@ $(function(){
 			$('#message').attr('placeholder','как дела?')
 			$('#submit').attr('value','послать')
 		} else {
-			$('h4').text('Every language in the world, for everyone.')
+			$('h4').html('Every language in the world, <span class="no-wrap">for everyone.</span>')
 			$('#summary').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
 			$('#get-involved').text('Get involved.')
 			$('.first').text('Made with international love ')
@@ -188,7 +151,5 @@ $(function(){
 			$('#message').attr('placeholder','What\'s up?')
 			$('#submit').attr('value','Send')
 		}
-
 	})
-
 })
