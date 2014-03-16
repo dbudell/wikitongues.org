@@ -35,7 +35,7 @@ $(function(){
 
 		var activeLanguage = $(this).text(),
 			rightToLeft = $('ul.language-options, h1.logotype, h4, #summary, #contact-form input, #contact-form textarea'),
-			rightToLeftCenterAlign = $('#get-involved, footer')
+			rightToLeftCenterAlign = $('#get-involved, footer, #overlay #contact-form .rtl')
 
 		if(activeLanguage === 'עברית'){
 			if($(rightToLeft).hasClass('rtl')) {
@@ -168,7 +168,7 @@ $(function(){
 			$('#message').attr('placeholder','как дела?')
 			$('#submit').attr('value','послать')
 		} else {
-			$('h4').text('Every language in the world, for everyone.')
+			$('h4').html('Every language in the world, <span class="no-wrap">for everyone.</span>')
 			$('#summary').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
 			$('#get-involved').text('Get involved.')
 			$('.first').text('Made with international love ')
@@ -181,5 +181,4 @@ $(function(){
 		}
 
 	})
-
 })
