@@ -1,35 +1,11 @@
 $(function(){
-	var clickOut = $('#overlay').on('click', function(e){
-						if (e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
-							$('#contact-form').animate({ marginTop : '-725px' }, 300)
-							$(this).fadeOut(300)
-							$('body').css('overflow', 'visible')
-						}
-					}),
-		escOut = $('body').on('keydown', function(e){
-					if ((e.keyCode || e.which) == 27)
-				    {
-				    	$('#contact-form').animate({ marginTop : '-725px' })
-				        $('#overlay').fadeOut(300)
-				        $('body').css('overflow', 'visible')
-				    }
-				})
+
 
 	// Logotype resize
 	$(".logotype").fitText(.712)
 
-	$(window).resize(function(){
-		contactResize()
-	})
 
-	$('button#get-involved').on('click', function(){
-		contactResize()
-		$('#overlay').fadeIn(150)
-		$('#contact-form').animate({ marginTop : '0px' })
-		$('body').css('overflow', 'hidden')
-		clickOut()
-		escOut()
-	})
+
 
 	$('.language-options li button').on('click', function(){
 
@@ -66,8 +42,8 @@ $(function(){
 			} else { }
 		}
 
-		$('#active').removeAttr('id','active')
-		$(this).attr('id','active')
+		$('.active').removeClass('active')
+		$(this).attr('class','active')
 		if(activeLanguage === 'Español'){
 			$('h4').text('Todos los idiomas del mundo, para todos.')
 			$('#summary').text('Wikitongues es un esfuerzo comunitario para que todas las personas puedan acceder a las 7.000 lenguas que existen y también las historias y los sentimientos detrás de ellas. Coordinados con una red de voluntarios, nos dedicamos a enseñar al mundo el verdadero significado de diversidad.')
