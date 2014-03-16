@@ -25,7 +25,7 @@ function contactForm () {
     $('#contact-form').addClass('displayed')
     $('body').css('overflow', 'hidden')
     clickOut()
-    escOut()
+    escapeOut()
   })
 }
 
