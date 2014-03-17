@@ -5,44 +5,16 @@ $(function(){
 
 	$('.language-options li button').on('click', function(){
 
-		var activeLanguage = $(this).text(),
-			rightToLeft = $('ul.language-options, h1.logotype, h4, #summary, #contact-form input, #contact-form textarea'),
-			rightToLeftCenterAlign = $('#get-involved, footer, #overlay #contact-form .rtl')
-
-		if(activeLanguage === 'עברית'){
-			if($(rightToLeft).hasClass('rtl')) {
-			} else {
-				$(rightToLeft).addClass('rtl')
-			}
-			if($(rightToLeftCenterAlign).hasClass('rtl-center')) {
-			} else {
-				$(rightToLeftCenterAlign).addClass('rtl-center')
-			}
-		} else if (activeLanguage === 'العربية') {
-			if($(rightToLeft).hasClass('rtl')) {
-			} else {
-				$(rightToLeft).addClass('rtl')
-			}
-			if($(rightToLeftCenterAlign).hasClass('rtl-center')) {
-			} else {
-				$(rightToLeftCenterAlign).addClass('rtl-center')
-			}
-		} else {
-			if($(rightToLeft).hasClass('rtl')) {
-				$(rightToLeft).removeClass('rtl')
-				$(rightToLeft).css('direction','ltr')
-			} else { }
-			if($(rightToLeftCenterAlign).hasClass('rtl-center')) {
-				$(rightToLeftCenterAlign).removeClass('rtl-center')
-				$(rightToLeftCenterAlign).css('direction','ltr')
-			} else { }
-		}
+		var activeLanguage = $(this).text()
 
 		$('.active').removeClass('active')
+
 		$(this).attr('class','active')
+
 		if(activeLanguage === 'Español'){
-			$('h4').text('Todos los idiomas del mundo, para todos.')
+			$('.slogan').text('Todos los idiomas del mundo, para todos.')
 			$('#summary').text('Wikitongues es un esfuerzo comunitario para que todas las personas puedan acceder a las 7.000 lenguas que existen y también las historias y los sentimientos detrás de ellas. Coordinados con una red de voluntarios, nos dedicamos a enseñar al mundo el verdadero significado de diversidad.')
+			$('.mobile-text').text('Wikitongues es un esfuerzo comunitario para que todas las personas puedan acceder a las 7.000 lenguas que existen y también las historias y los sentimientos detrás de ellas. Coordinados con una red de voluntarios, nos dedicamos a enseñar al mundo el verdadero significado de diversidad.')
 			$('#get-involved').text('Involúcrate.')
 			$('.first').text('Hecho con amor internacional por ')
 			$('.second').text(' y')
@@ -52,8 +24,9 @@ $(function(){
 			$('#message').attr('placeholder','¿Qué tal?')
 			$('#submit').attr('value','Enviar')
 		} else if (activeLanguage === 'Català') {
-			$('h4').text('Tots els idiomes del món, per a tothom.')
+			$('.slogan').text('Tots els idiomes del món, per a tothom.')
 			$('#summary').text('Wikitongues és un esforç comunitari perquè totes les persones puguin accedir a les 7.000 llengües que existeixen i també les històries i els sentiments darrere d\'elles. Coordinats amb una xarxa de voluntaris, ens dediquem a ensenyar al món el veritable significat de diversitat.')
+			$('.mobile-text').text('Wikitongues és un esforç comunitari perquè totes les persones puguin accedir a les 7.000 llengües que existeixen i també les històries i els sentiments darrere d\'elles. Coordinats amb una xarxa de voluntaris, ens dediquem a ensenyar al món el veritable significat de diversitat.')
 			$('#get-involved').text('Involucra\'t.')
 			$('.first').text('Fet amb amor internacional per ')
 			$('.second').text(' i')
@@ -63,8 +36,9 @@ $(function(){
 			$('#message').attr('placeholder','Què tal?')
 			$('#submit').attr('value','Enviar')
 		} else if (activeLanguage === 'Italiano') {
-			$('h4').text('Ogni lingua del mondo, per tutti.')
+			$('.slogan').text('Ogni lingua del mondo, per tutti.')
 			$('#summary').text('Wikitongues è una comunità che prova a dare accesso a tutte le persone del mondo a tutte le 7.000 lingue del mondo — storie e sentimenti nascosti dietro ognuna. Con l\'aiuto di una rete di volontari, ci dedichiamo a mostrare al mondo il vero significato di diversità.')
+			$('.mobile-text').text('Wikitongues è una comunità che prova a dare accesso a tutte le persone del mondo a tutte le 7.000 lingue del mondo — storie e sentimenti nascosti dietro ognuna. Con l\'aiuto di una rete di volontari, ci dedichiamo a mostrare al mondo il vero significato di diversità.')
 			$('#get-involved').text('Resta coinvolto.')
 			$('.first').text('Fatto con amore internazionale da ')
 			$('.second').text(' e')
@@ -74,8 +48,9 @@ $(function(){
 			$('#message').attr('placeholder','Il tuo messaggio?')
 			$('#submit').attr('value','Inviare')
 		} else if (activeLanguage === 'Deutsch') {
-			$('h4').text('Jede Sprache der Welt, für alle.')
+			$('.slogan').text('Jede Sprache der Welt, für alle.')
 			$('#summary').text('Wikitongues ist eine Gemeinschaft deren Anstrengung es ist den Menschen in der Welt Zugang zu allen 7000 Sprachen in der Welt zu geben - die Geschichte und die Gefühle dahinter. In Zusammenarbeit mit einem Netzwerk von Freiwilligen bemühen wir uns der Welt die wahre Bedeutung von Diversität zu zeigen.')
+			$('.mobile-text').text('Wikitongues ist eine Gemeinschaft deren Anstrengung es ist den Menschen in der Welt Zugang zu allen 7000 Sprachen in der Welt zu geben - die Geschichte und die Gefühle dahinter. In Zusammenarbeit mit einem Netzwerk von Freiwilligen bemühen wir uns der Welt die wahre Bedeutung von Diversität zu zeigen.')
 			$('#get-involved').text('Mach mit!')
 			$('.first').text('Mit internationaler Liebe gemacht ')
 			$('.second').text(' und')
@@ -85,8 +60,9 @@ $(function(){
 			$('#message').attr('placeholder','Wie geht\'s?')
 			$('#submit').attr('value','Senden')
 		} else if (activeLanguage === 'Lietuvių') {
-			$('h4').text('Visos pasaulio kalbos - kiekvienam.')
+			$('.slogan').text('Visos pasaulio kalbos - kiekvienam.')
 			$('#summary').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
+			$('.mobile-text').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
 			$('#get-involved').text('Prisijunk ir Tu!')
 			$('.first').text('Tarptautiškumą mylintys ')
 			$('.second').text(' ir')
@@ -96,8 +72,9 @@ $(function(){
 			$('#message').attr('placeholder','Kaip reikalai?')
 			$('#submit').attr('value','Siųsti')
 		} else if (activeLanguage === 'עברית') {
-			$('h4').text('כל שפה בעולם, לכולם.')
+			$('.slogan').text('כל שפה בעולם, לכולם.')
 			$('#summary').text('Wikitongues הינו מאמץ קהילתי שמטרתו לאפשר לכל אדם בעולם גישה לכל 7,000 השפות הקיימות בעולם – הסיפורים והרגש שעומד מאחוריהם. בתיאום עם קהילת מתנדבים, אנחנו מחוייבים להראות לעולם את משמעותו האמיתי של הגִּוּוּן.')
+			$('.mobile-text').text('Wikitongues הינו מאמץ קהילתי שמטרתו לאפשר לכל אדם בעולם גישה לכל 7,000 השפות הקיימות בעולם – הסיפורים והרגש שעומד מאחוריהם. בתיאום עם קהילת מתנדבים, אנחנו מחוייבים להראות לעולם את משמעותו האמיתי של הגִּוּוּן.')
 			$('#get-involved').text('הצטרפו אלינו.')
 			$('.first').text('נעשה באהבה ')
 			$('.second').text(' ו -')
@@ -107,8 +84,9 @@ $(function(){
 			$('#message').attr('placeholder','מה קורה?')
 			$('#submit').attr('value','מה קורה?')
 		} else if (activeLanguage === 'العربية') {
-			$('h4').text('أي لغة في العالم هي لغة للجميع و')
+			$('.slogan').text('أي لغة في العالم هي لغة للجميع و')
 			$('#summary').text('ويكي تونق هي مجموعة تسعي لمنح كل الناس في العالم امكانية التعرف علي كل لغات العالم و هي سبعة الف لغة \(7000\) و ما ورائها من قصص و احاسيس بالتنسيق مع مجموعة من المتطوعين نحن نركز علي تعريف العالم بالمعني الحقيقي للتنوع')
+			$('.mobile-text').text('ويكي تونق هي مجموعة تسعي لمنح كل الناس في العالم امكانية التعرف علي كل لغات العالم و هي سبعة الف لغة \(7000\) و ما ورائها من قصص و احاسيس بالتنسيق مع مجموعة من المتطوعين نحن نركز علي تعريف العالم بالمعني الحقيقي للتنوع')
 			$('#get-involved').text('الانضمام إلينا.')
 			$('.first').text('شارك و نظم بواسطة ')
 			$('.second').text(' ')
@@ -118,8 +96,9 @@ $(function(){
 			$('#message').attr('placeholder','ما الأمر؟?')
 			$('#submit').attr('value','إرسال?')
 		} else if (activeLanguage === 'Português') {
-			$('h4').text('Todas as linguas do mundo, para todos.')
+			$('.slogan').text('Todas as linguas do mundo, para todos.')
 			$('#summary').text('Wikitongues é uma comunidade com o fim de trazer accesso para as quase 7000 linguas do mundo à todas as pessoas - suas histórias e emoções. Em conjunto a uma rede de voluntários, nos dedicamos a mostrar ao mundo o verdadeiro significado de diversidade.')
+			$('.mobile-text').text('Wikitongues é uma comunidade com o fim de trazer accesso para as quase 7000 linguas do mundo à todas as pessoas - suas histórias e emoções. Em conjunto a uma rede de voluntários, nos dedicamos a mostrar ao mundo o verdadeiro significado de diversidade.')
 			$('#get-involved').text('Participe.')
 			$('.first').text('Feito com amor internacional por ')
 			$('.second').text(' e')
@@ -129,8 +108,9 @@ $(function(){
 			$('#message').attr('placeholder','A sua mensagem?')
 			$('#submit').attr('value','Enviar')
 		} else if (activeLanguage === 'Русский') {
-			$('h4').text('Каждый язык в мире для всех.')
+			$('.slogan').text('Каждый язык в мире для всех.')
 			$('#summary').text('Wikitongues является результатом коллективного усилия дать всем людям в мире доступ к 7000 языкам мира - к их историям и чувствам, стоящими за ними. Работая с сетью добровольцов, мы стремимся показать миру истинное значение разнообразия.')
+			$('.mobile-text').text('Wikitongues является результатом коллективного усилия дать всем людям в мире доступ к 7000 языкам мира - к их историям и чувствам, стоящими за ними. Работая с сетью добровольцов, мы стремимся показать миру истинное значение разнообразия.')
 			$('#get-involved').text('Примите участие.')
 			$('.first').text('Организаторы ')
 			$('.second').text(' и')
@@ -139,17 +119,32 @@ $(function(){
 			$('#email').attr('placeholder','электронный адрес?')
 			$('#message').attr('placeholder','как дела?')
 			$('#submit').attr('value','послать')
-		} else {
-			$('h4').html('Every language in the world, <span class="no-wrap">for everyone.</span>')
+		} else if (activeLanguage === 'Afrikaans') {
+			$('.slogan').text('Lke taal in die wêreld, vir almal.')
+			$('#summary').text("Wikitongues is 'n gemeenskap poging om vir al die mense in die wêreld toegang te tot al die 7000 wêreldstale en die stories en emoties agter hulle. In samenwerking met 'n netwerk van vrywilligers, is ons toegewyd om aan die wêreld die betekenis van diversiteit te wys.")
+			$('.mobile-text').text("Wikitongues is 'n gemeenskap poging om vir al die mense in die wêreld toegang te tot al die 7000 wêreldstale en die stories en emoties agter hulle. In samenwerking met 'n netwerk van vrywilligers, is ons toegewyd om aan die wêreld die betekenis van diversiteit te wys.")
+			$('#get-involved').text('Raak betrokke')
+			$('.first').text('Gemaak met die internasionale liefde deur ')
+			$('.second').text(' en')
+			$('footer p:last-child').text('© 2014 Wikitongues, Alle regte voorbehou')
+			$('#name').attr('placeholder','Wat is jou naam?')
+			$('#email').attr('placeholder','Wat is jou e-pos adres?')
+			$('#message').attr('placeholder','Hoe lyk dinge?')
+			$('#submit').attr('value','Stuur')
+		} else if (activeLanguage === 'English') {
+			$('.slogan').html('Every language in the world, <span class="no-wrap">for everyone.</span>')
 			$('#summary').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
+			$('.mobile-text').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
 			$('#get-involved').text('Get involved.')
 			$('.first').text('Made with international love ')
-			$('.second').text(' by')
+			$('.second').text(' and')
 			$('footer p:last-child').text('© 2014 Wikitongues, All Rights Reserved.')
 			$('#name').attr('placeholder','What\'s your name?')
 			$('#email').attr('placeholder','What\'s your email?')
 			$('#message').attr('placeholder','What\'s up?')
 			$('#submit').attr('value','Send')
+		} else {
+			console.log("Something's wrong")
 		}
 	})
 })

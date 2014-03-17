@@ -139,6 +139,7 @@ body {
             margin:20px 0 80px;
             width: 100%;
             display:block;
+            clear:both;
 
             li{
                 margin:0 -16px 0 0;
@@ -197,10 +198,13 @@ footer {
 
     .content-wrapper{
         margin: 0 auto;
+        display:inline-block;
 
         p {
             line-height: 1.8em;
             margin:0;
+            clear:both;
+            width:100%;
         }
 
         p, a {
@@ -305,11 +309,6 @@ footer {
 
 button {
     border:none;
-     -webkit-transition:background .2s ease-in-out;
-    -moz-transition:background .2s ease-in-out;
-    -ms-transition:background .2s ease-in-out;
-    -o-transition:background .2s ease-in-out;
-    transition:background .2s ease-in-out;
 
     &:focus {
         outline:none;
@@ -317,14 +316,10 @@ button {
 }
 
 .rtl{
-    direction:rtl;
+    direction:rtl!important;
     float:right !important;
 
     li{
         float:right !important;
     }
-}
-
-.rtl-center {
-    direction:rtl;
 }
