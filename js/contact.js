@@ -54,10 +54,11 @@ function contactResize () {
   mobileModalHeight = screenHeight - (246)
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-   console.log('Hit us up on Github @ https://github.com/wikitongues!')
   } else {
     $('#overlay #contact-form #message').css('height',modalHeight)
   }
+
+  console.log('Hit us up on Github @ https://github.com/wikitongues!')
 
   // if($(window).width() > 480) {
   //   $('#overlay #contact-form #message').css('height',modalHeight)
