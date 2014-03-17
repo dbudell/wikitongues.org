@@ -7,29 +7,29 @@
     font-size: 16px;
   }
   .content-wrapper .language-options {
-    display: none;
+    display: none !important;
   }
   .content-wrapper h1 {
     margin-top: 10px;
-    font-size: 2.5em;
+    font-size: 2.2em !important;
   }
   .content-wrapper h4 {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 400;
     margin-top: 20px;
   }
   .content-wrapper p {
-    font-size: 1em;
+    font-size: 1em !important;
     font-weight: 100;
     margin-top: 20px;
     display: none;
   }
   .content-wrapper p.mobile-text {
     margin-top: 0;
-    display: block;
+    display: block !important;
   }
   .content-wrapper #get-involved {
-    margin: 20px 0;
+    margin: 20px 0 !important;
     font-size: 2em;
   }
   .content-wrapper #social-media {
@@ -37,7 +37,7 @@
     margin: 5px 0 5px 0;
   }
   .content-wrapper #social-media li {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px 0 !important;
     width: 20%;
     float: left;
   }
@@ -57,11 +57,8 @@
     font-size: 0.8em;
     margin-top: 20px;
   }
-  #overlay {
-    width: 100%;
-  }
   #overlay #contact-form {
-    width: 100%;
+    width: 100% !important;
     box-sizing: border-box;
   }
   #overlay #contact-form h1 {
@@ -75,9 +72,11 @@
     border-top: none;
     border-bottom: 1px solid #eaeaea;
     margin: 0;
+    padding: 15px 7px !important;
   }
-  #overlay #contact-form textarea {
-    height: 180px !important;
+  #overlay #contact-form #message {
+    min-height: 160px !important;
+    height: 160px;
   }
 }
 /* Smartphones (landscape) ----------- */
