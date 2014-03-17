@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Español",
+        "direction":"ltr",
+        "slogan":"Todos los idiomas del mundo, para todos.",
+        "summary":"Wikitongues es un esfuerzo comunitario para que todas las personas puedan acceder a las 7.000 lenguas que existen y también las historias y los sentimientos detrás de ellas. Coordinados con una red de voluntarios, nos dedicamos a enseñar al mundo el verdadero significado de diversidad.",
+        "callToAction":"Involúcrate.",
+        "footerTag":"Hecho con amor internacional por ",
+        "footerTagComplement":" y",
+        "footerCopyright":"© 2014 Wikitongues, todos los derechos reservados.",
+        "contactFormName":"¿Cómo te llamas?",
+        "contactFormEmail":"¿Qué es tu correo electrónico?",
+        "contactFormMessage":"¿Qué tal?",
+        "contactFormSubmit":"Enviar"
+    }
+]

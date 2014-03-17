@@ -60,9 +60,4 @@ function contactResize () {
 
   console.log('Hit us up on Github @ https://github.com/wikitongues!')
 
-  // if($(window).width() > 480) {
-  //   $('#overlay #contact-form #message').css('height',modalHeight)
-  // } else {
-  //   $('#overlay #contact-form #message').css('height',mobileModalHeight)
-  // }
 }
