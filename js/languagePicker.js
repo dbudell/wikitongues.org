@@ -6,7 +6,7 @@ $(function(){
   languageModal()
 })
 
-var availableLanguage = ["English", "العربية", "Русский", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português"],
+var availableLanguage = ["English", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português"],
   languageLength = availableLanguage.length
 
 function createLanguageList () {
