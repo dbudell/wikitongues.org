@@ -46,25 +46,120 @@ body .content-wrapper {
   margin: 30px auto 0 auto;
 }
 body .content-wrapper .language-options {
+  display: none;
   clear: both;
   float: left;
   display: inline-block;
   margin-bottom: 20px;
+  height: 38px;
+  overflow: hidden;
 }
 body .content-wrapper .language-options li {
   font-size: 2rem;
   float: left;
 }
-body .content-wrapper .language-options li button {
+body .content-wrapper .language-options li .languageButton {
   background: none;
   padding: 5px 10px;
   font-family: 'Raleway', helvetica;
   font-weight: 100;
   height: 38px;
 }
-body .content-wrapper .language-options li button.active {
+body .content-wrapper .language-options li .languageButton.active {
   background: #11242f;
   color: #fff;
+}
+body .content-wrapper .language-modal {
+  background: none;
+  width: 100%;
+  position: fixed;
+  border-top: 20px solid #11242f;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: none;
+}
+body .content-wrapper .language-modal .modal-wrapper {
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+body .content-wrapper .language-modal .modal-wrapper .content-wrapper {
+  overflow: auto;
+  margin: 0 auto 30px auto;
+  padding-top: 30px;
+}
+body .content-wrapper .language-modal .modal-wrapper .content-wrapper.displayLanguageModal {
+  margin-top: 0 !important;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  -moz-transition: margin-top 0.2s ease-in-out;
+  -ms-transition: margin-top 0.2s ease-in-out;
+  -o-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
+}
+body .content-wrapper .language-modal .modal-wrapper .content-wrapper.hideLanguageModal {
+  margin-top: -200px;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  -moz-transition: margin-top 0.2s ease-in-out;
+  -ms-transition: margin-top 0.2s ease-in-out;
+  -o-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
+}
+body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options {
+  height: auto;
+  margin: auto;
+  display: block;
+}
+body .content-wrapper .language-modal .modal-wrapper .content-wrapper a {
+  text-decoration: none;
+  color: #c90007;
+  font-size: 2rem;
+  font-weight: 100;
+  margin: auto;
+}
+body .content-wrapper .language-modal .background {
+  display: none;
+  background: #11242f;
+  opacity: 0.97;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  cursor: pointer;
+}
+body .content-wrapper .moreLanguages {
+  height: 38px;
+  float: right;
+  border-radius: 2px;
+  font-family: 'Raleway', helvetica;
+  font-weight: 100;
+  font-size: 2rem;
+  width: 10px;
+  background-color: #11242f;
+  color: #11242f;
+  padding: 5px 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+body .content-wrapper .moreLanguages:hover {
+  width: initial;
+  color: #fff;
+  padding: 5px 13px;
+  background-color: #11242f;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 body .content-wrapper .logotype {
   clear: both;
@@ -183,8 +278,7 @@ footer .content-wrapper a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #11242f;
-  background: rgba(17,35,36,0.97);
+  background: rgba(17,36,47,0.97);
   cursor: pointer;
 }
 #overlay .displayed {
@@ -269,7 +363,6 @@ button:focus {
 }
 .rtl {
   direction: rtl !important;
-  float: right !important;
 }
 .rtl li {
   float: right !important;

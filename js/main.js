@@ -1,15 +1,14 @@
 $(function(){
-
 	// Logotype resize
 	$(".logotype").fitText(.712)
 
+	translate()
+})
+
+function translate (){
 	$('.language-options li button').on('click', function(){
 
 		var activeLanguage = $(this).text()
-
-		$('.active').removeClass('active')
-
-		$(this).attr('class','active')
 
 		if(activeLanguage === 'Español'){
 			$('.slogan').text('Todos los idiomas del mundo, para todos.')
@@ -120,7 +119,7 @@ $(function(){
 			$('#message').attr('placeholder','как дела?')
 			$('#submit').attr('value','послать')
 		} else if (activeLanguage === 'Afrikaans') {
-			$('.slogan').text('Lke taal in die wêreld, vir almal.')
+			$('.slogan').text('Elke taal in die wêreld, vir almal.')
 			$('#summary').text("Wikitongues is 'n gemeenskap poging om vir al die mense in die wêreld toegang te tot al die 7000 wêreldstale en die stories en emoties agter hulle. In samenwerking met 'n netwerk van vrywilligers, is ons toegewyd om aan die wêreld die betekenis van diversiteit te wys.")
 			$('.mobile-text').text("Wikitongues is 'n gemeenskap poging om vir al die mense in die wêreld toegang te tot al die 7000 wêreldstale en die stories en emoties agter hulle. In samenwerking met 'n netwerk van vrywilligers, is ons toegewyd om aan die wêreld die betekenis van diversiteit te wys.")
 			$('#get-involved').text('Raak betrokke')
@@ -131,13 +130,49 @@ $(function(){
 			$('#email').attr('placeholder','Wat is jou e-pos adres?')
 			$('#message').attr('placeholder','Hoe lyk dinge?')
 			$('#submit').attr('value','Stuur')
+		} else if (activeLanguage === '日本語') {
+			$('.slogan').text('世界中の言語を、世界中の人々に。')
+			$('#summary').text("ウィキタングス（wikitongues）は、世界で話されている７０００言語と、その裏にある物語や想いへのアクセスを世界中の人々に提供することを目指すコミュニティ活動です。ボランティアのネットワークと協力し、多様性の真の意味を世界に提示しようと尽力しています。")
+			$('.mobile-text').text("ウィキタングス（wikitongues）は、世界で話されている７０００言語と、その裏にある物語や想いへのアクセスを世界中の人々に提供することを目指すコミュニティ活動です。ボランティアのネットワークと協力し、多様性の真の意味を世界に提示しようと尽力しています。")
+			$('#get-involved').text('あなたも参加しませんか。')
+			$('.first').text('Made with international love by')
+			$('.second').text(' and')
+			$('footer p:last-child').text('© 2014 Wikitongues, All Rights Reserved.')
+			$('#name').attr('placeholder','名前はなんですか？')
+			$('#email').attr('placeholder','メールアドレスはなんですか？')
+			$('#message').attr('placeholder','あなたの最近の様子や興味関心を教えてください。')
+			$('#submit').attr('value','提出する')
+		} else if (activeLanguage === '한국어') {
+			$('.slogan').text('모두를 위한 전 세계의 언어')
+			$('#summary').text("Wikitongues는 세계 모든 사람들에게 이야기와 감성으로 7000개의 전세계 언어를 접할 수 있는 기회를 마련해줄 공동체 프로젝트입니다. 많은 자원 봉사자와 함께 우리는 세상에 다양성의 진정한 의미를 알리기 위해 최선을 다 할 것입니다.")
+			$('.mobile-text').text("Wikitongues는 세계 모든 사람들에게 이야기와 감성으로 7000개의 전세계 언어를 접할 수 있는 기회를 마련해줄 공동체 프로젝트입니다. 많은 자원 봉사자와 함께 우리는 세상에 다양성의 진정한 의미를 알리기 위해 최선을 다 할 것입니다.")
+			$('#get-involved').text('여러분도 함께 참여하세요')
+			$('.first').text('국제 사랑으로 만들었습니다 ')
+			$('.second').text(' +')
+			$('footer p:last-child').text('2014년 Wikitongues. 모든권리는 저작권에게 있습니다.')
+			$('#name').attr('placeholder','이름이 뭐예요?')
+			$('#email').attr('placeholder','이메일 주소가 뭐에요?')
+			$('#message').attr('placeholder','잘 지내세요?')
+			$('#submit').attr('value','보내기')
+		} else if (activeLanguage === 'isiZulu') {
+			$('.slogan').text('Izilimi zawowonke umuntu emhlabeni jikelele.')
+			$('#summary').text("Inhloso ye-Wikitongues ukwazisa abantu  ngezilimi ezingu-7000 ezikhulunywayo emhlabani jikelele - ngokufaka imizwa nezindaba ezihambelana nalezizilimi.Ukuze siphumelele sisebenzisana nabantu abazinikela mahhala (abavolon’thiyayo) ukuze sikhombise umhlaba ukusebenzisana kwabantu bezizwe ezahlukene.")
+			$('.mobile-text').text("Inhloso ye-Wikitongues ukwazisa abantu  ngezilimi ezingu-7000 ezikhulunywayo emhlabani jikelele - ngokufaka imizwa nezindaba ezihambelana nalezizilimi.Ukuze siphumelele sisebenzisana nabantu abazinikela mahhala (abavolon’thiyayo) ukuze sikhombise umhlaba ukusebenzisana kwabantu bezizwe ezahlukene.")
+			$('#get-involved').text('Woza nawe.')
+			$('.first').text('Made with international love by')
+			$('.second').text(' and')
+			$('footer p:last-child').text('© 2014 Wikitongues, All Rights Reserved.')
+			$('#name').attr('placeholder','Ubani igama lakho?')
+			$('#email').attr('placeholder','Sicela I-email yakho?')
+			$('#message').attr('placeholder','Unjani namhlanje?')
+			$('#submit').attr('value','Thumela.')
 		} else if (activeLanguage === 'English') {
 			$('.slogan').html('Every language in the world, <span class="no-wrap">for everyone.</span>')
 			$('#summary').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
 			$('.mobile-text').text('Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages — the stories and the feelings behind them. In coordination with a network of volunteers, we\'re dedicated to showing the world the true meaning of diversity.')
 			$('#get-involved').text('Get involved.')
-			$('.first').text('Made with international love ')
-			$('.second').text(' and')
+			$('.first').text('Made with international love by')
+			$('.second').text('and')
 			$('footer p:last-child').text('© 2014 Wikitongues, All Rights Reserved.')
 			$('#name').attr('placeholder','What\'s your name?')
 			$('#email').attr('placeholder','What\'s your email?')
@@ -147,4 +182,4 @@ $(function(){
 			console.log("Something's wrong")
 		}
 	})
-})
+}
