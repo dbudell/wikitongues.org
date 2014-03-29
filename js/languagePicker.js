@@ -4,6 +4,7 @@ $(function(){
   textDirection()
   languageOptionsWidth()
   languageModal()
+  // languageBeta()
 })
 
 var availableLanguage = ["English", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português"],
@@ -19,7 +20,7 @@ function createLanguageList () {
 // text direction handler
 function textDirection () {
   var rightToLeft_Languages = ["עברית", "العربية"],
-  rightToLeft_Targets = $(".language-options, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
+  rightToLeft_Targets = $(".language-options, .moreLanguages, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
 
   $(".languageButton").on("click", function(){
     for ( var i = 0; i < languageLength; i++ ) {
@@ -37,7 +38,7 @@ function textDirection () {
 // responsive language picker
 function languageOptionsWidth () {
   function languageOptionsWidthSet () {
-      var content = $(".content-wrapper").width()-45
+      var content = ($(".content-wrapper").width())-114
       $("body").children(".content-wrapper").children(".language-options").css("width",content)
   }
   languageOptionsWidthSet()
@@ -54,6 +55,7 @@ function createLanguageModal () {
     <div class="modal-wrapper">\
       <div class="content-wrapper hideLanguageModal">\
         <ul class="language-options"></ul>\
+        <a href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform" target="_blank">Help us translate this page!</a>\
       </div>\
     </div>\
     <div class="background"></div>\
@@ -119,4 +121,14 @@ function languageModal () {
     $(".languageButton#"+selectedLanguage).addClass('active')
 
   })
+}
+
+function languageBeta () {
+  var languageBeta = ["日本語", "한국어", "isiZulu"]
+
+  for(var i=0; i<languageLength; i++){
+    if ( $(this).attr("id")!==languageBeta[i]) {
+      $(".languageButton#"+languageBeta[i]).addClass("beta")
+    }
+  }
 }
