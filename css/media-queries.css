@@ -1,71 +1,106 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  .content-wrapper {
+  body {
+    border-top-width: 10px !important;
+  }
+  body .content-wrapper {
     box-sizing: border-box;
     width: 100%;
     padding: 0 20px;
     font-size: 16px;
   }
-  .content-wrapper .language-options {
-    display: none !important;
+  body .content-wrapper .language-options {
+    width: 211px !important;
   }
-  .content-wrapper h1 {
+  body .content-wrapper .language-options li {
+    width: 70px !important;
+  }
+  body .content-wrapper .language-options li .languageButton {
+    padding: 3px 8px !important;
+    font-size: 0.8em !important;
+  }
+  body .content-wrapper .moreLanguages {
+    width: 37px !important;
+  }
+  body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options {
+    width: 100% !important;
+  }
+  body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options li {
+    width: 25% !important;
+  }
+  body .content-wrapper h1 {
     margin-top: 10px;
     font-size: 2.2em !important;
   }
-  .content-wrapper h4 {
+  body .content-wrapper h4 {
     font-size: 1em;
     font-weight: 400;
     margin-top: 20px;
   }
-  .content-wrapper p {
+  body .content-wrapper p {
     font-size: 1em !important;
     font-weight: 100;
     margin-top: 20px;
     display: none;
   }
-  .content-wrapper p.mobile-text {
-    margin-top: 0;
+  body .content-wrapper p.mobile-text {
+    margin-top: 20px !important;
     display: block !important;
+    clear: both;
   }
-  .content-wrapper #get-involved {
+  body .content-wrapper #get-involved {
     margin: 20px 0 !important;
     font-size: 2em;
   }
-  .content-wrapper #social-media {
+  body .content-wrapper #social-media {
     display: inline-block;
     margin: 5px 0 5px 0;
   }
-  .content-wrapper #social-media li {
+  body .content-wrapper #social-media li {
     margin: 0 0 10px 0 !important;
     width: 20%;
     float: left;
   }
-  .content-wrapper #social-media li:last-of-type {
+  body .content-wrapper #social-media li:last-of-type {
     margin-right: 0;
   }
-  .content-wrapper #social-media li a {
+  body .content-wrapper #social-media li a {
     display: inline-block;
   }
-  footer .content-wrapper p {
+  body .content-wrapper #social-media li a:hover.youtube {
+    background: #b12324;
+  }
+  body .content-wrapper #social-media li a:hover.facebook {
+    background: #3b59b7;
+  }
+  body .content-wrapper #social-media li a:hover.twitter {
+    background: #5c90cb;
+  }
+  body .content-wrapper #social-media li a:hover.tumblr {
+    background: #1e295b;
+  }
+  body .content-wrapper #social-media li a:hover.instagram {
+    background: #3f729b;
+  }
+  body footer .content-wrapper p {
     display: block;
     font-size: 1em;
     font-weight: 100;
     margin: 0;
   }
-  footer .content-wrapper p:last-of-type {
+  body footer .content-wrapper p:last-of-type {
     font-size: 0.8em;
     margin-top: 20px;
   }
-  #overlay #contact-form {
+  body #overlay #contact-form {
     width: 100% !important;
     box-sizing: border-box;
   }
-  #overlay #contact-form h1 {
+  body #overlay #contact-form h1 {
     padding-bottom: 10px;
   }
-  #overlay #contact-form input,
-  #overlay #contact-form textarea {
+  body #overlay #contact-form input,
+  body #overlay #contact-form textarea {
     border-radius: 0;
     background: #fff;
     font-size: 1em;
@@ -74,7 +109,7 @@
     margin: 0;
     padding: 15px 7px !important;
   }
-  #overlay #contact-form #message {
+  body #overlay #contact-form #message {
     min-height: 160px !important;
     height: 160px;
   }
