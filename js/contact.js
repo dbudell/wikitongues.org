@@ -10,6 +10,8 @@ $(document).ready(function(){
     ')
 
   contactForm()
+
+  console.log('Hit us up on Github @ https://github.com/wikitongues!')
 })
 
 $(window).resize(function(){
@@ -64,6 +66,5 @@ function contactResize () {
     $('#overlay #contact-form #message').css('height',modalHeight)
   }
 
-  console.log('Hit us up on Github @ https://github.com/wikitongues!')
 
 }
