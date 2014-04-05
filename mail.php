@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $formcontent="From: $name \n Message: $message";
 $recipient = "hello@wikitongues.org";
-$subject = "Wikitongues.org Contact Form";
+$subject = substr($message, 0, 26)."...";
 $mailheader = "From: $email \r\n";
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 header('Location: index.html');

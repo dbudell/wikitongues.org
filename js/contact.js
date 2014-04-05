@@ -4,12 +4,14 @@ $(document).ready(function(){
       <h1 class="contactLogotype">WIKITONGUES</h1>\
       <input id="name" name="name" type="text" placeholder="What&#39;s your name?">\
       <input id="email" name="email" type="text" placeholder="What&#39;s your email?">\
-      <textarea id="message" name="message" placeholder="Whats up?"></textarea>\
+      <textarea id="message" name="message" placeholder="Message"></textarea>\
       <input id="submit" type="submit" value="Send">\
     </form>\
     ')
 
   contactForm()
+
+  console.log('Hit us up on Github @ https://github.com/wikitongues!')
 })
 
 $(window).resize(function(){
@@ -50,14 +52,19 @@ function escapeOut () {
 
 function contactResize () {
   var screenHeight = $(window).innerHeight(),
-  modalHeight = screenHeight - (246)
-  mobileModalHeight = screenHeight - (246)
+  padding = 20,
+  titleComponent = 42,
+  inputComponent = 60,
+  inputNumber = 2,
+  sendComponent = 70,
+  usedHeight = padding+titleComponent+(inputComponent*inputNumber)+sendComponent,
+  modalHeight = screenHeight - usedHeight
+  console.log(usedHeight)
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   } else {
     $('#overlay #contact-form #message').css('height',modalHeight)
   }
 
-  console.log('Hit us up on Github @ https://github.com/wikitongues!')
 
 }
