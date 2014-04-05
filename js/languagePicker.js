@@ -7,7 +7,7 @@ $(function(){
   // languageBeta()
 })
 
-var availableLanguage = ["English", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português"],
+var availableLanguage = ["English", "繁體中文", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português", "Kernewek", "Français", "Gaeilge", "Nederlands", "Polski", "Suomi", "tiếng Việt", "Ελληνικά", "тарашкевіца", "Esperanto", "Eesti", "Íslenska", "монгол", "Türkçe", "יידיש"],
   languageLength = availableLanguage.length
 
 function createLanguageList () {
@@ -19,7 +19,7 @@ function createLanguageList () {
 
 // text direction handler
 function textDirection () {
-  var rightToLeft_Languages = ["עברית", "العربية"],
+  var rightToLeft_Languages = ["עברית", "العربية", "יידיש"],
   rightToLeft_Targets = $(".language-options, .moreLanguages, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
 
   $(".languageButton").on("click", function(){
