@@ -7,7 +7,7 @@ $(function(){
   // languageBeta()
 })
 
-var availableLanguage = ["English", "繁體中文", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português", "Kernewek", "Français", "Gaeilge", "Nederlands", "Polski", "Suomi", "tiếng Việt", "Ελληνικά", "тарашкевіца", "Esperanto", "Eesti", "Íslenska", "монгол", "Türkçe", "יידיש"],
+var availableLanguage = ["English", "繁體中文", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português", "Kernewek", "Français", "Gaeilge", "Nederlands", "Polski", "Suomi", "tiếng Việt", "Ελληνικά", "тарашкевіца", "Esperanto", "Eesti", "Íslenska", "монгол", "Türkçe", "יידיש", "Solresol", "Galego", "Български"],
   languageLength = availableLanguage.length
 
 function createLanguageList () {

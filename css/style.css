@@ -4,6 +4,8 @@ input,
 select,
 textarea {
   color: #11242f;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
 }
 ::-moz-selection {
   background: #6a8b9b;
@@ -22,7 +24,6 @@ html {
 }
 body {
   font-size: 6rem;
-  font-family: 'Raleway', sans-serif;
   color: #11242f;
   background: #fafafa;
   text-shadow: 1px 1px 0 #fff;
@@ -62,7 +63,6 @@ body .content-wrapper .language-options li {
 body .content-wrapper .language-options li .languageButton {
   background: none;
   padding: 5px 10px;
-  font-family: 'Raleway', helvetica;
   font-weight: 100;
   height: 38px;
 }
@@ -79,11 +79,11 @@ body .content-wrapper .language-modal {
   background: none;
   width: 100%;
   position: fixed;
-  border-top: 20px solid #11242f;
+  border-top20px: solid #11242f;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+right0
+bottom0
   overflow: hidden;
   display: none;
 }
@@ -176,6 +176,7 @@ body .content-wrapper .logotype {
   font-weight: 800;
   font-size: 2.7em;
   line-height: 1em;
+  font-family: 'Raleway', sans-serif;
 }
 body .content-wrapper .slogan {
   margin: 0;
@@ -359,7 +360,7 @@ footer .content-wrapper a {
   background: #f5f5f5;
   outline: none;
 }
-@media screen and (max-width:1450px) {
+@media screen and (max-width: 1450px) {
   .content-wrapper {
     width: 90% !important;
   }
