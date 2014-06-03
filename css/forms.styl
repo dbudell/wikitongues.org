@@ -1,0 +1,102 @@
+@import 'nib'
+@import 'common-variables'
+
+
+#overlay {
+    display none
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background rgba($wikitonguesBlue,0.97)
+    cursor pointer
+    overflow-y scroll
+
+    form {
+        &.displayed {
+            margin-top 0 !important
+            transition margin-top $transitionTime ease-in-out
+        }
+
+        &#contact-form, &#submit-form {
+            display none
+            width 650px
+            margin auto
+            margin-top -600px
+            font-size 16px
+            padding 20px 20px 0 20px
+            background #fff
+            cursor initial
+            overflow-y scroll
+            transition margin-top $transitionTime ease-in-out
+
+            * {
+                width 100%
+                resize none
+                color $wikitonguesBlue
+                box-sizing border-box
+                -moz-box-sizing border-box
+            }
+
+            .contactLogotype {
+                font-family 'Raleway',helvetica
+                padding 0 20px 20px 20px
+                text-align center
+            }
+
+            .contactLogotype, input, textarea {
+                border-radius 0
+                font-size 1em
+                border none
+                margin 0
+            }
+
+            input, textarea, p {
+                padding 20px 20px 20px 20px
+            }
+
+            input[type="text"] {
+                border-bottom 1px solid #eaeaea
+
+                &:after {
+                    content "X"
+                }
+            }
+
+            textarea {
+                min-height 250px
+            }
+
+            #submit {
+                font-size 1.5em
+                background #fff
+                border-top 1px solid #eaeaea
+                font-weight 100
+            }
+
+            input:hover, textarea:hover, *:focus {
+                background rgb(245,245,245)
+                outline none
+            }
+
+            p {
+                font-size 1em
+                margin 0
+                padding 20px 20px 3px 5px
+                color #a9a9a9
+                border-bottom 1px dashed #EAEAEA
+            }
+        }
+
+        &#submit-form {
+            textarea {
+                border-bottom 1px solid #eaeaea
+
+                &:last-of-type {
+                    border-bottom none
+                }
+            }
+        }
+    }
+}

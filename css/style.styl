@@ -1,14 +1,12 @@
-$color = #11242f
-$selectColor = #6A8B9B
-$hoverColor = #FFC328
-$transitionTime = 0.2s
+@import 'nib'
+@import 'common-variables'
 
 html,
 button,
 input,
 select,
 textarea {
-    color $color
+    color $wikitonguesBlue
     font-family 'Open Sans', sans-serif
     font-weight 100
 }
@@ -28,19 +26,14 @@ textarea {
 html {
     font-size 62.5%
     line-height 1.4
-    background darken($color,15%)
+    background darken($wikitonguesBlue,15%)
 }
 
 body {
-    font-size 6rem
-    color $color
+    color $wikitonguesBlue
     background #fafafa
     text-shadow 1px 1px 0 #fff
-    border-top 20px solid $color
-    -webkit-transition all $transitionTime ease-in-out
-    -moz-transition all $transitionTime ease-in-out
-    -ms-transition all $transitionTime ease-in-out
-    -o-transition all $transitionTime ease-in-out
+    border-top 20px solid $wikitonguesBlue
     transition all $transitionTime ease-in-out
 
     ul {
@@ -55,365 +48,73 @@ body {
 
     .content-wrapper {
         width 1280px
-        margin 30px auto 0 auto
-
-        .language-options {
-            display none
-            clear both
-            float left
-            display inline-block
-            margin-bottom 20px
-            height 38px
-            overflow hidden
-
-            li {
-                font-size 1.5rem
-                float left
-                width 113px
-
-                .languageButton {
-                    background none
-                    padding 5px 10px
-                    font-weight  100
-                    height 38px
-
-                    &.beta:after {
-                        content " BETA"
-                        color #DB0000
-                        font-size 1rem
-                    }
-
-                    &.active {
-                        background $color
-                        color #fff
-                    }
-                }
-            }
-        }
-
-        .language-modal {
-            background none
-            width 100%
-            position fixed
-            border-top20px solid $color
-            top 0
-            left 0
-            right0
-            bottom0
-            overflow hidden
-            display none
-
-            .modal-wrapper {
-                border-bottom 1px solid #eee
-                background #fafafa
-                position absolute
-                z-index 1
-                width 100%
-
-                .content-wrapper {
-                    overflow auto
-                    margin 0 auto
-                    padding-top 30px
-
-                    &.displayLanguageModal {
-                        margin-top 0!important
-                        -webkit-transition margin-top $transitionTime ease-in-out
-                        -moz-transition margin-top $transitionTime ease-in-out
-                        -ms-transition margin-top $transitionTime ease-in-out
-                        -o-transition margin-top $transitionTime ease-in-out
-                        transition margin-top $transitionTime ease-in-out
-                    }
-
-                    &.hideLanguageModal {
-                        margin-top -200px
-                        -webkit-transition margin-top $transitionTime ease-in-out
-                        -moz-transition margin-top $transitionTime ease-in-out
-                        -ms-transition margin-top $transitionTime ease-in-out
-                        -o-transition margin-top $transitionTime ease-in-out
-                        transition margin-top $transitionTime ease-in-out
-                    }
-
-                    .language-options {
-                        height auto
-                        margin 0 auto 15px auto
-                        display block
-                        width 100%
-
-                        li {
-                            width 10%
-                        }
-                    }
-
-                    a {
-                        text-decoration none
-                        color #DB0000
-                        font-size 1.5rem
-                        font-weight 100
-                        margin auto
-                        display block
-                        text-align center
-                        clear both
-                        padding 15px
-                        border-top 1px solid #eee
-
-                        &:hover {
-                            background #eee
-                            text-shadow none
-                        }
-                    }
-                }
-            }
-
-            .background {
-                display none
-                background $color
-                opacity 0.97
-                position absolute
-                bottom 0
-                top 0
-                left 0
-                right 0
-                display none
-                cursor pointer
-            }
-        }
-
-        .moreLanguages {
-            width 113px
-            height 38px
-            float right
-            border-bottom 2px solid $color
-            font-family 'Raleway',helvetica
-            font-weight 100
-            font-size 2rem
-            background-color  $color
-            color #fff
-            padding 5px 13px
-            -webkit-transition all $transitionTime ease-in-out
-            -moz-transition all $transitionTime ease-in-out
-            -ms-transition all $transitionTime ease-in-out
-            -o-transition all $transitionTime ease-in-out
-            transition all $transitionTime ease-in-out
-        }
-
-        .logotype {
-            clear both
-            width 100%
-            margin -0 0 20px 0
-            font-weight 800
-            font-size 2.7em
-            line-height 1em
-            font-family 'Raleway', sans-serif
-        }
-
-        .slogan {
-            margin 0
-            font-weight bold
-
-            .no-wrap {
-                white-space nowrap
-            }
-        }
-
-        p {
-            font-size 4rem
-            padding-left 0px
-            margin-bottom 40px
-            margin-top 10px
-            font-weight 100
-
-            &.mobile-text {
-                display none
-            }
-        }
-
-        #get-involved {
-            display block
-            background $color
-            color #fff
-            font-weight 800
-            padding 20px 0
-            width 100%
-            margin 80px 0
-            border none
-            clear both
-            -webkit-transition background $transitionTime ease-in-out
-            -moz-transition background $transitionTime ease-in-out
-            -ms-transition background $transitionTime ease-in-out
-            -o-transition background $transitionTime ease-in-out
-            transition background $transitionTime ease-in-out
-
-            &:hover {
-                background $hoverColor
-            }
-
-            &:focus {
-                outline none
-            }
-        }
-
-        #social-media {
-            margin 20px 0 80px
-            width 100%
-            display block
-            clear both
-
-            li {
-                margin 0 -16px 0 0
-                width 20%
-                height 20%
-
-                a {
-                    display block
-                    -webkit-transition background $transitionTime ease-in-out
-                    -moz-transition background $transitionTime ease-in-out
-                    -ms-transition background $transitionTime ease-in-out
-                    -o-transition background $transitionTime ease-in-out
-                    transition background $transitionTime ease-in-out
-
-                    img {
-                        width 100%
-                        height auto
-                    }
-
-                    &.youtube {
-                        background #B12324
-                    }
-
-                    &.facebook {
-                        background #3B59B7
-                    }
-
-                    &.twitter {
-                        background #5C90CB
-                    }
-
-                    &.tumblr {
-                        background #1E295B
-                    }
-
-                    &.instagram {
-                        background #3F729B
-                    }
-                }
-
-                &:hover {
-                    a {
-                        background $hoverColor
-                    }
-                }
-            }
-        }
+        margin 15px auto 0 auto
     }
 }
 
 footer {
     width 100%
-    background $color
-    padding 50px 0
-    text-align center
+    background $wikitonguesBlue
+    padding 30px 0 50px 0
     clear both
+    display inline-block
 
     .content-wrapper {
-        margin  0 auto
-        display inline-block
+        overflow auto
 
-        p {
-            line-height  1.8em
+        .copyright, ul li, ul li a {
             margin 0
             clear both
-            width 100%
-        }
-
-        p, a {
-            font-size 1.75rem
             text-shadow none
-            color #fff
-        }
-    }
-}
+            color #889197
+            line-height 22.5px
 
-#overlay {
-    display none
-    position fixed
-    top 0
-    left 0
-    width 100%
-    height 100%
-    background rgba($color,.97)
-    cursor pointer
-
-    .displayed {
-        margin-top 0 !important
-        -webkit-transition margin-top $transitionTime ease-in-out
-        -moz-transition margin-top $transitionTime ease-in-out
-        -ms-transition margin-top $transitionTime ease-in-out
-        -o-transition margin-top $transitionTime ease-in-out
-        transition margin-top $transitionTime ease-in-out
-    }
-
-    #contact-form {
-        width 650px
-        margin auto
-        margin-top -600px
-        font-size 16px
-        padding 20px 20px 0 20px
-        background #fff
-        cursor initial
-        overflow auto
-        -webkit-transition margin-top $transitionTime ease-in-out
-        -moz-transition margin-top $transitionTime ease-in-out
-        -ms-transition margin-top $transitionTime ease-in-out
-        -o-transition margin-top $transitionTime ease-in-out
-        transition margin-top $transitionTime ease-in-out
-
-        * {
-            width 100%
-            resize none
-            font-family 'Raleway',helvetica
-            color $color
-            -webkit-transition margin-top $transitionTime ease-in-out
-            -moz-transition margin-top $transitionTime ease-in-out
-            -ms-transition margin-top $transitionTime ease-in-out
-            -o-transition margin-top $transitionTime ease-in-out
-            transition margin-top $transitionTime ease-in-out
-            box-sizing border-box
-            -moz-box-sizing border-box
+            &:hover {
+                color $hoverColor
+                transition color $transitionTime ease-in-out
+            }
         }
 
-        .contactLogotype {
-            padding 0 20px 20px 20px
-            text-align center
+        .copyright {
+            display inline-block
+            p{
+                margin 0
+                line-height 22.5px
+                clear both
+                float left
+                font-size 1.5em
+            }
         }
 
-        .contactLogotype, input, textarea {
-            border-radius 0
-            font-size 1em
-            border none
-            margin 0
+        img {
+            border-radius 100%
+            height 20px
+            margin 0 3px -4px 5px
         }
 
-        input, textarea {
-            padding 20px
-        }
+        .links {
+            float right
 
-        input[type="text"] {
-            border-bottom 1px solid #eaeaea
-        }
+            ul {
+                float left
+                margin 0 0 0 50px
 
-        textarea {
-            min-height 250px
-        }
+                li {
+                    font-size 1.3em
+                    clear both
+                    display block
 
-        #submit {
-            font-size 1.5em
-            background #fff
-            border-top 1px solid #eaeaea
-        }
+                    &.header {
+                        color: #fff
+                        text-shadow none
+                    }
 
-        input:hover, textarea:hover, *:focus {
-            background rgb(245,245,245)
-            outline none
+                    a {
+                        cursor pointer
+                        text-decoration none
+                    }
+                }
+            }
         }
     }
 }

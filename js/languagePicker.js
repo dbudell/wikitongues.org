@@ -4,23 +4,22 @@ $(function(){
   textDirection()
   languageOptionsWidth()
   languageModal()
-  // languageBeta()
 })
 
 var availableLanguage = ["English", "繁體中文", "Русский", "العربية", "Español", "Català", "Italiano", "Deutsch", "Afrikaans", "Lietuvių", "עברית", "日本語", "한국어", "isiZulu", "Português", "Kernewek", "Français", "Gaeilge", "Nederlands", "Polski", "Suomi", "tiếng Việt", "Ελληνικά", "тарашкевіца", "Esperanto", "Eesti", "Íslenska", "монгол", "Türkçe", "יידיש", "Solresol", "Galego", "Български"],
   languageLength = availableLanguage.length
 
+// creates screen nav
 function createLanguageList () {
-  for (var i = 0; i< 14; i++) {
+  for (var i = 0; i< 10; i++) {
     $("body").children(".content-wrapper").children(".language-options").append('<li><button class="languageButton" id='+availableLanguage[i]+'>'+availableLanguage[i]+'</button></li>')
   }
 }
 
-
 // text direction handler
 function textDirection () {
   var rightToLeft_Languages = ["עברית", "العربية", "יידיש"],
-  rightToLeft_Targets = $(".language-options, .moreLanguages, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
+  rightToLeft_Targets = $(".language-options, .moreLanguages, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer, footer .content-wrapper .links .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
 
   $(".languageButton").on("click", function(){
     for ( var i = 0; i < languageLength; i++ ) {
@@ -34,7 +33,6 @@ function textDirection () {
   })
 }
 
-
 // responsive language picker
 function languageOptionsWidth () {
   function languageOptionsWidthSet () {
@@ -47,7 +45,6 @@ function languageOptionsWidth () {
     languageOptionsWidthSet()
   })
 }
-
 
 // language picker modal
 function createLanguageModal () {
@@ -68,7 +65,6 @@ function createLanguageModal () {
   // initialize list with first language selected
   $(".languageButton#English").addClass("active")
 }
-
 
 function languageModal () {
   var languageListContent = $("body .content-wrapper .language-modal .content-wrapper"),
@@ -112,23 +108,14 @@ function languageModal () {
   // give class of active to selected language
   $('.languageButton').on('click', function(e){
     // get selected language's id
-    var selectedLanguage = (e.target || e.srcElement).id
+    var selectedLanguageId = (e.target || e.srcElement).id,
+    selectedLanguage = e.target
 
     // reset .active
     $('.active').removeClass('active')
 
     // add class of active to selected language
-    $(".languageButton#"+selectedLanguage).addClass('active')
+    $(".languageButton#"+selectedLanguageId).addClass('active')
 
   })
-}
-
-function languageBeta () {
-  var languageBeta = ["日本語", "한국어", "isiZulu"]
-
-  for(var i=0; i<languageLength; i++){
-    if ( $(this).attr("id")!==languageBeta[i]) {
-      $(".languageButton#"+languageBeta[i]).addClass("beta")
-    }
-  }
 }

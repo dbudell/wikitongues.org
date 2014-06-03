@@ -7,45 +7,47 @@ $(document).ready(function(){
       <textarea id="message" name="message" placeholder="Message"></textarea>\
       <input id="submit" type="submit" value="Send">\
     </form>\
-    ')
+  ')
 
-  contactForm()
-
-  console.log('Hit us up on Github @ https://github.com/wikitongues!')
+  $('#contact, footer .footer-contact').on('click', function(){
+    contactForm()
+  })
 })
 
 $(window).resize(function(){
   contactResize()
 })
 
-function contactForm () {
-    $('#get-involved').on('click', function(){
-    contactResize()
-    $('#overlay').fadeIn(150)
-    $('#contact-form').addClass('displayed')
-    $('body').css('overflow', 'hidden')
-    clickOut()
-    escapeOut()
-  })
+function contactForm() {
+  contactResize()
+  $('#contact-form').show()
+  $('#overlay').fadeIn(150)
+  $('#contact-form').addClass('displayed')
+  $('body').css('overflow', 'hidden')
+  clickContactOut()
+  escapeContactOut()
 }
 
-function clickOut () {
+function closeContactForm() {
+  $('#contact-form').removeClass('displayed')
+  $('#overlay').fadeOut(300)
+  $('body').css('overflow', 'visible')
+  $('#contact-form').hide()
+}
+
+function clickContactOut () {
   $('#overlay').on('click', function(e){
     if (e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
-      $('#contact-form').removeClass('displayed')
-      $(this).fadeOut(300)
-      $('body').css('overflow', 'visible')
+      closeContactForm()
     }
   })
 }
 
-function escapeOut () {
+function escapeContactOut () {
   $('body').on('keydown', function(e){
     if ((e.keyCode || e.which) == 27)
       {
-        $('#contact-form').removeClass('displayed')
-          $('#overlay').fadeOut(300)
-          $('body').css('overflow', 'visible')
+        closeContactForm()
       }
   })
 }
@@ -54,17 +56,15 @@ function contactResize () {
   var screenHeight = $(window).innerHeight(),
   padding = 20,
   titleComponent = 42,
-  inputComponent = 60,
+  inputComponent = 63,
   inputNumber = 2,
-  sendComponent = 70,
+  sendComponent = 74,
   usedHeight = padding+titleComponent+(inputComponent*inputNumber)+sendComponent,
   modalHeight = screenHeight - usedHeight
-  console.log(usedHeight)
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   } else {
     $('#overlay #contact-form #message').css('height',modalHeight)
   }
-
 
 }
