@@ -12,7 +12,7 @@ var availableLanguage = ["English", "繁體中文", "Русский", "العر�
 // creates screen nav
 function createLanguageList () {
   for (var i = 0; i< 10; i++) {
-    $("body").children(".content-wrapper").children(".language-options").append('<li><button class="languageButton" id='+availableLanguage[i]+'>'+availableLanguage[i]+'</button></li>')
+    $("body").children(".content-wrapper").children(".language-selection").children(".language-options").append('<li><button class="languageButton" id='+availableLanguage[i]+'>'+availableLanguage[i]+'</button></li>')
   }
 }
 
@@ -37,7 +37,7 @@ function textDirection () {
 function languageOptionsWidth () {
   function languageOptionsWidthSet () {
       var content = ($(".content-wrapper").width())-114
-      $("body").children(".content-wrapper").children(".language-options").css("width",content)
+      $("body").children(".content-wrapper").children(".language-selection").children(".language-options").css("width",content)
   }
   languageOptionsWidthSet()
 
