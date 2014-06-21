@@ -5,10 +5,10 @@ $(document).ready(function(){
       <ul>\
         <li><input id="name" name="name" type="text" placeholder="What&#39;s your name?"></li>\
         <li><input id="email" name="email" type="text" placeholder="What&#39;s your email?"></li>\
-        <li><input id="email" name="email" type="text" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>\
-        <li><input id="name" name="name" type="text" placeholder="What&#39;s the speaker&#39;s name?"></li>\
-        <li><p>What languages does this video display?</p></li>\
-        <li class="video-language last"><input type="text" placeholder="Language name"></li>\
+        <li><input id="link" name="link" type="text" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>\
+        <li><input id="speaker" name="speaker" type="text" placeholder="What&#39;s the speaker&#39;s name?"></li>\
+        <!--<li><p>What languages does this video display?</p></li>-->\
+        <li class="video-language last"><input id="language" name="language" type="text" placeholder="What languages does this video display?"></li>\
       </ul>\
       <textarea id="transcription" class="optional" name="transcription" placeholder="Transcription (optional)"></textarea>\
       <textarea id="translation" class="optional" name="translation" placeholder="Translation (optional)"></textarea>\
@@ -21,7 +21,7 @@ $(document).ready(function(){
     submitForm()
   })
 
-  languageName()
+  //languageName()
 })
 
 $(window).resize(function(){
@@ -72,6 +72,10 @@ function submitResize () {
   }
 }
 
+/*
+ * The proverbial pin in Freddie's UI swag
+ *
+
 function languageName() {
   var languageCount = $(".video-language").length
   $("li.video-language.last").on("click", function(){
@@ -84,3 +88,5 @@ function languageName() {
     languageName()
   })
 }
+
+*/
