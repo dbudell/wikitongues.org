@@ -117,11 +117,3 @@ p.mobile-text {
   transition: background 0.2s ease-in-out;
   background: #ffc328;
 }
-body {
-  overflow: hidden;
-}
-body .faces {
-  margin-top: -45px;
-  margin-bottom: 40px;
-  margin-left: -100px;
-}
