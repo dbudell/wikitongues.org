@@ -62,19 +62,6 @@ function translate (){
 			$('#email').attr('placeholder','Was ist Ihre E-Mail?')
 			$('#message').attr('placeholder','Wie geht\'s?')
 			$('#submit').attr('value','Senden')
-		} else if (activeLanguage === 'Lietuvių') {
-			$('.slogan').text('Visos pasaulio kalbos - kiekvienam.')
-			$('#summary').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
-			$('.mobile-text').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
-			$('#get-involved').text('Prisijunk ir Tu!')
-			$('.first').text('Tarptautiškumą mylintys ')
-			$('.second').text(' ir')
-			$('footer p:first-child').html('© 2014 <img src="img/wikitonguesLogoSquare.svg" alt="" />Wikitongues.')
-			$('footer p:last-child').text('Visos teisės saugomos.')
-			$('#name').attr('placeholder','Koks tavo vardas?')
-			$('#email').attr('placeholder','Koks jūsų elektroninio pašto?')
-			$('#message').attr('placeholder','Kaip reikalai?')
-			$('#submit').attr('value','Siųsti')
 		} else if (activeLanguage === 'עברית') {
 			$('.slogan').text('כל שפה בעולם, לכולם.')
 			$('#summary').text('Wikitongues הינו מאמץ קהילתי שמטרתו לאפשר לכל אדם בעולם גישה לכל 7,000 השפות הקיימות בעולם – הסיפורים והרגש שעומד מאחוריהם. בתיאום עם קהילת מתנדבים, אנחנו מחוייבים להראות לעולם את משמעותו האמיתי של הגִּוּוּן.')
@@ -439,7 +426,7 @@ function translate (){
 			$('#email').attr('placeholder','Каква е е-пощата Ви?')
 			$('#message').attr('placeholder','Какво е Вашето съобщение?')
 			$('#submit').attr('value','Изпращане')
-		} else if (activeLanguage === 'Lietuvių') {
+		} else if (activeLanguage === 'Latviešu') {
 			$('.slogan').html('Katra valoda pasaulē, katram.')
 			$('#summary').text('"Vikimēles" ir sabiedrības pūles lai dotu visas pasaules ļaudīm pieeju visas pasaules 7,000 valodām-stāstus un jūtas aiz viņiem. Saskaņojot ar tīklu no brīvprātīgajiem, mēs veltījām lai parādītu pasaulei daudzveidības patieso nozīmi.')
 			$('.mobile-text').text('"Vikimēles" ir sabiedrības pūles lai dotu visas pasaules ļaudīm pieeju visas pasaules 7,000 valodām-stāstus un jūtas aiz viņiem. Saskaņojot ar tīklu no brīvprātīgajiem, mēs veltījām lai parādītu pasaulei daudzveidības patieso nozīmi.')
@@ -452,7 +439,49 @@ function translate (){
 			$('#email').attr('placeholder','Kāds ir tavs e-pasts?')
 			$('#message').attr('placeholder','Kāds ir tavs vēstījums?')
 			$('#submit').attr('value','Sūtīt.')
-		} else {
+		} else if (activeLanguage === 'Lietuvių') {
+			$('.slogan').text('Visos pasaulio kalbos - kiekvienam.')
+			$('#summary').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
+			$('.mobile-text').text('Wikitongues tai organizacija, siekianti suteikti žmonėms prieigą prie visų - 7000 pasaulio kalbų, jas išgirsti ir pajausti. Bendradarbiaujant su gausybę savanorių es dirbame tam, kad parodytume koks įvairus yra pasaulis.')
+			$('#get-involved').text('Prisijunk ir Tu!')
+			$('.first').text('Tarptautiškumą mylintys ')
+			$('.second').text(' ir')
+			$('footer p:first-child').html('© 2014 <img src="img/wikitonguesLogoSquare.svg" alt="" />Wikitongues.')
+			$('footer p:last-child').text('Visos teisės saugomos.')
+			$('#name').attr('placeholder','Koks tavo vardas?')
+			$('#email').attr('placeholder','Koks jūsų elektroninio pašto?')
+			$('#message').attr('placeholder','Kaip reikalai?')
+			$('#submit').attr('value','Siųsti')
+		} else if (activeLanguage === 'Magyar') {
+			$('.slogan').html('A vilàg minden nyelve, mindenkinek.')
+			$('#summary').text('A Wikitongues egy közösségi kezdeményezés, amelynek célja, hogy vilàgszerte mindenki szàmàra hozzàférhetôvé tegye a létezô 7000 nyelvet - és a hozzàjuk kapcsolòdò történeteket és érzéseket. Mûködésünket önkénteshàlòzatunkra alapozva szeretnénk megmutatni a vilàgnak, mit is jelent igazàbòl a diverzitàs.')
+			$('.mobile-text').text('A Wikitongues egy közösségi kezdeményezés, amelynek célja, hogy vilàgszerte mindenki szàmàra hozzàférhetôvé tegye a létezô 7000 nyelvet - és a hozzàjuk kapcsolòdò történeteket és érzéseket. Mûködésünket önkénteshàlòzatunkra alapozva szeretnénk megmutatni a vilàgnak, mit is jelent igazàbòl a diverzitàs.')
+			$('#get-involved').text('Csatlakozz a kezdeményezéshez.')
+			$('.first').text('Készìtette @dbudell @freddieandrade @lindiebee és @fateuser nemzetközi odaadàssal.')
+			$('.second').text('')
+			$('footer p:first-child').html('© 2014 <img src="img/wikitonguesLogoSquare.svg" alt="" />Wikitongues.')
+			$('footer p:last-child').text('Minden jog fenntartva')
+			$('#name').attr('placeholder','Hogy hìvnak?')
+			$('#email').attr('placeholder','Mi az e-mail cìmed?')
+			$('#message').attr('placeholder','Mit üzensz?')
+			$('#submit').attr('value','Küldés')
+		} else if (activeLanguage === 'Shqip') {
+			$('.slogan').html('Secila gjuhë e botës, për të gjithë.')
+			$('#summary').text('Wikitongues është një përpjekje e përbashkët për t’ju dhënë të gjithë njerëzve të botës mundësinë për të pasur qasje në secilën prej 7000 gjuhëve të botës – storjet dhe ndjenjat prapa tyre. Në bashkpunim me një rrjet vullnetarësh, ne jemi të përkushtuar t’i tregojmë botës domethënien e vërtetë të diversitetit.')
+			$('.mobile-text').text('Wikitongues është një përpjekje e përbashkët për t’ju dhënë të gjithë njerëzve të botës mundësinë për të pasur qasje në secilën prej 7000 gjuhëve të botës – storjet dhe ndjenjat prapa tyre. Në bashkpunim me një rrjet vullnetarësh, ne jemi të përkushtuar t’i tregojmë botës domethënien e vërtetë të diversitetit.')
+			$('#get-involved').text('Përfshihu edhe ti!')
+			$('.first').text('E bërë me dashuri ndërkombëtare nga')
+			$('.second').text('')
+			$('footer p:first-child').html('© 2014 <img src="img/wikitonguesLogoSquare.svg" alt="" />Wikitongues.')
+			$('footer p:last-child').text('Të gjitha të drejtat e rezervuara.')
+			$('#name').attr('placeholder','Si quheni?')
+			$('#email').attr('placeholder','Cili është email-i juaj?')
+			$('#message').attr('placeholder','Cila është porosia juaj?')
+			$('#submit').attr('value','Dërgo')
+		}
+
+
+		else {
 			alert("Woops! There seems to be something wrong with this translation! We'll be sure to fix it as soon as possible! Thank you for checking us out :)")
 		}
 	})
