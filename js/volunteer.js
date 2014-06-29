@@ -6,7 +6,7 @@ $(document).ready(function(){
       <input id="name" name="name" type="text" placeholder="What&#39;s your name?">\
       <input id="email" name="email" type="text" placeholder="What&#39;s your email?">\
       <p>How would you like to contribute?</p>\
-      <label><input id="ambassador" name="check_list[]" type="checkbox" value="Ambassador">Ambassador</label>\
+      <label><input id="ambassador" name="check_list[]" type="checkbox" value="Ambassador">Language Recording</label>\
       <label><input id="socialMedia" name="check_list[]" type="checkbox" value="Social Media">Social Media</label>\
       <label><input id="webDev" name="check_list[]" type="checkbox" value="Web Development">Web Development</label>\
       <textarea id="message" name="message" placeholder="Tell us about yourself"></textarea>\
