@@ -38,9 +38,12 @@ function closeContactForm() {
 
 function clickContactOut () {
   $('#overlay').on('click', function(e){
-    if (e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
+    if (e.target.tagName == 'DIV') {
       closeContactForm()
     }
+  })
+  $('.close').on('click', function(){
+    closeContactForm()
   })
 }
 

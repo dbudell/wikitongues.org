@@ -42,9 +42,12 @@ function closeVolunteerForm() {
 
 function clickVolunteerOut () {
   $('#overlay').on('click', function(e){
-    if (e.target.tagName != 'FORM' && e.target.tagName != 'H1' && e.target.tagName != 'INPUT' && e.target.tagName != 'P' && e.target.tagName != 'LABEL' && e.target.tagName != 'TEXTAREA') {
+    if (e.target.tagName == 'DIV') {
       closeVolunteerForm()
     }
+  })
+  $('.close').on('click', function(){
+    closeVolunteerForm()
   })
 }
 

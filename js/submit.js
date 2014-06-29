@@ -48,9 +48,12 @@ function closeSubmitForm() {
 
 function clickSubmitOut () {
   $('#overlay').on('click', function(e){
-    if (e.target.tagName != 'FORM' && e.target.tagName != 'H1' && e.target.tagName != 'UL' && e.target.tagName != 'LI' && e.target.tagName != 'P' && e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
+    if (e.target.tagName == 'DIV') {
       closeSubmitForm()
     }
+  })
+  $('.close').on('click', function(){
+    closeSubmitForm()
   })
 }
 
@@ -82,22 +85,3 @@ function submitResize () {
     $('#overlay #submit-form #transcription, #overlay #submit-form #translation, #overlay #submit-form #message').css('min-height',modalHeight)
   }
 }
-
-/*
- * The proverbial pin in Freddie's UI swag
- *
-
-function languageName() {
-  var languageCount = $(".video-language").length
-  $("li.video-language.last").on("click", function(){
-    var newLanguageCount = $(".video-language").length
-
-    if($(this).hasClass('last'))
-      {
-        $(this).removeClass('last').after('<li class="video-language last"><input type="text" placeholder="Language name"></li>')
-      }
-    languageName()
-  })
-}
-
-*/
