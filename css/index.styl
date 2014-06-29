@@ -40,6 +40,7 @@ p {
 }
 
 #submit, #contact, #volunteer {
+    border-radius $radius
     &:not(:last-of-type){
         margin-right 2%
     }
@@ -88,6 +89,7 @@ p {
 
             &.youtube {
                 img {
+                    border-radius $radius 0 0 $radius
                     background #B12324
                 }
             }
@@ -112,6 +114,7 @@ p {
 
             &.instagram {
                 img {
+                    border-radius 0 $radius $radius 0
                     background #3F729B
                 }
             }
@@ -125,5 +128,14 @@ p {
                 }
             }
         }
+    }
+}
+
+body {
+    overflow hidden
+    .faces {
+        margin-top -45px
+        margin-bottom  40px
+        margin-left -100px
     }
 }
