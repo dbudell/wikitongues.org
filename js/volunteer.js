@@ -1,12 +1,14 @@
 $(document).ready(function(){
   $("#overlay").append('\
     <form id="volunteer-form" action="volunteer.php" method="POST">\
-      <h1 class="contactLogotype">WIKITONGUES</h1>\
+      <h1 class="contactLogotype">WIKITONGUES <span>Volunteer</span></h1>\
+      <span class="close">Close</span>\
       <input id="name" name="name" type="text" placeholder="What&#39;s your name?">\
       <input id="email" name="email" type="text" placeholder="What&#39;s your email?">\
+      <p>How would you like to contribute?</p>\
       <label><input id="ambassador" name="check_list[]" type="checkbox" value="Ambassador">Ambassador</label>\
       <label><input id="socialMedia" name="check_list[]" type="checkbox" value="Social Media">Social Media</label>\
-      <label><input id="webDev" name="check_list[]" type="checkbox" value="Web Development">Web Devlopment</label>\
+      <label><input id="webDev" name="check_list[]" type="checkbox" value="Web Development">Web Development</label>\
       <textarea id="message" name="message" placeholder="Tell us about yourself"></textarea>\
       <input id="submit" type="submit" value="Send">\
     </form>\
@@ -40,7 +42,7 @@ function closeVolunteerForm() {
 
 function clickVolunteerOut () {
   $('#overlay').on('click', function(e){
-    if (e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA' && e.target.tagName != 'LABEL') {
+    if (e.target.tagName != 'FORM' && e.target.tagName != 'H1' && e.target.tagName != 'INPUT' && e.target.tagName != 'P' && e.target.tagName != 'LABEL' && e.target.tagName != 'TEXTAREA') {
       closeVolunteerForm()
     }
   })
@@ -61,8 +63,12 @@ function volunteerResize () {
   titleComponent = 42,
   inputComponent = 63,
   inputNumber = 2,
+  hintComponent = 52,
+  hintNumber = 1,
+  labelComponent = 62,
+  labelNumber = 3,
   sendComponent = 74,
-  usedHeight = padding+titleComponent+(inputComponent*inputNumber)+sendComponent,
+  usedHeight = padding+titleComponent+(inputComponent*inputNumber)+(hintComponent*hintNumber)+(labelComponent*labelNumber)+sendComponent,
   modalHeight = screenHeight - usedHeight
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

@@ -1,7 +1,8 @@
 $(document).ready(function(){
   $("#overlay").append('\
     <form id="contact-form" action="mail.php" method="POST">\
-      <h1 class="contactLogotype">WIKITONGUES</h1>\
+      <h1 class="contactLogotype">WIKITONGUES <span>Contact</span></h1>\
+      <span class="close">Close</span>\
       <input id="name" name="name" type="text" placeholder="What&#39;s your name?">\
       <input id="email" name="email" type="text" placeholder="What&#39;s your email?">\
       <textarea id="message" name="message" placeholder="Message"></textarea>\

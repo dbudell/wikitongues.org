@@ -1,7 +1,8 @@
 $(document).ready(function(){
   $("#overlay").append('\
     <form id="submit-form" action="submit.php" method="POST">\
-      <h1 class="contactLogotype">WIKITONGUES</h1>\
+      <h1 class="contactLogotype">WIKITONGUES <span>Submit</span></h1>\
+      <span class="close">Close</span>\
       <ul>\
         <li><input id="name" name="name" type="text" placeholder="What&#39;s your name?"></li>\
         <li><input id="email" name="email" type="text" placeholder="What&#39;s your email?"></li>\
@@ -47,7 +48,7 @@ function closeSubmitForm() {
 
 function clickSubmitOut () {
   $('#overlay').on('click', function(e){
-    if (e.target.tagName != 'LI' && e.target.tagName != 'P' && e.target.tagName != 'INPUT' && e.target.tagName != 'H1' && e.target.tagName != 'A' && e.target.tagName != 'TEXTAREA') {
+    if (e.target.tagName != 'FORM' && e.target.tagName != 'H1' && e.target.tagName != 'UL' && e.target.tagName != 'LI' && e.target.tagName != 'P' && e.target.tagName != 'INPUT' && e.target.tagName != 'TEXTAREA') {
       closeSubmitForm()
     }
   })
@@ -64,11 +65,21 @@ function escapeSubmitOut () {
 
 function submitResize () {
   var screenHeight = $(window).innerHeight(),
-  modalHeight = (screenHeight - 496)/3
+  padding = 20,
+  titleComponent = 43,
+  inputComponent = 63,
+  inputNumber = 5,
+  hintComponent = 52,
+  hintNumber = 0,
+  labelComponent = 62,
+  labelNumber = 0,
+  sendComponent = 74,
+  usedHeight = padding+titleComponent+(inputComponent*inputNumber)+(hintComponent*hintNumber)+(labelComponent*labelNumber)+sendComponent,
+  modalHeight = (screenHeight - usedHeight)/3
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   } else {
-    $('#overlay #submit-form #transcription, #overlay #submit-form #translation, #overlay #submit-form #message').css('height',modalHeight)
+    $('#overlay #submit-form #transcription, #overlay #submit-form #translation, #overlay #submit-form #message').css('min-height',modalHeight)
   }
 }
 
