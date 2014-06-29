@@ -17,14 +17,6 @@
   -ms-transition: margin-top 0.2s ease-in-out;
   transition: margin-top 0.2s ease-in-out;
 }
-#overlay form.hidden {
-  margin-top: -600px;
-  -webkit-transition: margin-top 0.2s ease-in-out;
-  -moz-transition: margin-top 0.2s ease-in-out;
-  -o-transition: margin-top 0.2s ease-in-out;
-  -ms-transition: margin-top 0.2s ease-in-out;
-  transition: margin-top 0.2s ease-in-out;
-}
 #overlay form#contact-form,
 #overlay form#submit-form,
 #overlay form#volunteer-form {

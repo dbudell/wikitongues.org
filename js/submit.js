@@ -21,8 +21,6 @@ $(document).ready(function(){
   $('#submit, footer .footer-submit').on('click', function(){
     submitForm()
   })
-
-  //languageName()
 })
 
 $(window).resize(function(){
