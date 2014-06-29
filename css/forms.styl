@@ -19,7 +19,7 @@
             transition margin-top $transitionTime ease-in-out
         }
 
-        &#contact-form, &#submit-form {
+        &#contact-form, &#submit-form, &#volunteer-form {
             display none
             width 650px
             margin auto
@@ -42,7 +42,21 @@
             .contactLogotype {
                 font-family 'Raleway',helvetica
                 padding 0 20px 20px 20px
-                text-align center
+                width auto
+                float left
+
+                span {
+                    font-family 'Open Sans', sans-serif
+                    font-weight 100
+                    margin-left 7px
+                }
+            }
+
+            .close {
+                padding 0 20px
+                float right
+                width auto
+                cursor pointer
             }
 
             .contactLogotype, input, textarea {
@@ -76,8 +90,25 @@
             }
 
             input:hover, textarea:hover, *:focus {
-                background rgb(245,245,245)
+                background lighten($wikitonguesBlue,95%)
                 outline none
+                transition background ($transitionTime / 2) ease-in-out
+
+                &::-webkit-input-placeholder {
+                   color $wikitonguesBlue
+                }
+
+                &:-moz-placeholder { /* Firefox 18- */
+                   color $wikitonguesBlue
+                }
+
+                &::-moz-placeholder {  /* Firefox 19+ */
+                   color $wikitonguesBlue
+                }
+
+                &:-ms-input-placeholder {
+                   color $wikitonguesBlue
+                }
             }
 
             p {
@@ -90,12 +121,45 @@
         }
 
         &#submit-form {
+            ul {
+                display inline-block
+            }
             textarea {
                 border-bottom 1px solid #eaeaea
 
                 &:last-of-type {
                     border-bottom none
                 }
+            }
+        }
+
+        &#volunteer-form {
+            p {
+                padding 20px 20px 10px 20px
+                border none
+            }
+
+            label {
+                color #A9A9A9
+                padding 20px
+                display block
+                cursor pointer
+                text-shadow none
+
+                &:hover {
+                    background lighten($wikitonguesBlue,95%)
+                    color $wikitonguesBlue
+                    transition background ($transitionTime / 2) ease-in-out
+                }
+
+                input {
+                    margin-right 14px
+                    width auto
+                }
+            }
+
+            textarea {
+                border-top 1px solid #eaeaea
             }
         }
     }

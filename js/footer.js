@@ -29,10 +29,13 @@ $(function(){
             <a class="footer-submit">Submit a video</a>\
           </li>\
           <li>\
-            <a href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform" target="_blank">Translate this page</a>\
+            <a class="footer-volunteer">Volunteer</a>\
           </li>\
           <li>\
             <a class="footer-contact">Get in touch</a>\
+          </li>\
+          <li>\
+            <a href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform" target="_blank">Translate this page</a>\
           </li>\
         </ul>\
         <ul>\

@@ -18,7 +18,8 @@
   transition: margin-top 0.2s ease-in-out;
 }
 #overlay form#contact-form,
-#overlay form#submit-form {
+#overlay form#submit-form,
+#overlay form#volunteer-form {
   display: none;
   width: 650px;
   margin: auto;
@@ -35,7 +36,8 @@
   transition: margin-top 0.2s ease-in-out;
 }
 #overlay form#contact-form *,
-#overlay form#submit-form * {
+#overlay form#submit-form *,
+#overlay form#volunteer-form * {
   width: 100%;
   resize: none;
   color: #11242f;
@@ -45,17 +47,37 @@
   -moz-box-sizing: border-box;
 }
 #overlay form#contact-form .contactLogotype,
-#overlay form#submit-form .contactLogotype {
+#overlay form#submit-form .contactLogotype,
+#overlay form#volunteer-form .contactLogotype {
   font-family: 'Raleway', helvetica;
   padding: 0 20px 20px 20px;
-  text-align: center;
+  width: auto;
+  float: left;
+}
+#overlay form#contact-form .contactLogotype span,
+#overlay form#submit-form .contactLogotype span,
+#overlay form#volunteer-form .contactLogotype span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  margin-left: 7px;
+}
+#overlay form#contact-form .close,
+#overlay form#submit-form .close,
+#overlay form#volunteer-form .close {
+  padding: 0 20px;
+  float: right;
+  width: auto;
+  cursor: pointer;
 }
 #overlay form#contact-form .contactLogotype,
 #overlay form#submit-form .contactLogotype,
+#overlay form#volunteer-form .contactLogotype,
 #overlay form#contact-form input,
 #overlay form#submit-form input,
+#overlay form#volunteer-form input,
 #overlay form#contact-form textarea,
-#overlay form#submit-form textarea {
+#overlay form#submit-form textarea,
+#overlay form#volunteer-form textarea {
   -webkit-border-radius: 0;
   border-radius: 0;
   font-size: 1em;
@@ -64,26 +86,33 @@
 }
 #overlay form#contact-form input,
 #overlay form#submit-form input,
+#overlay form#volunteer-form input,
 #overlay form#contact-form textarea,
 #overlay form#submit-form textarea,
+#overlay form#volunteer-form textarea,
 #overlay form#contact-form p,
-#overlay form#submit-form p {
+#overlay form#submit-form p,
+#overlay form#volunteer-form p {
   padding: 20px 20px 20px 20px;
 }
 #overlay form#contact-form input[type="text"],
-#overlay form#submit-form input[type="text"] {
+#overlay form#submit-form input[type="text"],
+#overlay form#volunteer-form input[type="text"] {
   border-bottom: 1px solid #eaeaea;
 }
 #overlay form#contact-form input[type="text"]:after,
-#overlay form#submit-form input[type="text"]:after {
+#overlay form#submit-form input[type="text"]:after,
+#overlay form#volunteer-form input[type="text"]:after {
   content: "X";
 }
 #overlay form#contact-form textarea,
-#overlay form#submit-form textarea {
+#overlay form#submit-form textarea,
+#overlay form#volunteer-form textarea {
   min-height: 250px;
 }
 #overlay form#contact-form #submit,
-#overlay form#submit-form #submit {
+#overlay form#submit-form #submit,
+#overlay form#volunteer-form #submit {
   font-size: 1.5em;
   background: #fff;
   border-top: 1px solid #eaeaea;
@@ -91,24 +120,109 @@
 }
 #overlay form#contact-form input:hover,
 #overlay form#submit-form input:hover,
+#overlay form#volunteer-form input:hover,
 #overlay form#contact-form textarea:hover,
 #overlay form#submit-form textarea:hover,
+#overlay form#volunteer-form textarea:hover,
 #overlay form#contact-form *:focus,
-#overlay form#submit-form *:focus {
-  background: #f5f5f5;
+#overlay form#submit-form *:focus,
+#overlay form#volunteer-form *:focus {
+  background: #eff5f9;
   outline: none;
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+#overlay form#contact-form input:hover::-webkit-input-placeholder,
+#overlay form#submit-form input:hover::-webkit-input-placeholder,
+#overlay form#volunteer-form input:hover::-webkit-input-placeholder,
+#overlay form#contact-form textarea:hover::-webkit-input-placeholder,
+#overlay form#submit-form textarea:hover::-webkit-input-placeholder,
+#overlay form#volunteer-form textarea:hover::-webkit-input-placeholder,
+#overlay form#contact-form *:focus::-webkit-input-placeholder,
+#overlay form#submit-form *:focus::-webkit-input-placeholder,
+#overlay form#volunteer-form *:focus::-webkit-input-placeholder {
+  color: #11242f;
+}
+#overlay form#contact-form input:hover:-moz-placeholder,
+#overlay form#submit-form input:hover:-moz-placeholder,
+#overlay form#volunteer-form input:hover:-moz-placeholder,
+#overlay form#contact-form textarea:hover:-moz-placeholder,
+#overlay form#submit-form textarea:hover:-moz-placeholder,
+#overlay form#volunteer-form textarea:hover:-moz-placeholder,
+#overlay form#contact-form *:focus:-moz-placeholder,
+#overlay form#submit-form *:focus:-moz-placeholder,
+#overlay form#volunteer-form *:focus:-moz-placeholder {
+/* Firefox 18- */
+  color: #11242f;
+}
+#overlay form#contact-form input:hover::-moz-placeholder,
+#overlay form#submit-form input:hover::-moz-placeholder,
+#overlay form#volunteer-form input:hover::-moz-placeholder,
+#overlay form#contact-form textarea:hover::-moz-placeholder,
+#overlay form#submit-form textarea:hover::-moz-placeholder,
+#overlay form#volunteer-form textarea:hover::-moz-placeholder,
+#overlay form#contact-form *:focus::-moz-placeholder,
+#overlay form#submit-form *:focus::-moz-placeholder,
+#overlay form#volunteer-form *:focus::-moz-placeholder {
+/* Firefox 19+ */
+  color: #11242f;
+}
+#overlay form#contact-form input:hover:-ms-input-placeholder,
+#overlay form#submit-form input:hover:-ms-input-placeholder,
+#overlay form#volunteer-form input:hover:-ms-input-placeholder,
+#overlay form#contact-form textarea:hover:-ms-input-placeholder,
+#overlay form#submit-form textarea:hover:-ms-input-placeholder,
+#overlay form#volunteer-form textarea:hover:-ms-input-placeholder,
+#overlay form#contact-form *:focus:-ms-input-placeholder,
+#overlay form#submit-form *:focus:-ms-input-placeholder,
+#overlay form#volunteer-form *:focus:-ms-input-placeholder {
+  color: #11242f;
 }
 #overlay form#contact-form p,
-#overlay form#submit-form p {
+#overlay form#submit-form p,
+#overlay form#volunteer-form p {
   font-size: 1em;
   margin: 0;
   padding: 20px 20px 3px 5px;
   color: #a9a9a9;
   border-bottom: 1px dashed #eaeaea;
 }
+#overlay form#submit-form ul {
+  display: inline-block;
+}
 #overlay form#submit-form textarea {
   border-bottom: 1px solid #eaeaea;
 }
 #overlay form#submit-form textarea:last-of-type {
   border-bottom: none;
+}
+#overlay form#volunteer-form p {
+  padding: 20px 20px 10px 20px;
+  border: none;
+}
+#overlay form#volunteer-form label {
+  color: #a9a9a9;
+  padding: 20px;
+  display: block;
+  cursor: pointer;
+  text-shadow: none;
+}
+#overlay form#volunteer-form label:hover {
+  background: #eff5f9;
+  color: #11242f;
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+#overlay form#volunteer-form label input {
+  margin-right: 14px;
+  width: auto;
+}
+#overlay form#volunteer-form textarea {
+  border-top: 1px solid #eaeaea;
 }
