@@ -27,6 +27,8 @@
 .language-options li .languageButton.active {
   background: #11242f;
   color: #fff;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 .language-options li .languageButton:hover {
   border-bottom: 2px solid #11242f;
@@ -111,6 +113,8 @@
   cursor: pointer;
 }
 .moreLanguages {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
   width: 113px;
   height: 38px;
   float: right;
