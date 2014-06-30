@@ -22,6 +22,9 @@ $(function(){
           <li>\
             <a href="developers.html">Developers</a>\
           </li>\
+          <li>\
+            <a href="press.html">Press</a>\
+          </li>\
         </ul>\
         <ul>\
           <li class="header">Get involved</li>\
