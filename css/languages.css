@@ -26,14 +26,16 @@
   transition: margin-right 0.2s ease-in-out;
 }
 .language-selection:hover .language-options li .languageButton.activeLanguage {
-  background: #668797;
-  -webkit-transition: background 0.2s ease-in-out;
-  -moz-transition: background 0.2s ease-in-out;
-  -o-transition: background 0.2s ease-in-out;
-  -ms-transition: background 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out;
   -webkit-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
+}
+.language-selection:hover .moreLanguages {
+  background-color: #668797;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .language-selection .language-options {
   display: none;
@@ -199,11 +201,15 @@
   width: 43px;
   height: 38px;
   float: right;
-  border-bottom: 2px solid #11242f;
   font-size: 1.5em;
   background-color: #11242f;
   color: #fff;
   padding: 5px 13px;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 .moreLanguages.rtl {
   -webkit-border-radius: 2px 0 0 2px;

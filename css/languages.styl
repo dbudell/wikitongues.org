@@ -29,11 +29,13 @@
 
             li {
                 .languageButton.activeLanguage {
-                    background #668797
-                    transition background $transitionTime ease-in-out
                     border-radius $radius 0 0 $radius
                 }
             }
+        }
+        .moreLanguages {
+            background-color #668797
+            transition background-color $transitionTime ease-in-out
         }
     }
 
@@ -191,11 +193,11 @@
     width 43px
     height 38px
     float right
-    border-bottom 2px solid $wikitonguesBlue
     font-size 1.5em
-    background-color  $wikitonguesBlue
+    background-color $wikitonguesBlue
     color #fff
     padding 5px 13px
+    transition background $transitionTime ease-in-out
 
     &.rtl {
         border-radius $radius 0 0 $radius
