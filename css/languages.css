@@ -1,5 +1,39 @@
 .language-selection {
   display: inline-block;
+  float: right;
+}
+.language-selection.rtl {
+  float: left !important;
+}
+.language-selection.rtl:hover .language-options {
+  margin-left: 0;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+  -moz-transition: margin-left 0.2s ease-in-out;
+  -o-transition: margin-left 0.2s ease-in-out;
+  -ms-transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.2s ease-in-out;
+}
+.language-selection.rtl:hover .language-options li .languageButton.activeLanguage {
+  -webkit-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.language-selection:hover .language-options {
+  margin-right: 0;
+  -webkit-transition: margin-right 0.2s ease-in-out;
+  -moz-transition: margin-right 0.2s ease-in-out;
+  -o-transition: margin-right 0.2s ease-in-out;
+  -ms-transition: margin-right 0.2s ease-in-out;
+  transition: margin-right 0.2s ease-in-out;
+}
+.language-selection:hover .language-options li .languageButton.activeLanguage {
+  background: #668797;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
 }
 .language-selection .language-options {
   display: none;
@@ -8,13 +42,37 @@
   display: inline-block;
   height: 38px;
   overflow: hidden;
+  margin-right: -43px;
+  position: relative;
+  -webkit-transition: margin-right 0.2s ease-in-out;
+  -moz-transition: margin-right 0.2s ease-in-out;
+  -o-transition: margin-right 0.2s ease-in-out;
+  -ms-transition: margin-right 0.2s ease-in-out;
+  transition: margin-right 0.2s ease-in-out;
+}
+.language-selection .language-options.rtl {
+  margin-right: 0;
+  margin-left: -43px;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+  -moz-transition: margin-left 0.2s ease-in-out;
+  -o-transition: margin-left 0.2s ease-in-out;
+  -ms-transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.2s ease-in-out;
 }
 .language-selection .language-options li {
   font-size: 1.5em;
-  float: left;
+  float: right;
   width: 113px;
 }
+.language-selection .language-options li.rtl {
+  float: left !important;
+}
+.language-selection .language-options li.rtl .activeLanguage {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
 .language-selection .language-options li .languageButton {
+  width: 100%;
   background: none;
   padding: 5px 10px;
   font-weight: 100;
@@ -26,14 +84,16 @@
   color: #db0000;
   font-size: 1em;
 }
-.language-selection .language-options li .languageButton.active {
+.language-selection .language-options li .languageButton.activeLanguage {
   background: #11242f;
   color: #fff;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-}
-.language-selection .language-options li .languageButton:hover {
-  border-bottom: 2px solid #11242f;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 .language-modal {
   background: none;
@@ -82,7 +142,15 @@
   width: 100%;
 }
 .language-modal .modal-wrapper .content-wrapper .language-options li {
+  float: left;
   width: 10%;
+}
+.language-modal .modal-wrapper .content-wrapper .language-options li button.active {
+  background: #11242f;
+  color: #fff;
+}
+.language-modal .modal-wrapper .content-wrapper .language-options li button:hover {
+  border-bottom: 2px solid #11242f;
 }
 .language-modal .modal-wrapper .content-wrapper a {
   text-decoration: none;
@@ -126,9 +194,9 @@
   cursor: pointer;
 }
 .moreLanguages {
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  width: 113px;
+  -webkit-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  width: 43px;
   height: 38px;
   float: right;
   border-bottom: 2px solid #11242f;
@@ -136,4 +204,8 @@
   background-color: #11242f;
   color: #fff;
   padding: 5px 13px;
+}
+.moreLanguages.rtl {
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
 }
