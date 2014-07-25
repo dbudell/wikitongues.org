@@ -100,11 +100,6 @@
 #overlay form#volunteer-form input[type="text"] {
   border-bottom: 1px solid #eaeaea;
 }
-#overlay form#contact-form input[type="text"]:after,
-#overlay form#submit-form input[type="text"]:after,
-#overlay form#volunteer-form input[type="text"]:after {
-  content: "X";
-}
 #overlay form#contact-form textarea,
 #overlay form#submit-form textarea,
 #overlay form#volunteer-form textarea {
