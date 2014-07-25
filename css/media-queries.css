@@ -4,38 +4,57 @@
     border-top-width: 10px !important;
   }
   body .content-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
+    width: 100% !important;
     padding: 0 20px;
     font-size: 16px;
   }
   body .content-wrapper .language-options {
-    width: 211px !important;
+    width: 243px !important;
   }
   body .content-wrapper .language-options li {
-    width: 70px !important;
+    width: 80px !important;
+    font-size: 0.8em !important;
   }
   body .content-wrapper .language-options li .languageButton {
     padding: 3px 8px !important;
-    font-size: 0.8em !important;
   }
   body .content-wrapper .moreLanguages {
     width: 37px !important;
+    padding: 5px;
+  }
+  body .content-wrapper .language-modal .modal-wrapper .content-wrapper {
+    padding-top: 0;
   }
   body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options {
     width: 100% !important;
+    max-height: 248px;
+    overflow: scroll;
+    margin: 0 auto !important;
+    padding-top: 30px;
   }
   body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options li {
+    font-size: 0.6em !important;
     width: 25% !important;
   }
-  body .content-wrapper h1 {
-    margin-top: 10px;
-    font-size: 2.2em !important;
+  body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options li .languageButton {
+    padding: 3px 6px !important;
   }
-  body .content-wrapper h4 {
+  body .content-wrapper .language-modal .modal-wrapper .content-wrapper .language-options li .languageButton:hover {
+    border-color: transparent;
+  }
+  body .content-wrapper .language-modal .modal-wrapper .content-wrapper a {
     font-size: 1em;
-    font-weight: 400;
-    margin-top: 20px;
+  }
+  body .content-wrapper img.logo {
+    height: initial;
+    margin: auto;
+  }
+  body .content-wrapper h2.slogan {
+    font-size: 1.4em;
+    margin-bottom: 1em;
   }
   body .content-wrapper p {
     font-size: 1em !important;
@@ -48,68 +67,131 @@
     display: block !important;
     clear: both;
   }
-  body .content-wrapper #get-involved {
-    margin: 20px 0 !important;
-    font-size: 2em;
+  body .content-wrapper button#submit,
+  body .content-wrapper button#contact,
+  body .content-wrapper button#volunteer {
+    clear: both;
+    font-size: 1em;
+    width: 100%;
+    margin: 0 0 2px 0;
+  }
+  body .content-wrapper button#submit:hover,
+  body .content-wrapper button#contact:hover,
+  body .content-wrapper button#volunteer:hover {
+    background: #11242f !important;
+  }
+  body .content-wrapper button#volunteer {
+    margin: 0;
   }
   body .content-wrapper #social-media {
     display: inline-block;
-    margin: 5px 0 5px 0;
+    margin: 40px 0 5px 0;
   }
   body .content-wrapper #social-media li {
-    margin: 0 0 10px 0 !important;
+    margin: 0 !important;
     width: 20%;
     float: left;
-  }
-  body .content-wrapper #social-media li:last-of-type {
-    margin-right: 0;
   }
   body .content-wrapper #social-media li a {
     display: inline-block;
   }
-  body .content-wrapper #social-media li a:hover.youtube {
+  body .content-wrapper #social-media li a:hover.youtube img {
     background: #b12324;
   }
-  body .content-wrapper #social-media li a:hover.facebook {
+  body .content-wrapper #social-media li a:hover.facebook img {
     background: #3b59b7;
   }
-  body .content-wrapper #social-media li a:hover.twitter {
+  body .content-wrapper #social-media li a:hover.twitter img {
     background: #5c90cb;
   }
-  body .content-wrapper #social-media li a:hover.tumblr {
+  body .content-wrapper #social-media li a:hover.tumblr img {
     background: #1e295b;
   }
-  body .content-wrapper #social-media li a:hover.instagram {
+  body .content-wrapper #social-media li a:hover.instagram img {
     background: #3f729b;
   }
-  body footer .content-wrapper p {
-    display: block;
-    font-size: 1em;
-    font-weight: 100;
+  body footer .content-wrapper {
     margin: 0;
   }
-  body footer .content-wrapper p:last-of-type {
-    font-size: 0.8em;
-    margin-top: 20px;
+  body footer .content-wrapper .copyright {
+    margin-bottom: 1.5em;
   }
-  body #overlay #contact-form {
+  body footer .content-wrapper .copyright p {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0 0 0.8em 0;
+  }
+  body footer .content-wrapper .copyright p:first-of-type {
+    font-size: 1.4em;
+  }
+  body footer .content-wrapper .copyright p:first-of-type img {
+    height: 29px;
+    margin: 0 3px -7px 5px;
+  }
+  body footer .content-wrapper .links {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  body footer .content-wrapper .links ul {
+    margin: 0;
+    font-size: 0.7em;
+    float: left;
+  }
+  body footer .content-wrapper .links ul:last-of-type {
+    float: right;
+  }
+  body footer .content-wrapper .links ul li {
+    line-height: 1.9em;
+  }
+  body #overlay form#contact-form,
+  body #overlay form#volunteer-form,
+  body #overlay form#submit-form {
     width: 100% !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  body #overlay #contact-form h1 {
-    padding-bottom: 10px;
+  body #overlay form#contact-form h1,
+  body #overlay form#volunteer-form h1,
+  body #overlay form#submit-form h1 {
+    padding: 0 0 10px 0 !important;
   }
-  body #overlay #contact-form input,
-  body #overlay #contact-form textarea {
+  body #overlay form#contact-form .close,
+  body #overlay form#volunteer-form .close,
+  body #overlay form#submit-form .close {
+    padding: 0 !important;
+  }
+  body #overlay form#contact-form input,
+  body #overlay form#volunteer-form input,
+  body #overlay form#submit-form input,
+  body #overlay form#contact-form textarea,
+  body #overlay form#volunteer-form textarea,
+  body #overlay form#submit-form textarea,
+  body #overlay form#contact-form p,
+  body #overlay form#volunteer-form p,
+  body #overlay form#submit-form p,
+  body #overlay form#contact-form label,
+  body #overlay form#volunteer-form label,
+  body #overlay form#submit-form label {
+    -webkit-border-radius: 0;
     border-radius: 0;
     background: #fff;
-    font-size: 1em;
+    font-size: 0.7em;
     border-top: none;
     border-bottom: 1px solid #eaeaea;
     margin: 0;
     padding: 15px 7px !important;
   }
-  body #overlay #contact-form #message {
+  body #overlay form#contact-form label input,
+  body #overlay form#volunteer-form label input,
+  body #overlay form#submit-form label input {
+    padding: 0 20px 0 0 !important;
+  }
+  body #overlay form#contact-form #message,
+  body #overlay form#volunteer-form #message,
+  body #overlay form#submit-form #message {
+    border-bottom: none;
     min-height: 160px !important;
     height: 160px;
   }
