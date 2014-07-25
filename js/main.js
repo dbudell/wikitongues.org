@@ -1,7 +1,4 @@
 $(function(){
-	// Logotype resize
-	$(".logotype").fitText(.712)
-
 	translate()
 })
 
