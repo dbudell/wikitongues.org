@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:800|Merriweather:300italic|Open+Sans:800,300&subset=cyrillic-ext,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/languages.css">
+        <link rel="stylesheet" type="text/css" href="css/submit.css">
+        <link rel="stylesheet" type="text/css" href="css/forms.css">
+        <link rel="stylesheet" type="text/css" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)" href="css/media-queries.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="content-wrapper">
+            <div class="language-selection">
+                <ul class="language-options">
+                <!-- Language picker template -->
+                </ul>
+                <button class="moreLanguages">...</button>
+                <div class="language-modal">
+                <!-- Language modal template -->
+                </div>
+            </div>
+
+            <div class="submit-page-about">
+                <a href="index.html">
+                    <img class="logo" src="img/wikitonguesLogoRectangle.svg" alt="">
+                </a>
+                <h2 class="slogan">Every language in the world, <span class="no-wrap">for everyone.</span></h2>
+                <p id="summary">Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages, the stories and memories that compose all our cultures. Join us and show the world the languages you use.</p>
+                <a href="http://youtube.com/wikitongues">For examples, visit our <span>Youtube</span> channel</a>
+                <br>
+                <a id="contact">For questions, <span>contact us</span></a>
+            </div>
+            <form id="submit-form-page" action="submit.php" method="post">
+                <h1 class="contactLogotype">WIKITONGUES<span>Submit</span></h1>
+                <ul>
+                    <li><input type="text" id="name" name="name" placeholder="What&#39;s your name?"></li>
+                    <li><input type="text" id="email" name="email" placeholder="What&#39;s your email?"></li>
+                    <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
+                    <li><input type="text" id="speaker" name="speaker" placeholder="What&#39;s the speaker&#39;s name?"></li>
+                    <li class="video-language last"><input type="text" id="language" name="language" placeholder="What languages does this video display?"></li>
+                </ul>
+                <textarea name="transcription" id="transcription" cols="30" rows="10" class="optional" placeholder="Transcription (optional)"></textarea>
+                <textarea name="translation" id="translation" cols="30" rows="10" class="optional" placeholder="Translation (optional)"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" class="optional" placeholder="Message (optional)"></textarea>
+                <input type="submit" id="send-button" value="Send">
+            </form>
+            &nbsp;
+        </div>
+
+        <div id="overlay">
+        <!-- Contact template -->
+        </div>
+
+        <footer>
+        <!-- Footer template -->
+        </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><script>')</script>
+
+
+        <script src="js/footer.js"></script>
+        <script src="js/contact.js"></script>
+        <script src="js/volunteer.js"></script>
+        <script src="js/submit.js"></script>
+        <script src="js/languagePicker.js"></script>
+
+
+        <script src="js/jquery.fittext.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
