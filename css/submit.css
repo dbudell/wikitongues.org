@@ -1,9 +1,11 @@
 body {
   display: inline-block;
+  width: 100%;
 }
 .submit-page-about {
   width: 37%;
   float: left;
+  margin-top: 3em;
 }
 .submit-page-about .logo {
   margin: 20px 0;
@@ -16,6 +18,32 @@ body {
 .submit-page-about p#summary {
   font-size: 2.5em;
 }
+.submit-page-about a {
+  font-size: 2.5em;
+  text-decoration: none;
+  color: #11242f;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.submit-page-about a:hover span {
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  color: #ffc328;
+}
+.submit-page-about a#contact {
+  width: 100%;
+  font-size: 2.5em;
+  background: none;
+  color: #11242f;
+  font-weight: 100;
+  cursor: pointer;
+}
 #submit-form-page {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -23,7 +51,7 @@ body {
   max-width: 650px;
   width: 60%;
   float: right;
-  margin: 2em 0;
+  margin: 3em 0;
   font-size: 16px;
   padding: 20px 20px 0 20px;
   background: #fff;
@@ -85,7 +113,7 @@ body {
 #submit-form-page textarea:last-of-type {
   border-bottom: none;
 }
-#submit-form-page #submit {
+#submit-form-page #send-button {
   font-size: 1.5em;
   background: #fff;
   border-top: 1px solid #eaeaea;

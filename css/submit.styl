@@ -3,11 +3,13 @@
 
 body {
     display inline-block
+    width 100%
 }
 
 .submit-page-about {
     width 37%
     float left
+    margin-top 3em
 
     .logo {
         margin 20px 0
@@ -22,6 +24,29 @@ body {
     p#summary {
         font-size 2.5em
     }
+
+    a {
+        font-size 2.5em
+        text-decoration none
+        color $wikitonguesBlue
+        transition color $transitionTime ease-in-out
+
+        &:hover {
+            span {
+                transition color $transitionTime ease-in-out
+                color $hoverColor
+            }
+        }
+    }
+
+    a#contact {
+        width 100%
+        font-size 2.5em
+        background none
+        color $wikitonguesBlue
+        font-weight 100
+        cursor pointer
+    }
 }
 
 #submit-form-page {
@@ -29,7 +54,7 @@ body {
     max-width 650px
     width 60%
     float right
-    margin 2em 0
+    margin 3em 0
     font-size 16px
     padding 20px 20px 0 20px
     background #fff
@@ -89,7 +114,7 @@ body {
         }
     }
 
-    #submit {
+    #send-button {
         font-size 1.5em
         background #fff
         border-top 1px solid #eaeaea
