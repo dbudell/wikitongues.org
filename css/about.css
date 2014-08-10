@@ -23,34 +23,35 @@ body.about button.volunteer {
   padding: 0;
 }
 body.about button.volunteer:hover {
-  text-decoration: underline;
+  color: #295671;
 }
 body.about h2 {
   margin-top: 60px;
   text-align: center;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+body.about #volunteers-list {
+  width: 100%;
 }
 body.about #volunteers-list li {
-  width: 316px;
+  width: 24%;
   margin: 0 0 60px 0;
   vertical-align: top;
 }
-body.about #volunteers-list img {
-  width: inherit;
+body.about #volunteers-list li img {
+  border-radius: 2px;
+  width: 100%;
   margin-bottom: 15px;
 }
-body.about #volunteers-list span {
+body.about #volunteers-list li span {
   font-size: 0.9em;
 }
-body.about #volunteers-list .italic {
+body.about #volunteers-list li span.italic {
   font-style: italic;
+  margin-left: -2px;
 }
-body.about #volunteers-list .italic a {
+body.about #volunteers-list li span.italic a {
   color: #11242f;
   text-decoration: none;
-}
-body.about #volunteers-list .italic a:hover {
-  cursor: help;
-  text-decoration: underline;
 }

@@ -29,48 +29,46 @@ body {
 			font-weight bold
 			background none
 			padding 0
-		}
 
-
-		button.volunteer:hover {
-			text-decoration underline
+			&:hover {
+				color lighten($wikitonguesBlue, 20%)
+			}
 		}
 
 		h2 {
 			margin-top 60px
 			text-align center
 			padding-bottom .5em
-			border-bottom 1px solid #ccc
+			margin-bottom 10px
 		}
 
 		#volunteers-list {
+			width 100%
+
 			li {
-				width 316px
+				width 24%
 				margin  0 0 60px 0
 				vertical-align top
-			}
 
-			img {
-				width inherit
-				margin-bottom 15px
-			}
+				img {
+					border-radius $radius
+					width 100%
+					margin-bottom 15px
+				}
 
-			span {
-				font-size .9em
-			}
-			
-			.italic {
-				font-style italic
-					
-				a {
-					color #11242f
-					text-decoration none
-					
-					&:hover {
-						cursor help
-						text-decoration underline
+				span {
+					font-size .9em
+
+					&.italic {
+						font-style italic
+						margin-left -2px
+
+						a {
+							color $wikitonguesBlue
+							text-decoration none
+						}
 					}
-				}	
+				}
 			}
 		}
 	}

@@ -13,18 +13,6 @@ $(function(){
           <li>\
             <a href="about.html">About</a>\
           </li>\
-          <li>\
-            <a href="ambassadors.html">Ambassadors</a>\
-          </li>\
-          <li>\
-            <a href="volunteers.html">Volunteers</a>\
-          </li>\
-          <li>\
-            <a href="developers.html">Developers</a>\
-          </li>\
-          <li>\
-            <a href="press.html">Press</a>\
-          </li>\
         </ul>\
         <ul>\
           <li class="header">Get involved</li>\
@@ -57,18 +45,6 @@ $(function(){
           </li>\
           <li>\
             <a href="http://instagram.com/wikitongues" target="_blank">Instagram</a>\
-          </li>\
-        </ul>\
-        <ul>\
-          <li class="header">Legal</li>\
-          <li>\
-            <a href="termsOfService.html">Terms of Service</a>\
-          </li>\
-          <li>\
-            <a href="privacy.html">Privacy Policy</a>\
-          </li>\
-          <li>\
-            <a href=""></a>\
           </li>\
         </ul>\
       </div>\
