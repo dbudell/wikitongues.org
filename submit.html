@@ -9,11 +9,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='http://fonts.googleapis.com/css?family=Raleway:800|Open+Sans:800,300&subset=cyrillic-ext,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:800|Merriweather:300italic|Open+Sans:800,300&subset=cyrillic-ext,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/languages.css">
-        <link rel="stylesheet" type="text/css" href="css/page.css">
+        <link rel="stylesheet" type="text/css" href="css/submit.css">
         <link rel="stylesheet" type="text/css" href="css/forms.css">
         <link rel="stylesheet" type="text/css" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)" href="css/media-queries.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -33,15 +34,32 @@
                 <!-- Language modal template -->
                 </div>
             </div>
-            <div class="content">
-                <h1 class="header">Volunteers</h1>
-                <h2 class="slogan">Every language in the world, for everyone.</h2>
-                <p>Wikitongues is an open source effort to create a video archive of native speakers and signers of the all the world's languages. The project is a vehicle for debate around the value and legitimacy of culture as expressed through language. We maintain ambassadors responsible for recording speakers and signers in their respective regions and conducting missions to produce content in areas of difficult access.
-                </p>
-                <p>
-                Our vision is to create a living database of video interviews with multiple speakers of all the world's languages, hosted on an open source platform that allows for frequent and new user-generated submissions and translations, facilitating not only a popular conversation about the value of identity but the research of linguists, sociologists and other academics in the social sciences.
-                </p>
+
+            <div class="submit-page-about">
+                <a href="index.html">
+                    <img class="logo" src="img/wikitonguesLogoRectangle.svg" alt="">
+                </a>
+                <h2 class="slogan">Every language in the world, <span class="no-wrap">for everyone.</span></h2>
+                <p id="summary">Wikitongues is a community effort to give all the world’s people access to all the world’s 7,000 languages, the stories and memories that compose all our cultures. Join us and show the world the languages you use.</p>
+                <a href="http://youtube.com/wikitongues">For examples, visit our <span>Youtube</span> channel</a>
+                <br>
+                <a id="contact">For questions, <span>contact us</span></a>
             </div>
+            <form id="submit-form-page" action="submit.php" method="post">
+                <h1 class="contactLogotype">WIKITONGUES<span>Submit</span></h1>
+                <ul>
+                    <li><input type="text" id="name" name="name" placeholder="What&#39;s your name?"></li>
+                    <li><input type="text" id="email" name="email" placeholder="What&#39;s your email?"></li>
+                    <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
+                    <li><input type="text" id="speaker" name="speaker" placeholder="What&#39;s the speaker&#39;s name?"></li>
+                    <li class="video-language last"><input type="text" id="language" name="language" placeholder="What languages does this video display?"></li>
+                </ul>
+                <textarea name="transcription" id="transcription" cols="30" rows="10" class="optional" placeholder="Transcription (optional)"></textarea>
+                <textarea name="translation" id="translation" cols="30" rows="10" class="optional" placeholder="Translation (optional)"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" class="optional" placeholder="Message (optional)"></textarea>
+                <input type="submit" id="send-button" value="Send">
+            </form>
+            &nbsp;
         </div>
 
         <div id="overlay">
@@ -66,15 +84,5 @@
         <script src="js/jquery.fittext.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-48869719-1', 'wikitongues.org');
-            ga('send', 'pageview');
-        </script>
     </body>
 </html>
