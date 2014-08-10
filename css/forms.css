@@ -8,6 +8,7 @@
   background: rgba(17,36,47,0.97);
   cursor: pointer;
   overflow-y: scroll;
+  overflow-x: initial;
 }
 #overlay form.displayed {
   margin-top: 0 !important;

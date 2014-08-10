@@ -9,15 +9,21 @@ $(function(){
       </a>\
       <div class="links">\
         <ul>\
+          <li class="header">Organization</li>\
+          <li>\
+            <a href="about.html">About</a>\
+          </li>\
+        </ul>\
+        <ul>\
           <li class="header">Get involved</li>\
           <li>\
             <a class="footer-submit">Submit a video</a>\
           </li>\
           <li>\
-            <a class="footer-contact">Get in touch</a>\
+            <a class="footer-volunteer">Volunteer</a>\
           </li>\
           <li>\
-            <a class="footer-volunteer">Volunteer</a>\
+            <a class="footer-contact">Get in touch</a>\
           </li>\
           <li>\
             <a href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform" target="_blank">Translate this page</a>\

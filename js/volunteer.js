@@ -14,7 +14,7 @@ $(document).ready(function(){
     </form>\
   ')
 
-  $('#volunteer, footer .footer-volunteer').on('click', function(){
+  $('#volunteer, footer .footer-volunteer, body.about button.volunteer').on('click', function(){
     volunteerForm()
   })
 })
