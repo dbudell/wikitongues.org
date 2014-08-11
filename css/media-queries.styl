@@ -7,8 +7,41 @@
     body {
         border-top-width 10px !important
 
+        &.about {
+            h1.header {
+                font-size 1em
+                padding 0
+                margin 0
+            }
+            
+            .content-wrapper:first-of-type {
+                .content {
+                    padding-bottom 30px
+
+                    #volunteers-list {
+                        li {
+                            width 31%
+                            margin 0 0 30px 0
+                            font-size .40em !important
+
+                            img {
+                                margin-bottom 5px
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-size 55em !important
+                    font-weight 100
+                    margin-top 0
+                }
+            }
+
+        }
+
         .content-wrapper {
-            box-sizing border-box
+            box-sizsubmiting border-box
             width 100% !important
             padding 0 20px
             font-size 16px
@@ -85,6 +118,23 @@
                     display block !important
                     clear both
                 }
+            }
+            
+            .submit-form-about {
+                width 100%
+
+                p#summary  {
+                    display block
+                }
+
+                a {
+                    font-size 1em !important
+                }
+            }
+
+            #submit-form-page {
+                float left
+                width 100%
             }
 
             button {
@@ -186,8 +236,12 @@
                         font-size 0.7em
                         float left
 
+                        &:first-of-type {
+                            margin-right 60px
+                        }
+
                         &:last-of-type {
-                            float right
+                            float left
                         }
 
                         li {

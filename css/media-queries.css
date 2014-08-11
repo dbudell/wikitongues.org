@@ -3,10 +3,29 @@
   body {
     border-top-width: 10px !important;
   }
+  body.about h1.header {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  body.about .content-wrapper:first-of-type .content {
+    padding-bottom: 30px;
+  }
+  body.about .content-wrapper:first-of-type .content #volunteers-list li {
+    width: 31%;
+    margin: 0 0 30px 0;
+    font-size: 0.4em !important;
+  }
+  body.about .content-wrapper:first-of-type .content #volunteers-list li img {
+    margin-bottom: 5px;
+  }
+  body.about .content-wrapper:first-of-type p {
+    font-size: 55em !important;
+    font-weight: 100;
+    margin-top: 0;
+  }
   body .content-wrapper {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizsubmiting: border-box;
     width: 100% !important;
     padding: 0 20px;
     font-size: 16px;
@@ -66,6 +85,19 @@
     margin-top: 20px !important;
     display: block !important;
     clear: both;
+  }
+  body .content-wrapper .submit-form-about {
+    width: 100%;
+  }
+  body .content-wrapper .submit-form-about p#summary {
+    display: block;
+  }
+  body .content-wrapper .submit-form-about a {
+    font-size: 1em !important;
+  }
+  body .content-wrapper #submit-form-page {
+    float: left;
+    width: 100%;
   }
   body .content-wrapper button#submit,
   body .content-wrapper button#contact,
@@ -138,8 +170,11 @@
     font-size: 0.7em;
     float: left;
   }
+  body footer .content-wrapper .links ul:first-of-type {
+    margin-right: 60px;
+  }
   body footer .content-wrapper .links ul:last-of-type {
-    float: right;
+    float: left;
   }
   body footer .content-wrapper .links ul li {
     line-height: 1.9em;

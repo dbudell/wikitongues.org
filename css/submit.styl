@@ -31,10 +31,14 @@ body {
         color $wikitonguesBlue
         transition color $transitionTime ease-in-out
 
+        span {
+            font-weight 800
+        }
+
         &:hover {
             span {
                 transition color $transitionTime ease-in-out
-                color $hoverColor
+                color lighten($wikitonguesBlue, 20%)
             }
         }
     }
