@@ -21,7 +21,7 @@
     margin-top: 15px;
   }
   body.about .content-wrapper:first-of-type .content #volunteers-list li {
-    width: 31%;
+    width: 48%;
     margin: 0 0 30px 0;
     font-size: 0.4em !important;
   }
@@ -102,10 +102,19 @@
   }
   body .content-wrapper .submit-page-about {
     width: 100%;
+    margin-top: 25px;
+  }
+  body .content-wrapper .submit-page-about p#summary {
+    display: block;
   }
   body .content-wrapper .submit-page-about a,
   body .content-wrapper .submit-page-about a#contact {
     font-size: 1em;
+    display: inline-block;
+  }
+  body .content-wrapper .submit-page-about a img,
+  body .content-wrapper .submit-page-about a#contact img {
+    margin-bottom: 25px;
   }
   body .content-wrapper #submit-form-page {
     float: left;
