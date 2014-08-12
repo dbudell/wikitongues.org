@@ -21,6 +21,11 @@ body.about button.volunteer {
   font-weight: bold;
   background: none;
   padding: 0;
+  -webkit-transition: hover 0.2s ease-in-out;
+  -moz-transition: hover 0.2s ease-in-out;
+  -ms-transition: hover 0.2s ease-in-out;
+  -o-transition: hover 0.2s ease-in-out;
+  transition: hover 0.2s ease-in-out;
 }
 body.about button.volunteer:hover {
   color: #295671;

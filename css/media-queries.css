@@ -3,7 +3,37 @@
   body {
     border-top-width: 10px !important;
   }
+  body.about h1.header {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  body.about .content-wrapper:first-of-type .content {
+    padding-bottom: 30px;
+  }
+  body.about .content-wrapper:first-of-type .content p {
+    display: block;
+    font-size: 0.55em !important;
+    font-weight: 100;
+    margin-top: 0;
+  }
+  body.about .content-wrapper:first-of-type .content p.first-of-type {
+    margin-top: 15px;
+  }
+  body.about .content-wrapper:first-of-type .content #volunteers-list li {
+    width: 48%;
+    margin: 0 0 30px 0;
+    font-size: 0.4em !important;
+  }
+  body.about .content-wrapper:first-of-type .content #volunteers-list li img {
+    margin-bottom: 5px;
+  }
+  body.about h2 {
+    font-size: 1em;
+  }
   body .content-wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -62,10 +92,40 @@
     margin-top: 20px;
     display: none;
   }
+  body .content-wrapper p#summary {
+    display: none;
+  }
   body .content-wrapper p.mobile-text {
     margin-top: 20px !important;
     display: block !important;
     clear: both;
+  }
+  body .content-wrapper .submit-page-about {
+    width: 100%;
+    margin-top: 25px;
+  }
+  body .content-wrapper .submit-page-about p#summary {
+    display: block;
+  }
+  body .content-wrapper .submit-page-about a,
+  body .content-wrapper .submit-page-about a#contact {
+    font-size: 1em;
+    display: inline-block;
+  }
+  body .content-wrapper .submit-page-about a img,
+  body .content-wrapper .submit-page-about a#contact img {
+    margin-bottom: 25px;
+  }
+  body .content-wrapper #submit-form-page {
+    float: left;
+    width: 114%;
+    margin-top: 0;
+    margin-left: -20px;
+    padding: 20px 0 0 0;
+  }
+  body .content-wrapper #submit-form-page input,
+  body .content-wrapper #submit-form-page textarea {
+    font-size: 0.7em;
   }
   body .content-wrapper button#submit,
   body .content-wrapper button#contact,
@@ -138,8 +198,11 @@
     font-size: 0.7em;
     float: left;
   }
+  body footer .content-wrapper .links ul:first-of-type {
+    margin-right: 60px;
+  }
   body footer .content-wrapper .links ul:last-of-type {
-    float: right;
+    float: left;
   }
   body footer .content-wrapper .links ul li {
     line-height: 1.9em;

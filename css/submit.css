@@ -28,13 +28,16 @@ body {
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
+.submit-page-about a span {
+  font-weight: 800;
+}
 .submit-page-about a:hover span {
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
-  color: #ffc328;
+  color: #295671;
 }
 .submit-page-about a#contact {
   width: 100%;
