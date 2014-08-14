@@ -1,6 +1,99 @@
+.log-in-fields {
+  background-color: #11242f;
+  display: inline-block;
+  width: 100%;
+  padding: 0 0 6px 0;
+  position: absolute;
+  z-index: 2;
+  margin-top: -70px;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  -moz-transition: margin-top 0.2s ease-in-out;
+  -o-transition: margin-top 0.2s ease-in-out;
+  -ms-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
+}
+.log-in-fields.active {
+  margin-top: -9px;
+  -webkit-transition: margin-top 0.2s ease-in-out;
+  -moz-transition: margin-top 0.2s ease-in-out;
+  -o-transition: margin-top 0.2s ease-in-out;
+  -ms-transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
+  border-bottom: 4px solid #20455a;
+}
+.log-in-fields ul {
+  width: 90%;
+  margin: auto;
+}
+.log-in-fields ul li {
+  float: right;
+}
+.log-in-fields ul li.left-block {
+  float: left;
+}
+.log-in-fields ul li:not(:last-of-type) {
+  margin-left: 5px;
+}
+.log-in-fields ul li input,
+.log-in-fields ul li button.go,
+.log-in-fields ul li a {
+  font-size: 1.5em;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+  padding: 15px;
+}
+.log-in-fields ul li button.go {
+  background-color: #ffc328;
+  color: #fff;
+}
+.log-in-fields ul li a {
+  display: inline-block;
+  text-shadow: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.log-in-fields ul li a:visited {
+  color: #fff;
+}
+.log-in-fields ul li img {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  width: initial;
+}
+.log-in-area {
+  float: right;
+}
+.log-in-area button {
+  width: 113px;
+  height: 38px;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  float: left;
+}
+.log-in-area button.sign-up {
+  color: #11242f;
+  background-color: transparent;
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border-bottom: 2px transparent solid;
+}
+.log-in-area button.sign-up:hover {
+  border-bottom-color: #11242f;
+}
+.log-in-area button.log-in {
+  color: #fff;
+  background-color: #11242f;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
 .language-selection {
   display: inline-block;
-  float: right;
+  float: left;
 }
 .language-selection.rtl {
   float: left !important;

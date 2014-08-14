@@ -1,9 +1,105 @@
 @import 'nib'
 @import 'common-variables'
 
+.log-in-fields {
+    background-color $wikitonguesBlue
+    display inline-block
+    width 100%
+    padding 0 0 6px 0
+    position absolute
+    z-index 2
+    margin-top -70px
+    transition margin-top $transitionTime ease-in-out
+
+    &.active {
+        margin-top -9px
+        transition margin-top $transitionTime ease-in-out
+        border-bottom 4px solid lighten($wikitonguesBlue, 13%)
+    }
+
+    ul {
+        width 90%
+        margin auto
+
+        li {
+            float right
+
+            &.left-block {
+                float left
+            }
+
+            &:not(:last-of-type) {
+                margin-left 5px
+            }
+
+            input, button.go, a {
+                font-size 1.5em
+                border-radius $radius
+                border none
+                padding 15px
+            }
+
+            button.go {
+                background-color $hoverColor
+                color #fff
+            }
+
+            a {
+                display inline-block
+                text-shadow none
+                color #fff
+                text-decoration none
+                font-size 1.5em
+                padding-right 30px
+                padding-left 30px
+
+                &:visited {
+                    color #fff
+                }
+            }
+
+            img {
+                padding 0
+                margin 0
+                height 50px
+                width initial
+            }
+        }
+    }
+}
+
+.log-in-area {
+    float right
+
+    button {
+        width 113px
+        height 38px
+        padding 5px 10px
+        font-size 1.5em
+        float left
+
+        &.sign-up {
+            color $wikitonguesBlue
+            background-color transparent
+            border-radius $radius 0 0 $radius
+            border-bottom 2px transparent solid
+
+            &:hover {
+                border-bottom-color $wikitonguesBlue
+            }
+        }
+
+        &.log-in {
+            color #fff
+            background-color $wikitonguesBlue
+            border-radius $radius
+        }
+    }
+}
+
 .language-selection {
     display inline-block
-    float right
+    float left
 
     &.rtl {
         float left !important
