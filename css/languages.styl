@@ -3,6 +3,41 @@
 
 .language-selection {
     display inline-block
+    float right
+
+    &.rtl {
+        float left !important
+
+        &:hover {
+            .language-options {
+                margin-left 0
+                transition margin-left $transitionTime ease-in-out
+
+                li {
+                    .languageButton.activeLanguage {
+                        border-radius 0 $radius $radius 0
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .language-options {
+            margin-right 0
+            transition margin-right $transitionTime ease-in-out
+
+            li {
+                .languageButton.activeLanguage {
+                    border-radius $radius 0 0 $radius
+                }
+            }
+        }
+        .moreLanguages {
+            background-color #668797
+            transition background-color $transitionTime ease-in-out
+        }
+    }
 
     .language-options {
         display none
@@ -11,13 +46,31 @@
         display inline-block
         height 38px
         overflow hidden
+        margin-right -43px
+        position relative
+        transition margin-right $transitionTime ease-in-out
+
+        &.rtl {
+            margin-right 0
+            margin-left -43px
+            transition margin-left $transitionTime ease-in-out
+        }
 
         li {
             font-size 1.5em
-            float left
+            float right
             width 113px
 
+            &.rtl {
+                float left !important
+
+                .activeLanguage {
+                    border-radius $radius
+                }
+            }
+
             .languageButton {
+                width 100%
                 background none
                 padding 5px 10px
                 font-weight  100
@@ -30,14 +83,11 @@
                     font-size 1em
                 }
 
-                &.active {
+                &.activeLanguage {
                     background $wikitonguesBlue
                     color #fff
                     border-radius $radius
-                }
-
-                &:hover {
-                    border-bottom 2px solid $wikitonguesBlue
+                    transition background $transitionTime ease-in-out
                 }
             }
         }
@@ -85,7 +135,19 @@
                 width 100%
 
                 li {
+                    float left
                     width 10%
+
+                    button {
+                        &.active {
+                           background $wikitonguesBlue
+                           color #fff
+                        }
+
+                        &:hover {
+                            border-bottom 2px solid $wikitonguesBlue
+                        }
+                    }
                 }
             }
 
@@ -127,13 +189,17 @@
 }
 
 .moreLanguages {
-    border-radius $radius
-    width 113px
+    border-radius 0 $radius $radius 0
+    width 43px
     height 38px
     float right
-    border-bottom 2px solid $wikitonguesBlue
     font-size 1.5em
-    background-color  $wikitonguesBlue
+    background-color $wikitonguesBlue
     color #fff
     padding 5px 13px
+    transition background $transitionTime ease-in-out
+
+    &.rtl {
+        border-radius $radius 0 0 $radius
+    }
 }

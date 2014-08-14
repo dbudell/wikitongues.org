@@ -1,8 +1,8 @@
 $(function(){
-  createLanguageList()
+  // createLanguageList()
   createLanguageModal()
   textDirection()
-  languageOptionsWidth()
+  // languageOptionsWidth()
   languageModal()
 })
 
@@ -55,7 +55,7 @@ function createLanguageList () {
 // text direction handler
 function textDirection () {
   var rightToLeft_Languages = ["עברית", "العربية", "יידיש"],
-  rightToLeft_Targets = $(".language-options, .moreLanguages, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer, footer .content-wrapper .links .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
+  rightToLeft_Targets = $(".language-selection, .language-options, .language-options li, .moreLanguages, .logotype, .slogan, #summary, #get-involved, .mobile-text, footer, footer .content-wrapper .links .content-wrapper p, #contact-form #name, #contact-form #email, #contact-form #message, #contact-form #submit")
 
   $(".languageButton").on("click", function(){
     for ( var i = 0; i < languageLength; i++ ) {
@@ -66,19 +66,6 @@ function textDirection () {
         }
         rightToLeft_Targets.removeClass("rtl")
     }
-  })
-}
-
-// responsive language picker
-function languageOptionsWidth () {
-  function languageOptionsWidthSet () {
-      var content = ($(".content-wrapper").width())-114
-      $("body").children(".content-wrapper").children(".language-selection").children(".language-options").css("width",content)
-  }
-  languageOptionsWidthSet()
-
-  $(window).resize(function(){
-    languageOptionsWidthSet()
   })
 }
 
@@ -111,7 +98,7 @@ function languageModal () {
   $(".hideLanguageModal").css("margin-top", -languageListHeight)
 
   // click button
-  $(".moreLanguages").on("click", function(){
+  $(".activeLanguage, .moreLanguages").on("click", function(){
     $(".language-modal").show()
     // fade in background
     $(".language-modal .background").fadeIn(delayTime)
@@ -153,5 +140,6 @@ function languageModal () {
     // add class of active to selected language
     $(".languageButton#"+selectedLanguageId).addClass('active')
 
+    $(".activeLanguage").text(selectedLanguageId).attr('id', selectedLanguageId)
   })
 }
