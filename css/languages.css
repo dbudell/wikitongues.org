@@ -5,7 +5,7 @@
   padding: 0 0 6px 0;
   position: absolute;
   z-index: 2;
-  margin-top: -70px;
+  margin-top: -71px;
   -webkit-transition: margin-top 0.2s ease-in-out;
   -moz-transition: margin-top 0.2s ease-in-out;
   -o-transition: margin-top 0.2s ease-in-out;
@@ -13,7 +13,7 @@
   transition: margin-top 0.2s ease-in-out;
 }
 .log-in-fields.active {
-  margin-top: -9px;
+  margin-top: -10px;
   -webkit-transition: margin-top 0.2s ease-in-out;
   -moz-transition: margin-top 0.2s ease-in-out;
   -o-transition: margin-top 0.2s ease-in-out;
@@ -31,6 +31,13 @@
 .log-in-fields ul li.left-block {
   float: left;
 }
+.log-in-fields ul li.left-block a {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.log-in-fields ul li.left-block a:visited {
+  color: #fff;
+}
 .log-in-fields ul li:not(:last-of-type) {
   margin-left: 5px;
 }
@@ -43,20 +50,16 @@
   border: none;
   padding: 15px;
 }
-.log-in-fields ul li button.go {
-  background-color: #ffc328;
-  color: #fff;
-}
 .log-in-fields ul li a {
   display: inline-block;
   text-shadow: none;
   color: #fff;
   text-decoration: none;
   font-size: 1.5em;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-bottom: 14px;
 }
-.log-in-fields ul li a:visited {
+.log-in-fields ul li a.go {
+  background-color: #ffc328;
   color: #fff;
 }
 .log-in-fields ul li img {

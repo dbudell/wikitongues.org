@@ -8,11 +8,11 @@
     padding 0 0 6px 0
     position absolute
     z-index 2
-    margin-top -70px
+    margin-top -71px
     transition margin-top $transitionTime ease-in-out
 
     &.active {
-        margin-top -9px
+        margin-top -10px
         transition margin-top $transitionTime ease-in-out
         border-bottom 4px solid lighten($wikitonguesBlue, 13%)
     }
@@ -26,6 +26,15 @@
 
             &.left-block {
                 float left
+
+                a {
+                    padding-right 30px
+                    padding-left 30px
+
+                    &:visited {
+                        color #fff
+                    }
+                }
             }
 
             &:not(:last-of-type) {
@@ -39,24 +48,21 @@
                 padding 15px
             }
 
-            button.go {
-                background-color $hoverColor
-                color #fff
-            }
-
             a {
                 display inline-block
                 text-shadow none
                 color #fff
                 text-decoration none
                 font-size 1.5em
-                padding-right 30px
-                padding-left 30px
+                padding-bottom 14px
 
-                &:visited {
+                &.go {
+                    background-color $hoverColor
                     color #fff
                 }
             }
+
+
 
             img {
                 padding 0

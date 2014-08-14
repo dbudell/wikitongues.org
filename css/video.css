@@ -1,0 +1,291 @@
+a {
+  text-decoration: none;
+  color: #adcee1;
+  font-style: italic;
+  text-shadow: none;
+}
+a:hover {
+  color: #6ca7ca;
+}
+header {
+  width: 100%;
+  background: #11242f;
+  display: inline-block;
+  margin-top: -20px;
+}
+header * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: none;
+}
+header .home {
+  margin-left: 30px;
+  height: 60px;
+  float: left;
+}
+header a {
+  font-style: initial;
+  color: #fff;
+  font-size: 1.6em;
+  float: right;
+  height: 60px;
+  padding: 19px 30px;
+  margin-left: 25px;
+  background-color: #193646;
+}
+header a.profile {
+  float: right;
+  background-color: #39d87a;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  padding: 16px 25px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  margin: 0;
+}
+header a.profile:hover {
+  color: #fff;
+}
+header a:hover {
+  color: #ffc328;
+}
+header input {
+  float: right;
+  width: 70%;
+  height: 60px;
+  border: none;
+  font-size: 1.5em;
+  padding: 0 20px;
+  outline: none;
+  font-style: italic;
+}
+section.search-results {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  background-color: #f8fbfd;
+  width: 100%;
+  margin-top: -3px;
+  padding: 20px 5%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 3px solid #deebf3;
+}
+section.search-results h1 {
+  color: #6ca7ca;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+}
+section.search-results ul.search-context {
+  width: 25%;
+  float: left;
+}
+section.search-results ul.search-context li {
+  float: left;
+}
+section.search-results ul.search-context li.headers {
+  width: 100%;
+}
+section.search-results ul.search-context li h2 {
+  text-align: center;
+}
+section.search-results ul.search-context li img {
+  height: 70px;
+}
+section.search-results ul.search-context li p.more {
+  margin: 0;
+  background-color: #11242f;
+  color: #fff;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  text-shadow: none;
+  padding-top: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.content-wrapper {
+  margin-bottom: 20px !important;
+}
+.content-wrapper .app {
+  font-size: 1.5em;
+}
+.content-wrapper .app * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: none;
+}
+.content-wrapper .app .video {
+  width: 100%;
+  height: 600px;
+  background: #000;
+  overflow: hidden;
+}
+.content-wrapper .app .video.small {
+  width: 67%;
+  height: 500px;
+}
+.content-wrapper .app .video img.speaker {
+  margin-top: -20px;
+  width: 100%;
+}
+.content-wrapper .app .video img.watermark {
+  width: 150px;
+  position: relative;
+  top: -180px;
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+}
+.content-wrapper .app nav {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  float: left;
+}
+.content-wrapper .app nav h2.title {
+  float: left;
+  font-size: 1.5em;
+  padding: 20px 20px 10px 40px;
+  margin: 0;
+  font-weight: 100;
+}
+.content-wrapper .app nav h2.title a.language {
+  background-color: #11242f;
+  padding: 5px 20px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  text-decoration: none;
+  font-style: initial;
+}
+.content-wrapper .app nav button {
+  padding: 21px 26px;
+  background-color: transparent;
+  float: right;
+}
+.content-wrapper .app nav button:hover {
+  background-color: #ddeaf2;
+}
+.content-wrapper .app nav p.tags {
+  padding: 20px;
+  margin: 0;
+  float: right;
+  font-style: italic;
+  color: #adcee1;
+}
+.content-wrapper .app nav .uploaded-by {
+  font-size: 1em;
+  color: #ccc;
+  float: left;
+  width: 100%;
+  padding: 0 40px 0 40px;
+}
+.content-wrapper .app nav .uploaded-by span {
+  float: right;
+}
+.content-wrapper .app .transcript {
+  font-size: 1.4em;
+  line-height: 1.6em;
+  background-color: #fff;
+  float: left;
+}
+.content-wrapper .app .transcript input {
+  float: left;
+  width: 90%;
+  font-size: 1em;
+  padding: 17px 20px 18px 40px;
+  border: none;
+  outline: none;
+}
+.content-wrapper .app .transcript input:active,
+.content-wrapper .app .transcript input:hover {
+  background-color: #eff5f9;
+}
+.content-wrapper .app .transcript .translation {
+  width: 10%;
+  margin: 0;
+  float: right;
+  padding: 17px 18px 18px 18px;
+  background-color: #eff5f9;
+  border: none;
+}
+.content-wrapper .app .transcript .translation:hover {
+  background-color: #ddeaf2;
+}
+.content-wrapper .app .transcript .original-content {
+  float: left;
+  padding: 0 100px 40px 60px;
+}
+.content-wrapper .app .transcript .original {
+  display: block;
+}
+.content-wrapper .app .transcript .translated {
+  display: none;
+}
+.content-wrapper .app .transcript.translated .original {
+  display: none;
+}
+.content-wrapper .app .transcript.translated .translated {
+  display: block;
+}
+.content-wrapper .app .comments {
+  display: inline-block;
+  padding: 40px;
+}
+.content-wrapper .app .comments textarea {
+  width: 545px;
+  height: 170px;
+  padding: 20px;
+  float: left;
+  resize: none;
+  border: none;
+  outline: none;
+}
+.content-wrapper .app .comments button.post {
+  width: 100%;
+  clear: both;
+  float: right;
+  padding: 15px 20px;
+  background-color: #cee2ed;
+}
+.content-wrapper .app .comments ul {
+  float: left;
+  clear: both;
+  display: inline-block;
+}
+.content-wrapper .app .comments ul .comment {
+  margin: 20px 0;
+  float: left;
+  clear: both;
+  background-color: #fff;
+  padding: 20px;
+}
+.content-wrapper .app .comments ul .comment .commenter {
+  height: 50px;
+  width: 50px;
+  float: left;
+  background-color: #ffc328;
+  display: inline-block;
+  margin: 5px 20px 5px 5px;
+}
+.content-wrapper .app .comments ul .comment p {
+  width: 430px;
+  float: left;
+  margin: 0;
+}
+.content-wrapper .app .comments ul .comment p.date {
+  clear: both;
+  margin-top: 10px;
+  float: right;
+  color: #adcee1;
+  text-align: right;
+}
