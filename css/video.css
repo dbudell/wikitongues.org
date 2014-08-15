@@ -1,7 +1,6 @@
 a {
   text-decoration: none;
   color: #adcee1;
-  font-style: italic;
   text-shadow: none;
 }
 a:hover {
@@ -12,6 +11,7 @@ header {
   background: #11242f;
   display: inline-block;
   margin-top: -20px;
+  float: left;
 }
 header * {
   -webkit-box-sizing: border-box;
@@ -19,7 +19,13 @@ header * {
   box-sizing: border-box;
   text-shadow: none;
 }
-header .home {
+header a.home {
+  float: left;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+header a.home img {
   margin-left: 30px;
   height: 60px;
   float: left;
@@ -112,7 +118,7 @@ section.search-results ul.search-context li p.more {
   box-sizing: border-box;
 }
 .content-wrapper {
-  margin-bottom: 20px !important;
+  margin: 65px auto 20px auto !important;
 }
 .content-wrapper .app {
   font-size: 1.5em;
@@ -122,6 +128,9 @@ section.search-results ul.search-context li p.more {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: none;
+}
+.content-wrapper .app a {
+  font-style: italic;
 }
 .content-wrapper .app .video {
   width: 100%;

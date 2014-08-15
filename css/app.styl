@@ -1,128 +1,47 @@
 @import 'nib'
 @import 'common-variables'
 
-a {
-    text-decoration none
-    color lighten($wikitonguesBlue, 75%)
-    font-style italic
-    text-shadow none
-
-    &:hover {
-        color lighten($wikitonguesBlue, 55%)
-    }
-}
-
-header {
-    width 100%
-    background $wikitonguesBlue
+nav {
+    background-color lighten($wikitonguesBlue, 95%)
+    float left
     display inline-block
-    margin-top -20px
+    width 100%
 
-   * {
-        box-sizing border-box
-        text-shadow none
-    }
-
-    .home {
-        margin-left 30px
-        height 60px
+    ul {
         float left
-    }
-
-    a {
-        font-style initial
-        color #fff
-        font-size 1.6em
-        float right
-        height 60px
-        padding 19px 30px
-        margin-left 25px
-        background-color lighten($wikitonguesBlue, 7%)
-
-        &.profile {
-            float right
-            background-color #39d87a
-            width 60px
-            height 60px
-            display inline-block
-            padding 16px 25px
-            color #fff
-            text-decoration none
-            font-size 2em
-            margin 0
-
-            &:hover {
-                color #fff
+        li {
+            a {
+                color #000
+                font-size 1.5em
+                display inline-block
+                padding 20px
             }
         }
-
-        &:hover {
-            color $hoverColor
-        }
-    }
-
-    input {
-        float right
-        width 70%
-        height 60px
-        border none
-        font-size 1.5em
-        padding 0 20px
-        outline none
-        font-style italic
     }
 }
 
-section.search-results {
+.sample-videos {
     display none
-    position absolute
-    z-index 3
-    background-color lighten($wikitonguesBlue, 98%)
-    width 100%
-    margin-top -3px
-    // min-height 500px
-    padding 20px 5%
-    box-sizing border-box
-    border-bottom 3px solid lighten($wikitonguesBlue, 90%)
 
     h1 {
-        color lighten($wikitonguesBlue, 55%)
-        font-style italic
-        font-weight 400
-        font-size 2em
-        text-align center
+        padding 40px
     }
 
-    ul.search-context {
-        width 25%
-        float left
+    ul {
+        width 100%
+        display inline-block
+        overflow hidden
 
         li {
             float left
+            display inline-block
+            width 25%
 
-            &.headers {
+            a {
                 width 100%
-            }
-
-            h2 {
-                text-align center
-            }
-
-            img {
-                height 70px
-            }
-
-            p {
-                &.more {
-                    margin 0
-                    background-color $wikitonguesBlue
-                    color #fff
-                    height 70px
-                    width 70px
-                    text-align center
-                    text-shadow none
-                    padding-top 25px
-                    box-sizing border-box
+                img {
+                    width inherit
+                    float left
                 }
             }
         }
@@ -130,58 +49,43 @@ section.search-results {
 }
 
 .content-wrapper {
-    margin-bottom 20px !important
-
+    overflow auto
     .app {
-        * {
-            box-sizing border-box
-            text-shadow none
-        }
-
-        font-size 1.5em
-
-        .video {
-            width 100%
-            height 600px
-            background #000
-            overflow hidden
-
-            &.small {
-                width 67%
-                height 500px
-            }
-
-            img {
-                &.speaker {
-                    margin-top -20px
-                    width 100%
-                }
-
-                &.watermark {
-                    width 150px
-                    position relative
-                    top -180px
-                    opacity .9
+        .weeklytongue {
+            a {
+                h1 {
+                    font-weight 100
                 }
             }
-        }
 
-        nav {
-            width 100%
-            display inline-block
-            background-color #fff
-            float left
-
-            h2.title {
+            .about, .phrasebook, .misc {
+                font-size 1.4em
+                line-height 1.5em
+                width 60%
                 float left
-                font-size 1.5em
-                padding 20px 20px 10px 40px
-                margin 0
-                font-weight 100
+                padding 0 60px 0 20px
+                font-style initial
+            }
 
-                a.language {
+            .about {
+                h2.language {
+                    font-weight 100
+                    padding 10px 20px
+                    border-radius $radius
+                    float left
                     background-color $wikitonguesBlue
-                    padding 5px 20px
+                    color #fff
+                    margin 10px 0
+                }
+
+                p {
+                    width 100%
+                    float left
+                }
+
+                span.language {
+                    background-color $wikitonguesBlue
+                    padding 5px 15px
                     border-radius $radius
                     color #fff
                     text-decoration none
@@ -189,150 +93,115 @@ section.search-results {
                 }
             }
 
-            button {
-                // margin 10px 20px 0 14px
-                padding 21px 26px
-                background-color transparent
-                float right
+            .phrasebook {
+                padding 0
+                background-color #fff
+                margin auto
+                border-radius $radius
 
-                &:hover {
-                    background-color darken(#EFF5F9, 5%)
-                }
-            }
-
-            p.tags {
-                padding 20px
-                margin 0
-                float right
-                font-style italic
-                color lighten($wikitonguesBlue, 75%)
-            }
-
-            .uploaded-by {
-                font-size 1em
-                color #ccc
-                float left
-                width 100%
-                padding 0 40px 0 40px
-
-                span {
-                    float right
-                }
-            }
-        }
-
-        .transcript {
-            font-size 1.4em
-            line-height 1.6em
-            background-color #fff
-            float left
-
-            input {
-                float left
-                width 90%
-                font-size 1em
-                padding 17px 20px 18px 40px
-                border none
-                outline none
-
-                &:active, &:hover {
-                    background-color #EFF5F9
-                }
-            }
-
-            .translation {
-                width 10%
-                margin 0
-                float right
-                padding 17px 18px 18px 18px
-                background-color #EFF5F9
-                border none
-
-                &:hover {
-                    background-color darken(#EFF5F9, 5%)
-                }
-            }
-
-            .original-content {
-                float left
-                padding 0 100px 40px 60px
-            }
-            .original {
-                display block
-            }
-
-            .translated {
-                display none
-            }
-
-            &.translated {
-                .original {
-                    display none
-                }
-
-                .translated {
-                    display block
-                }
-            }
-        }
-
-        .comments {
-            display inline-block
-            padding 40px
-
-            textarea {
-                width 545px
-                height 170px
-                padding 20px
-                float left
-                resize none
-                border none
-                outline none
-            }
-
-            button.post {
-                width 100%
-                clear both
-                float right
-                padding 15px 20px
-                background-color lighten($wikitonguesBlue, 85%)
-            }
-
-            ul {
-                float left
-                clear both
-                display inline-block
-
-                .comment {
-                    margin 20px 0
+                .phrasebook-header {
+                    border-radius $radius $radius 0 0
+                    width 100%
                     float left
-                    clear both
-                    background-color #fff
-                    padding 20px
+                    display inline-block
+                    padding 20px 40px
+                    background-color lighten($wikitonguesBlue, 7%)
+                    color #fff
 
-                    .commenter {
-                        height 50px
-                        width 50px
+                    a, p {
                         float left
-                        background-color $hoverColor
-                        display inline-block
-                        // border-radius 100%
-                        margin 5px 20px 5px 5px
                     }
 
                     p {
-                        width 430px
-                        float left
                         margin 0
+                    }
 
-                        &.date {
-                            clear both
-                            margin-top 10px
-                            float right
-                            color lighten($wikitonguesBlue, 75%)
-                            text-align right
+                    a {
+                        float right
+                        color #fff
+                        padding-right 3px
+
+                        &:hover {
+                            color $hoverColor
                         }
                     }
+                }
+
+                .language-options {
+                    float left
+                    width 100%
+
+                    button {
+                        width 50%
+                        float left
+                        padding 20px 0
+                        background-color lighten($wikitonguesBlue, 80%)
+
+                        &.translated {
+                            background-color lighten($wikitonguesBlue, 90%)
+                        }
+                    }
+                }
+
+                ul {
+                    width 100%
+                    float left
+                    margin-top 10px
+                    padding 20px 70px
+
+                    li {
+                        width 100%
+                        p {
+                            clear both
+                            display inline-block
+                            padding 9px 20px
+                            margin 5px 0
+                            color #555
+
+                            &.original {
+                                float left
+                                background-color lighten($wikitonguesBlue, 80%)
+                                border-radius 26px 26px 26px 0
+                            }
+
+                            &.translated {
+                                text-align right
+                                float right
+                                background-color lighten($wikitonguesBlue, 90%)
+                                border-radius 26px 26px 0 26px
+                            }
+                        }
+                    }
+                }
+            }
+
+            .video {
+                padding 30px
+                width 40%
+                float right
+                height initial
+                background-color transparent
+
+                a {
+                    margin-bottom 10px
+                    display inline-block
+
+                    img {
+                        float left
+                        width 100%
+                        border-radius $radius
+
+                        &:last-of-type {
+                            margin-bottom 0
+                        }
+                    }
+                }
+
+                a.note {
+                    width 100%
+                    text-align center
+                    padding 10px
+                    float left
                 }
             }
         }

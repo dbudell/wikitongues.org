@@ -4,7 +4,6 @@
 a {
     text-decoration none
     color lighten($wikitonguesBlue, 75%)
-    font-style italic
     text-shadow none
 
     &:hover {
@@ -17,16 +16,23 @@ header {
     background $wikitonguesBlue
     display inline-block
     margin-top -20px
+    float left
 
    * {
         box-sizing border-box
         text-shadow none
     }
 
-    .home {
-        margin-left 30px
-        height 60px
+    a.home {
         float left
+        background none
+        padding 0
+        margin 0
+        img {
+            margin-left 30px
+            height 60px
+            float left
+        }
     }
 
     a {
@@ -130,12 +136,16 @@ section.search-results {
 }
 
 .content-wrapper {
-    margin-bottom 20px !important
+    margin 65px auto 20px auto !important
 
     .app {
         * {
             box-sizing border-box
             text-shadow none
+        }
+
+        a {
+            font-style italic
         }
 
         font-size 1.5em
@@ -190,7 +200,6 @@ section.search-results {
             }
 
             button {
-                // margin 10px 20px 0 14px
                 padding 21px 26px
                 background-color transparent
                 float right

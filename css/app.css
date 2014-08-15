@@ -1,291 +1,177 @@
-a {
-  text-decoration: none;
-  color: #adcee1;
-  font-style: italic;
-  text-shadow: none;
-}
-a:hover {
-  color: #6ca7ca;
-}
-header {
-  width: 100%;
-  background: #11242f;
+nav {
+  background-color: #eff5f9;
+  float: left;
   display: inline-block;
-  margin-top: -20px;
+  width: 100%;
 }
-header * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-shadow: none;
-}
-header .home {
-  margin-left: 30px;
-  height: 60px;
+nav ul {
   float: left;
 }
-header a {
-  font-style: initial;
-  color: #fff;
-  font-size: 1.6em;
-  float: right;
-  height: 60px;
-  padding: 19px 30px;
-  margin-left: 25px;
-  background-color: #193646;
-}
-header a.profile {
-  float: right;
-  background-color: #39d87a;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  padding: 16px 25px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 2em;
-  margin: 0;
-}
-header a.profile:hover {
-  color: #fff;
-}
-header a:hover {
-  color: #ffc328;
-}
-header input {
-  float: right;
-  width: 70%;
-  height: 60px;
-  border: none;
+nav ul li a {
+  color: #000;
   font-size: 1.5em;
-  padding: 0 20px;
-  outline: none;
-  font-style: italic;
+  display: inline-block;
+  padding: 20px;
 }
-section.search-results {
+.sample-videos {
   display: none;
-  position: absolute;
-  z-index: 3;
-  background-color: #f8fbfd;
+}
+.sample-videos h1 {
+  padding: 40px;
+}
+.sample-videos ul {
   width: 100%;
-  margin-top: -3px;
-  padding: 20px 5%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-bottom: 3px solid #deebf3;
-}
-section.search-results h1 {
-  color: #6ca7ca;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 2em;
-  text-align: center;
-}
-section.search-results ul.search-context {
-  width: 25%;
-  float: left;
-}
-section.search-results ul.search-context li {
-  float: left;
-}
-section.search-results ul.search-context li.headers {
-  width: 100%;
-}
-section.search-results ul.search-context li h2 {
-  text-align: center;
-}
-section.search-results ul.search-context li img {
-  height: 70px;
-}
-section.search-results ul.search-context li p.more {
-  margin: 0;
-  background-color: #11242f;
-  color: #fff;
-  height: 70px;
-  width: 70px;
-  text-align: center;
-  text-shadow: none;
-  padding-top: 25px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.content-wrapper {
-  margin-bottom: 20px !important;
-}
-.content-wrapper .app {
-  font-size: 1.5em;
-}
-.content-wrapper .app * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-shadow: none;
-}
-.content-wrapper .app .video {
-  width: 100%;
-  height: 600px;
-  background: #000;
+  display: inline-block;
   overflow: hidden;
 }
-.content-wrapper .app .video.small {
-  width: 67%;
-  height: 500px;
-}
-.content-wrapper .app .video img.speaker {
-  margin-top: -20px;
-  width: 100%;
-}
-.content-wrapper .app .video img.watermark {
-  width: 150px;
-  position: relative;
-  top: -180px;
-  opacity: 0.9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-}
-.content-wrapper .app nav {
-  width: 100%;
+.sample-videos ul li {
+  float: left;
   display: inline-block;
-  background-color: #fff;
+  width: 25%;
+}
+.sample-videos ul li a {
+  width: 100%;
+}
+.sample-videos ul li a img {
+  width: inherit;
   float: left;
 }
-.content-wrapper .app nav h2.title {
-  float: left;
-  font-size: 1.5em;
-  padding: 20px 20px 10px 40px;
-  margin: 0;
+.content-wrapper {
+  overflow: auto;
+}
+.content-wrapper .app .weeklytongue a h1 {
   font-weight: 100;
 }
-.content-wrapper .app nav h2.title a.language {
+.content-wrapper .app .weeklytongue .about,
+.content-wrapper .app .weeklytongue .phrasebook,
+.content-wrapper .app .weeklytongue .misc {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  width: 60%;
+  float: left;
+  padding: 0 60px 0 20px;
+  font-style: initial;
+}
+.content-wrapper .app .weeklytongue .about h2.language {
+  font-weight: 100;
+  padding: 10px 20px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  float: left;
   background-color: #11242f;
-  padding: 5px 20px;
+  color: #fff;
+  margin: 10px 0;
+}
+.content-wrapper .app .weeklytongue .about p {
+  width: 100%;
+  float: left;
+}
+.content-wrapper .app .weeklytongue .about span.language {
+  background-color: #11242f;
+  padding: 5px 15px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   color: #fff;
   text-decoration: none;
   font-style: initial;
 }
-.content-wrapper .app nav button {
-  padding: 21px 26px;
-  background-color: transparent;
-  float: right;
+.content-wrapper .app .weeklytongue .phrasebook {
+  padding: 0;
+  background-color: #fff;
+  margin: auto;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
-.content-wrapper .app nav button:hover {
-  background-color: #ddeaf2;
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header {
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+  width: 100%;
+  float: left;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #193646;
+  color: #fff;
 }
-.content-wrapper .app nav p.tags {
-  padding: 20px;
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header a,
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header p {
+  float: left;
+}
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header p {
   margin: 0;
-  float: right;
-  font-style: italic;
-  color: #adcee1;
 }
-.content-wrapper .app nav .uploaded-by {
-  font-size: 1em;
-  color: #ccc;
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header a {
+  float: right;
+  color: #fff;
+  padding-right: 3px;
+}
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header a:hover {
+  color: #ffc328;
+}
+.content-wrapper .app .weeklytongue .phrasebook .language-options {
   float: left;
   width: 100%;
-  padding: 0 40px 0 40px;
 }
-.content-wrapper .app nav .uploaded-by span {
-  float: right;
-}
-.content-wrapper .app .transcript {
-  font-size: 1.4em;
-  line-height: 1.6em;
-  background-color: #fff;
+.content-wrapper .app .weeklytongue .phrasebook .language-options button {
+  width: 50%;
   float: left;
+  padding: 20px 0;
+  background-color: #bdd8e7;
 }
-.content-wrapper .app .transcript input {
-  float: left;
-  width: 90%;
-  font-size: 1em;
-  padding: 17px 20px 18px 40px;
-  border: none;
-  outline: none;
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.translated {
+  background-color: #deebf3;
 }
-.content-wrapper .app .transcript input:active,
-.content-wrapper .app .transcript input:hover {
-  background-color: #eff5f9;
-}
-.content-wrapper .app .transcript .translation {
-  width: 10%;
-  margin: 0;
-  float: right;
-  padding: 17px 18px 18px 18px;
-  background-color: #eff5f9;
-  border: none;
-}
-.content-wrapper .app .transcript .translation:hover {
-  background-color: #ddeaf2;
-}
-.content-wrapper .app .transcript .original-content {
-  float: left;
-  padding: 0 100px 40px 60px;
-}
-.content-wrapper .app .transcript .original {
-  display: block;
-}
-.content-wrapper .app .transcript .translated {
-  display: none;
-}
-.content-wrapper .app .transcript.translated .original {
-  display: none;
-}
-.content-wrapper .app .transcript.translated .translated {
-  display: block;
-}
-.content-wrapper .app .comments {
-  display: inline-block;
-  padding: 40px;
-}
-.content-wrapper .app .comments textarea {
-  width: 545px;
-  height: 170px;
-  padding: 20px;
-  float: left;
-  resize: none;
-  border: none;
-  outline: none;
-}
-.content-wrapper .app .comments button.post {
+.content-wrapper .app .weeklytongue .phrasebook ul {
   width: 100%;
-  clear: both;
-  float: right;
-  padding: 15px 20px;
-  background-color: #cee2ed;
-}
-.content-wrapper .app .comments ul {
   float: left;
-  clear: both;
-  display: inline-block;
-}
-.content-wrapper .app .comments ul .comment {
-  margin: 20px 0;
-  float: left;
-  clear: both;
-  background-color: #fff;
-  padding: 20px;
-}
-.content-wrapper .app .comments ul .comment .commenter {
-  height: 50px;
-  width: 50px;
-  float: left;
-  background-color: #ffc328;
-  display: inline-block;
-  margin: 5px 20px 5px 5px;
-}
-.content-wrapper .app .comments ul .comment p {
-  width: 430px;
-  float: left;
-  margin: 0;
-}
-.content-wrapper .app .comments ul .comment p.date {
-  clear: both;
   margin-top: 10px;
-  float: right;
-  color: #adcee1;
+  padding: 20px 70px;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li {
+  width: 100%;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li p {
+  clear: both;
+  display: inline-block;
+  padding: 9px 20px;
+  margin: 5px 0;
+  color: #555;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li p.original {
+  float: left;
+  background-color: #bdd8e7;
+  -webkit-border-radius: 26px 26px 26px 0;
+  border-radius: 26px 26px 26px 0;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li p.translated {
   text-align: right;
+  float: right;
+  background-color: #deebf3;
+  -webkit-border-radius: 26px 26px 0 26px;
+  border-radius: 26px 26px 0 26px;
+}
+.content-wrapper .app .weeklytongue .video {
+  padding: 30px;
+  width: 40%;
+  float: right;
+  height: initial;
+  background-color: transparent;
+}
+.content-wrapper .app .weeklytongue .video a {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.content-wrapper .app .weeklytongue .video a img {
+  float: left;
+  width: 100%;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.content-wrapper .app .weeklytongue .video a img:last-of-type {
+  margin-bottom: 0;
+}
+.content-wrapper .app .weeklytongue .video a.note {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  float: left;
 }
