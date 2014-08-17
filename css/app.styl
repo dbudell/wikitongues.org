@@ -58,9 +58,14 @@ nav {
                 }
             }
 
+            h2 {
+                display inline-block
+                margin 20px 40px
+            }
+
             .about, .phrasebook, .misc {
                 font-size 1.4em
-                line-height 1.5em
+                line-height 1.7em
                 width 60%
                 float left
                 padding 0 60px 0 20px
@@ -68,6 +73,9 @@ nav {
             }
 
             .about {
+                background-color #fff
+                padding 40px
+
                 h2.language {
                     font-weight 100
                     padding 10px 20px
@@ -75,12 +83,22 @@ nav {
                     float left
                     background-color $wikitonguesBlue
                     color #fff
-                    margin 10px 0
+                    margin 0
                 }
 
                 p {
                     width 100%
                     float left
+                    margin 10px 0
+
+                    &.similarities {
+                        background-color lighten($wikitonguesBlue, 95%)
+                        padding 30px
+
+                        a {
+                            color lighten($wikitonguesBlue, 55%)
+                        }
+                    }
                 }
 
                 span.language {
@@ -176,7 +194,7 @@ nav {
             }
 
             .video {
-                padding 30px
+                padding 0 30px
                 width 40%
                 float right
                 height initial
@@ -206,4 +224,12 @@ nav {
             }
         }
     }
+}
+
+
+.misc {
+    padding 20px 40px
+    font-size 2em
+    width 100%
+    background-color #fff
 }

@@ -42,15 +42,23 @@ nav ul li a {
 .content-wrapper .app .weeklytongue a h1 {
   font-weight: 100;
 }
+.content-wrapper .app .weeklytongue h2 {
+  display: inline-block;
+  margin: 20px 40px;
+}
 .content-wrapper .app .weeklytongue .about,
 .content-wrapper .app .weeklytongue .phrasebook,
 .content-wrapper .app .weeklytongue .misc {
   font-size: 1.4em;
-  line-height: 1.5em;
+  line-height: 1.7em;
   width: 60%;
   float: left;
   padding: 0 60px 0 20px;
   font-style: initial;
+}
+.content-wrapper .app .weeklytongue .about {
+  background-color: #fff;
+  padding: 40px;
 }
 .content-wrapper .app .weeklytongue .about h2.language {
   font-weight: 100;
@@ -60,11 +68,19 @@ nav ul li a {
   float: left;
   background-color: #11242f;
   color: #fff;
-  margin: 10px 0;
+  margin: 0;
 }
 .content-wrapper .app .weeklytongue .about p {
   width: 100%;
   float: left;
+  margin: 10px 0;
+}
+.content-wrapper .app .weeklytongue .about p.similarities {
+  background-color: #eff5f9;
+  padding: 30px;
+}
+.content-wrapper .app .weeklytongue .about p.similarities a {
+  color: #6ca7ca;
 }
 .content-wrapper .app .weeklytongue .about span.language {
   background-color: #11242f;
@@ -150,7 +166,7 @@ nav ul li a {
   border-radius: 26px 26px 0 26px;
 }
 .content-wrapper .app .weeklytongue .video {
-  padding: 30px;
+  padding: 0 30px;
   width: 40%;
   float: right;
   height: initial;
@@ -174,4 +190,10 @@ nav ul li a {
   text-align: center;
   padding: 10px;
   float: left;
+}
+.misc {
+  padding: 20px 40px;
+  font-size: 2em;
+  width: 100%;
+  background-color: #fff;
 }
