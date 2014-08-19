@@ -8,7 +8,14 @@ nav {
     width 100%
 
     ul {
-        float left
+        &.dashboard-nav {
+            float left
+        }
+
+        &.user-nav {
+            float right
+        }
+
         li {
             a {
                 color #000
@@ -123,15 +130,16 @@ nav {
                     float left
                     display inline-block
                     padding 20px 40px
-                    background-color lighten($wikitonguesBlue, 7%)
+                    background-color lighten($wikitonguesBlue, 0%)
                     color #fff
 
-                    a, p {
+                    a, h2 {
                         float left
                     }
 
-                    p {
+                    h2 {
                         margin 0
+                        font-weight 100
                     }
 
                     a {
@@ -149,14 +157,39 @@ nav {
                     float left
                     width 100%
 
-                    button {
+                    button.translated, button.original {
                         width 50%
                         float left
                         padding 20px 0
                         background-color lighten($wikitonguesBlue, 80%)
 
                         &.translated {
+                            margin-left -5%
                             background-color lighten($wikitonguesBlue, 90%)
+                        }
+                    }
+
+                    button.translation-direction {
+                        width 10%
+                        box-sizing border-box
+                        padding 20px 0 20px 0
+                        float left
+                        position relative
+                        text-align center
+                        background-color lighten($wikitonguesBlue, 90%)
+                        left -5%
+                        margin-right -5%
+                        border-radius 40px
+                        transition transform $transitionTime ease-in-out, background-color $transitionTime ease-in-out
+
+                        &:hover {
+                            background-color #fff
+                            transform rotate(180deg)
+                            transition transform $transitionTime ease-in-out, background-color $transitionTime ease-in-out
+                        }
+
+                        img {
+                            width 30px
                         }
                     }
                 }
@@ -165,31 +198,76 @@ nav {
                     width 100%
                     float left
                     margin-top 10px
-                    padding 20px 70px
+                    padding 0 70px 10px 70px
 
                     li {
-                        width 100%
-                        p {
-                            clear both
-                            display inline-block
-                            padding 9px 20px
-                            margin 5px 0
-                            color #555
+                        clear both
 
-                            &.original {
+                        &.original {
+                            float left
+
+                            p {
                                 float left
                                 background-color lighten($wikitonguesBlue, 80%)
                                 border-radius 26px 26px 26px 0
-                            }
-
-                            &.translated {
-                                text-align right
-                                float right
-                                background-color lighten($wikitonguesBlue, 90%)
-                                border-radius 26px 26px 0 26px
+                                margin 15px 0 0 0
                             }
                         }
+
+                        &.translated {
+                            float right
+
+                            p {
+                                text-align right
+                                float right
+                                background-color lighten($wikitonguesBlue, 95%)
+                                border-radius 26px 26px 0 26px
+                                position relative
+                                z-index 2
+                                right -40px
+                                border-bottom 2px solid lighten($wikitonguesBlue, 90%)
+                                margin -5px 0 20px 0
+                            }
+
+                            button.translated-more {
+                                float right
+                                right 15px
+                                transform rotate(-30deg)
+                                transition right 2*$transitionTime cubic-bezier(0.175, 0.885, 0.320, 1.275), transform 2*$transitionTime ease-in-out
+                            }
+
+                            &:hover {
+                                button.translated-more {
+                                    right -50px
+                                    transform rotate(0deg)
+                                    transition right 2*$transitionTime cubic-bezier(0.175, 0.885, 0.320, 1.275), transform 2*$transitionTime ease-in-out
+                                }
+                            }
+                        }
+
+                        p {
+                            padding 9px 20px
+                            color #555
+                        }
+
+                        button.translated-more {
+                            position relative
+                            padding 12px 20px
+                            margin 0
+                            z-index 1
+                            background-color lighten($wikitonguesBlue, 97%)
+                            border-radius 26px
+                        }
                     }
+                }
+
+                button.new-phrase {
+                    width 100%
+                    background-color lighten($wikitonguesBlue, 90%)
+                    text-align center
+                    font-style none
+                    border-radius 0 0 $radius $radius
+                    padding 20px
                 }
             }
 
@@ -228,7 +306,8 @@ nav {
 
 
 .misc {
-    padding 20px 40px
+    box-sizing border-box
+    padding 20px 40px 60px 40px
     font-size 2em
     width 100%
     background-color #fff

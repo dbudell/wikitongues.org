@@ -28,13 +28,16 @@
             <a href="#">Explore your world</a>
         </header>
         <nav>
-            <ul>
+            <ul class="dashboard-nav">
                 <li>
                     <a href="#">Recent videos</a>
                 </li>
                 <li>
                     <a href="#">Weeklytongue</a>
                 </li>
+            </ul>
+            <ul class="user-nav">
+                <li><a href="#">Upload a video</a></li>
             </ul>
         </nav>
         <div class="sample-videos">
@@ -67,34 +70,34 @@
                     <h2>Here are some phrases.</h2>
                     <div class="phrasebook">
                         <div class="phrasebook-header">
-                            <p>Aymara Starter Guide</p>
+                            <h2>Aymara Starter Guide</h2>
                             <a href="#">Go to phrasebook</a>
                         </div>
                         <div class="language-options">
-                            <button>English</button>
+                            <button class="original">English</button>
+                            <button class="translation-direction"><img src="../img/icons/phrasebook-direction.svg" alt=""></button>
                             <button class="translated">Aymara</button>
                         </div>
                         <ul>
-                            <li>
-                                <p class="original">Good day (native Aymara)</p>
-                                <p class="translated">Aski urukipan</p>
+                            <li class="original"><p class="original">Good day (native Aymara)</p></li>
+                            <li class="translated"><button class="translated-more">+</button><p>Aski urukipan</p></li>
 
-                                <p class="original">Good bye</p>
-                                <p class="translated">Jakisiñkama</p>
+                            <li class="original"><p class="original">Good bye</p></li>
+                            <li class="translated"><button class="translated-more">+</button><p>Jakisiñkama</p></li>
 
-                                <p class="original">Thank you</p>
-                                <p class="translated">Yuspagara</p>
+                            <li class="original"><p class="original">Thank you</p></li>
+                            <li class="translated"><button class="translated-more">+</button><p>Yuspagara</p></li>
 
-                                <p class="original">Yes / No</p>
-                                <p class="translated">Jisa/Jani</p>
+                            <li class="original"><p class="original">Yes / No</p></li>
+                            <li class="translated"><button class="translated-more">+</button><p>Jisa/Jani</p></li>
 
-                                <p class="original">One, two, three</p>
-                                <p class="translated">Maya, pays, kimsa</p>
+                            <li class="original"><p class="original">One, two, three</p></li>
+                            <li class="translated"><button class="translated-more">+</button><p>Maya, pays, kimsa</p></li>
 
-                                <p class="original">How are you?</p>
-                                <p class="translated">Kunjamaskatasa?</p>
-                            </li>
+                            <li class="original"><p class="original">How are you?</p></li>
+                            <li class="translated"><button class="translated-more">+</button><p>Kunjamaskatasa?</p></li>
                         </ul>
+                        <button class="new-phrase" href="#">Add a phrase</button>
                     </div>
                 </div>
             </div>

@@ -4,8 +4,11 @@ nav {
   display: inline-block;
   width: 100%;
 }
-nav ul {
+nav ul.dashboard-nav {
   float: left;
+}
+nav ul.user-nav {
+  float: right;
 }
 nav ul li a {
   color: #000;
@@ -105,15 +108,16 @@ nav ul li a {
   float: left;
   display: inline-block;
   padding: 20px 40px;
-  background-color: #193646;
+  background-color: #11242f;
   color: #fff;
 }
 .content-wrapper .app .weeklytongue .phrasebook .phrasebook-header a,
-.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header p {
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header h2 {
   float: left;
 }
-.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header p {
+.content-wrapper .app .weeklytongue .phrasebook .phrasebook-header h2 {
   margin: 0;
+  font-weight: 100;
 }
 .content-wrapper .app .weeklytongue .phrasebook .phrasebook-header a {
   float: right;
@@ -127,43 +131,136 @@ nav ul li a {
   float: left;
   width: 100%;
 }
-.content-wrapper .app .weeklytongue .phrasebook .language-options button {
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.translated,
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.original {
   width: 50%;
   float: left;
   padding: 20px 0;
   background-color: #bdd8e7;
 }
-.content-wrapper .app .weeklytongue .phrasebook .language-options button.translated {
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.translated.translated,
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.original.translated {
+  margin-left: -5%;
   background-color: #deebf3;
+}
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.translation-direction {
+  width: 10%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 0 20px 0;
+  float: left;
+  position: relative;
+  text-align: center;
+  background-color: #deebf3;
+  left: -5%;
+  margin-right: -5%;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -ms-transition: -ms-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.translation-direction:hover {
+  background-color: #fff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -ms-transition: -ms-transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.content-wrapper .app .weeklytongue .phrasebook .language-options button.translation-direction img {
+  width: 30px;
 }
 .content-wrapper .app .weeklytongue .phrasebook ul {
   width: 100%;
   float: left;
   margin-top: 10px;
-  padding: 20px 70px;
+  padding: 0 70px 10px 70px;
 }
 .content-wrapper .app .weeklytongue .phrasebook ul li {
-  width: 100%;
-}
-.content-wrapper .app .weeklytongue .phrasebook ul li p {
   clear: both;
-  display: inline-block;
-  padding: 9px 20px;
-  margin: 5px 0;
-  color: #555;
 }
-.content-wrapper .app .weeklytongue .phrasebook ul li p.original {
+.content-wrapper .app .weeklytongue .phrasebook ul li.original {
+  float: left;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li.original p {
   float: left;
   background-color: #bdd8e7;
   -webkit-border-radius: 26px 26px 26px 0;
   border-radius: 26px 26px 26px 0;
+  margin: 15px 0 0 0;
 }
-.content-wrapper .app .weeklytongue .phrasebook ul li p.translated {
+.content-wrapper .app .weeklytongue .phrasebook ul li.translated {
+  float: right;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li.translated p {
   text-align: right;
   float: right;
-  background-color: #deebf3;
+  background-color: #eff5f9;
   -webkit-border-radius: 26px 26px 0 26px;
   border-radius: 26px 26px 0 26px;
+  position: relative;
+  z-index: 2;
+  right: -40px;
+  border-bottom: 2px solid #deebf3;
+  margin: -5px 0 20px 0;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li.translated button.translated-more {
+  float: right;
+  right: 15px;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  -webkit-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.4s ease-in-out;
+  -moz-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -moz-transform 0.4s ease-in-out;
+  -o-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -o-transform 0.4s ease-in-out;
+  -ms-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -ms-transform 0.4s ease-in-out;
+  transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s ease-in-out;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li.translated:hover button.translated-more {
+  right: -50px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.4s ease-in-out;
+  -moz-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -moz-transform 0.4s ease-in-out;
+  -o-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -o-transform 0.4s ease-in-out;
+  -ms-transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), -ms-transform 0.4s ease-in-out;
+  transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.4s ease-in-out;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li p {
+  padding: 9px 20px;
+  color: #555;
+}
+.content-wrapper .app .weeklytongue .phrasebook ul li button.translated-more {
+  position: relative;
+  padding: 12px 20px;
+  margin: 0;
+  z-index: 1;
+  background-color: #f5f9fb;
+  -webkit-border-radius: 26px;
+  border-radius: 26px;
+}
+.content-wrapper .app .weeklytongue .phrasebook button.new-phrase {
+  width: 100%;
+  background-color: #deebf3;
+  text-align: center;
+  font-style: none;
+  -webkit-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+  padding: 20px;
 }
 .content-wrapper .app .weeklytongue .video {
   padding: 0 30px;
@@ -192,7 +289,10 @@ nav ul li a {
   float: left;
 }
 .misc {
-  padding: 20px 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 40px 60px 40px;
   font-size: 2em;
   width: 100%;
   background-color: #fff;
