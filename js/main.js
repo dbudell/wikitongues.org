@@ -113,8 +113,8 @@ function translate (){
 			$('#submit').attr('value','послать')
 		} else if (activeLanguage === 'Afrikaans') {
 			$('.slogan').text('Elke taal in die wêreld, vir almal.')
-			$('#summary').text("Wikitongues is 'n gemeenskap poging om vir al die mense in die wêreld toegang te tot al die 7000 wêreldstale en die stories en emoties agter hulle. In samenwerking met 'n netwerk van vrywilligers, is ons toegewyd om aan die wêreld die betekenis van diversiteit te wys.")
-			$('.mobile-text').text("Wikitongues is 'n gemeenskap poging om vir al die mense in die wêreld toegang te tot al die 7000 wêreldstale en die stories en emoties agter hulle. In samenwerking met 'n netwerk van vrywilligers, is ons toegewyd om aan die wêreld die betekenis van diversiteit te wys.")
+			$('#summary').text("Wikitongues is 'n gemeenskaps inisiatief om aan al die mense in die wêreld toegang te gee tot al 7000 wêreldtale asook die stories en emosies daaragter. In samewerking met 'n netwerk van vrywilligers is ons toegewyd om aan die wêreld die betekenis en verskeidenheid van tale uit te beeld.")
+			$('.mobile-text').text("Wikitongues is 'n gemeenskaps inisiatief om aan al die mense in die wêreld toegang te gee tot al 7000 wêreldtale asook die stories en emosies daaragter. In samewerking met 'n netwerk van vrywilligers is ons toegewyd om aan die wêreld die betekenis en verskeidenheid van tale uit te beeld.")
 			$('#get-involved').text('Raak betrokke')
 			$('.first').text('Gemaak met internasionale liefde deur ')
 			$('.second').text(' en')
