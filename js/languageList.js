@@ -1,6 +1,6 @@
 $(window).load(function(){
   var listLength = 6909,
-  recordedLength = 107,
+  recordedLength = 99,
   recordedPercentage = Math.round(recordedLength/listLength*100)
 
   for (var i = 1; i <= listLength; i++) {
